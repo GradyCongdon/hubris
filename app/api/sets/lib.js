@@ -40,27 +40,26 @@ const player = async (rCode, characterShort) => {
   const urls = [0, 100, 200, 300, 400, 500].map(
     (o) => `${urlTemplate}?offset=${o}`
   );
-  const texts = await Promise.all(
+  const allSetsOffsets = await Promise.all(
     urls.map(async (url) => {
       console.log("fetching", url);
       const resp = await fetch(url);
-      const text = resp.text();
-      return text;
+      const text = await resp.text();
+      const slug = url.replace('http://ratingupdate.info/player/', '').replace('/history?offset=', '-').padEnd(22, ' ');
+      const tables = tabletojson.convert(text);
+      if (tables.length == 0) {
+        console.log(slug, " sets:  0");
+        return [];
+      }
+      const sets = tables[0];
+      const newest = sets[0];
+      const oldest = sets[sets.length - 1];
+      const firstLastDateRangeString = `${newest["Date"]} - ${oldest["Date"]}`;
+      console.log(`${slug}  sets: ${sets.length} [${firstLastDateRangeString}]`);
+      return sets;
     })
   );
-  const allSets = texts.map((text) => {
-    const tables = tabletojson.convert(text);
-    if (tables.length == 0) {
-      console.log("no sets");
-      return [];
-    }
-    const sets = tables[0];
-    const newest = sets[0];
-    const oldest = sets[sets.length - 1];
-    const firstLastDateRangeString = `${newest["Date"]} - ${oldest["Date"]}`;
-    console.log(firstLastDateRangeString, "sets:", sets.length);
-    return sets;
-  }).flat(Infinity);
+  const allSets = allSetsOffsets.flat(Infinity);
   const unique = uniq(allSets, (x) => x["Date"]);
   const sets = unique.map((set) => {
     const opponentCharacter = set["Character"];
