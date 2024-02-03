@@ -40,17 +40,27 @@ const player = async (rCode, characterShort) => {
   const urls = [0, 100, 200, 300, 400, 500].map(
     (o) => `${urlTemplate}?offset=${o}`
   );
-  const allSets = await Promise.all(
+  const texts = await Promise.all(
     urls.map(async (url) => {
       console.log("fetching", url);
       const resp = await fetch(url);
       const text = resp.text();
-      const sets = tabletojson.convert(text);
-      console.log(`${url}: ${sets.length} sets`);
-      console.log(`${url}: ${sets[0].Date} - ${sets[sets.length - 1].Date}`);
-      return sets;
+      return text;
     })
-  ).flat(Infinity);
+  );
+  const allSets = texts.map((text) => {
+    const tables = tabletojson.convert(text);
+    if (tables.length == 0) {
+      console.log("no sets");
+      return [];
+    }
+    const sets = tables[0];
+    const newest = sets[0];
+    const oldest = sets[sets.length - 1];
+    const firstLastDateRangeString = `${newest["Date"]} - ${oldest["Date"]}`;
+    console.log(firstLastDateRangeString, "sets:", sets.length);
+    return sets;
+  }).flat(Infinity);
   const unique = uniq(allSets, (x) => x["Date"]);
   const sets = unique.map((set) => {
     const opponentCharacter = set["Character"];
