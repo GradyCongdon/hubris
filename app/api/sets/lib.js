@@ -40,15 +40,17 @@ const player = async (rCode, characterShort) => {
   const urls = [0, 100, 200, 300, 400, 500].map(
     (o) => `${urlTemplate}?offset=${o}`
   );
-  const texts = await Promise.all(
+  const allSets = await Promise.all(
     urls.map(async (url) => {
       console.log("fetching", url);
       const resp = await fetch(url);
       const text = resp.text();
-      return text;
+      const sets = tabletojson.convert(text);
+      console.log(`${url}: ${sets.length} sets`);
+      console.log(`${url}: ${sets[0].Date} - ${sets[sets.length - 1].Date}`);
+      return sets;
     })
-  );
-  const allSets = texts.map((text) => tabletojson.convert(text)).flat(Infinity);
+  ).flat(Infinity);
   const unique = uniq(allSets, (x) => x["Date"]);
   const sets = unique.map((set) => {
     const opponentCharacter = set["Character"];
