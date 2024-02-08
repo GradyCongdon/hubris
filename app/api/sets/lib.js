@@ -43,7 +43,7 @@ const player = async (rCode, characterShort) => {
   const allSetsOffsets = await Promise.all(
     urls.map(async (url) => {
       console.log("fetching", url);
-      const resp = await fetch(url);
+      const resp = await fetch(url, { next: { revalidate: 30 } });
       const text = await resp.text();
       const slug = url.replace('http://ratingupdate.info/player/', '').replace('/history?offset=', '-').padEnd(22, ' ');
       const tables = tabletojson.convert(text);
