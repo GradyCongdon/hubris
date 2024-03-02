@@ -43,7 +43,7 @@ export default async function Page({
   const nameClass = nameLength > 16 ? "rt-sm" : "rt-md";
 
   return (
-    <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container bw theme">
+    <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
       <h1 className={`${ratingClass} mx-auto leading-none -mb-1`}>
         {rating}
         <span className="mono-100 text-full-width-sm">±{error}</span>

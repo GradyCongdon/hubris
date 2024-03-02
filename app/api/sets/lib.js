@@ -33,12 +33,12 @@ export const shortToLong = {
   EL: "Elphelt",
 };
 
-const longToShort = Object.entries(shortToLong).reduce((acc, [k, v]) => {
+export const longToShort = Object.entries(shortToLong).reduce((acc, [k, v]) => {
   acc[v] = k;
   return acc;
 }, {});
 
-const player = async (rCode, characterShort) => {
+const fetchHistory = async (rCode, characterShort) => {
   const urlTemplate = `http://ratingupdate.info/player/${rCode}/${characterShort}/history`;
   const urls = [0, 100, 200, 300, 400, 500].map(
     (o) => `${urlTemplate}?offset=${o}`
@@ -46,7 +46,10 @@ const player = async (rCode, characterShort) => {
   const allSetsOffsets = await Promise.all(
     urls.map(async (url) => {
       console.log("fetching", url);
-      const resp = await fetch(url, { next: { revalidate: 30 } });
+      const offset = parseInt(url.split("offset=")[1], 10);
+      const revalidate = offset == 0 ? 30 : 60 * 60 * 24 * (offset / 100);
+      const resp = await fetch(url, { next: { revalidate} });
+    
       const text = await resp.text();
       const slug = url.replace('http://ratingupdate.info/player/', '').replace('/history?offset=', '-').padEnd(22, ' ');
       const tables = tabletojson.convert(text);
@@ -185,7 +188,7 @@ export const getAllSets = async (rCode) => {
   const all = [];
   const chars = Object.keys(shortToLong).map(async (short) => {
     console.log(`downloading ${rCode}...`);
-    const sets = await player(rCode, short);
+    const sets = await fetchHistory(rCode, short);
     const clean = fixSheet(sets);
     all.push(clean);
   });
@@ -202,7 +205,37 @@ export const getCharacterSets = async (
   if (cached) {
     return heckSets
   }
-  const sets = await player(rCode, characterShort);
+  const sets = await fetchHistory(rCode, characterShort);
   const clean = fixSheet(sets);
   return clean;
+};
+
+// search
+// http://ratingupdate.info/api/player_lookup?name=glue%20eater
+
+export const getPlayerData = async (rCode, characterShort) => {
+  const url = `http://ratingupdate.info/player/${rCode}/${characterShort}`;
+  const resp = await fetch(url);
+  const text = await resp.text();
+  // const regex = /<p class="title">\s+(?<vip><span class="tag is-warning is-medium">VIP<\/span>)?\s+(?<name>.*?)\s+<span class="tag is-medium"><\/span>/;
+  const regex = /<title>(?<title>.*?)<\/title>/;
+  try {
+  const match = text.match(regex);
+  const title = match.groups.title;
+  const [name, other] = title.split(" (");
+  const character = other.split(")")[0];
+  const data = {
+    name,
+    characterShort,
+    character,
+    rCode,
+  };
+  return data;
+  } catch (e) {
+    console.log(e);
+    return {
+      text: text,
+      error: e.message,
+    };
+  }
 };
