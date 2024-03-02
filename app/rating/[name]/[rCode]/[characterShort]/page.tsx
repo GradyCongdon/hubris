@@ -91,27 +91,31 @@ export default async function Page({
   );
   const ratingClass = "text-full-width-" + error.toString().length;
   const maxHeight = 38;
+  const nameLength = name.length;
+  const nameClass = nameLength > 16 ? "rt-sm" : "rt-md";
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container bw theme">
-      <h1 className={`${ratingClass} mx-auto leading-none -mb-2`}>
+      <h1 className={`${ratingClass} mx-auto leading-none -mb-1`}>
         {rating}
         <span className="mono-100 text-full-width-sm">±{error}</span>
       </h1>
       <div className="container player-meta divide-x border-t">
-        <h2 className="rt-md text-left pl-1">{rCode}</h2>
+        <h2 className="rt-rc text-left pl-2">{rCode}</h2>
         <div
-          className="pr-1 theme-invert flex align-middle justify-end"
+          className="theme-invert flex align-middle justify-end"
           style={{ alignItems: "center", height: "100%" }}
         >
-          <h2 className="rt-md text-right align-middle">{name}</h2>
+          <h2 className={`${nameClass} text-right align-middle pr-2`}>
+            {name.slice(0, 22)}
+          </h2>
         </div>
       </div>
       <div className="container player-meta divide-x border-t">
-        <h2 className="rt-md pl-1 flex justify-between">
+        <h2 className="rt-md pl-2 flex justify-between">
           {shortToLong[characterShort as keyof typeof shortToLong]}
         </h2>
-        <h2 className="rt-md text-right pr-1">
+        <h2 className="rt-md text-right pr-2">
           {gameCount.wins}W:{gameCount.losses}L
         </h2>
       </div>
@@ -171,7 +175,8 @@ export default async function Page({
           }`;
           const change = isLarge ? _change.split(".")[0] : _change;
           const record = `${s.Wins} - ${s.Losses}`;
-          const date = new Date(s.Date);
+          const _date = new Date(s.Date).getTime();
+          const date = new Date(_date - new Date().getTimezoneOffset() * 60000);
           const timestamp = date
             .toLocaleString("en-US", {
               month: "short",

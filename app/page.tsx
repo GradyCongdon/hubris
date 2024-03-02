@@ -21,12 +21,26 @@ export default function Home() {
         &nbsp;page
       </p>
       <br />
-      example:{" "}
-      <kbd>
-        <a className="underline" href="/rating/UMISHO/2EC3DC4435865B9/SO">
-          /rating/UMISHO/2EC3DC4435865B9/SO
-        </a>
-      </kbd>
+      <p>examples:</p>
+      <ul>
+        <li>
+          <kbd>
+            <a className="underline" href="/rating/UMISHO/2EC3DC4435865B9/SO">
+              /rating/UMISHO/2EC3DC4435865B9/SO
+            </a>
+          </kbd>
+        </li>
+        <li>
+          <kbd>
+            <a
+              className="underline"
+              href="/rating/heckscape/2EC3DCA33129F30/KY"
+            >
+              /rating/heckscape/2EC3DCA33129F30/KY
+            </a>
+          </kbd>
+        </li>
+      </ul>
     </main>
   );
 }

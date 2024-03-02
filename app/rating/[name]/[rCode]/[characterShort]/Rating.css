@@ -80,9 +80,9 @@
 .set {
   display: grid;
   grid-template-columns: 1.8fr 1.5fr 1.8fr 5fr;
-  height: 60px;
+  height: 64px;
   align-items: baseline;
-  line-height: 60px;
+  line-height: 64px;
   gap:1px;
   transition: transform 0.5s;
 }
@@ -107,7 +107,6 @@
 }
 .set-meta {
   align-self: flex-start;
-  align-items: stretch;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 32px 32px;
@@ -116,10 +115,10 @@
 }
 .opponent-name {
   grid-column: span 2;
+  line-height: 32px;
   text-align: end;
-}
-.oppponent-character {
-  display: none;
+  max-height: 32px;
+  height: 32px;
 }
 
 .container {
@@ -140,6 +139,9 @@
 }
 .rt-xs{
   font-size: 2cqi;
+}
+.rt-rc {
+  font-size: 4.8cqi;
 }
 /* decreased the rt class font sizes by 10% */
 @media screen and (min-width: 768px) {
