@@ -1,78 +1,29 @@
-.theme {
-  background-color: var(--bg);
-  color: var(--color);
+:root {
+  --player-grid-height: 48px;
+  --set-grid-height: 64px;
+  --set-grid-height-2: 32px;
 }
-
-@media (prefers-color-scheme: light) {
+@media screen and (min-width: 768px) {
   :root {
-    --bg: white;
-    --color: blue;
-    --border-color: rgb(192, 200, 255);
-    --accent-color: rgb(132, 132, 255);
-    --accent-color: blue;
+    --player-grid-height: 64px;
+    --set-grid-height: 72px;
+    --set-grid-height-2: 36px;
   }
-  /* Display-P3 color, when supported. */
-  @supports (color: color(display-p3 1 1 1)) {
-    :root {
-      --color: color(display-p3 0 0.207 1);
-    }
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: rgb(26, 26, 26);
-    /* --color : rgb(181, 183, 57); */
-    --color: rgb(209, 209, 209);
-    --border-color: rgb(48, 48, 48);
-    --accent-color: rgb(167, 239, 0);
-  }
-  @supports (color: color(display-p3 1 1 1)) {
-    :root {
-      --accent-color: color(display-p3 0.694 1 0);
-    }
-  }
-  .change-bg {
-    filter: contrast(0.7) brightness(0.6);
-  }
-}
-.change-bg {
-  filter: contrast(0.88) brightness(1);
 }
 * {
   border-color: var(--border-color) !important;
-}
-.theme-invert {
-  color: var(--bg);
-  background-color: var(--color);
-}
-.change .value {
-  filter: brightness(1);
-  /* color: var(--color);  */
-  color: white;
-}
-
-.wr {
-  --bg: red;
-  --color: white;
-}
-.gg {
-  background-color: rgb(48, 48, 48) !important;
-  color: rgb(0, 238, 52) !important;
 }
 .character-meta,
 .player-meta {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: var(--player-grid-height);
+  line-height: var(--player-grid-height);
   justify-content: center;
   align-items: center;
-  margin-left: -2px;
-  margin-right: -2px;
-}
-:root {
-  --player-grid-height: 48px;
-  --set-grid-height: 64px;
-  --set-grid-height-2: 32px;
+  /* FIXME */
+  margin-left: 4px;
+  margin-right: 4px;
 }
 .set {
   display: grid;
@@ -83,19 +34,6 @@
   gap: 1px;
   transition: transform 0.5s;
 }
-@media screen and (min-width: 768px) {
-  :root {
-    --player-grid-height: 64px;
-    --set-grid-height: 72px;
-    --set-grid-height-2: 36px;
-  }
-  .character-meta,
-  .player-meta {
-    margin-left: 1px;
-    margin-right: 1px;
-  }
-}
-
 .set-meta {
   align-self: flex-start;
   display: grid;
@@ -104,18 +42,19 @@
   grid-template-rows: repeat(2, var(--set-grid-height-2));
   line-height: var(--set-grid-height);
 }
+/* TODO:  Border bleeds into name if removed */
 .set-meta > div {
   line-height: var(--set-grid-height-2);
 }
 .opponent-name {
   grid-column: span 2;
   text-align: end;
-  line-height: var(--set-grid-height-2);
-  height: var(--set-grid-height-2);
 }
-
-.container {
-  container-type: inline-size;
+.change-bg {
+  filter: contrast(0.88) brightness(1);
+}
+.change .value {
+  color: white;
 }
 
 .rt-xl {
@@ -152,5 +91,44 @@
   }
   .rt-xs {
     font-size: 1.2cqi;
+  }
+}
+
+.theme {
+  background-color: var(--bg);
+  color: var(--color);
+}
+.theme-invert {
+  color: var(--bg);
+  background-color: var(--color);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: white;
+    --color: blue;
+    --border-color: rgb(192, 200, 255);
+    --accent-color: rgb(132, 132, 255);
+    --accent-color: blue;
+  }
+  @supports (color: color(display-p3 1 1 1)) {
+    :root {
+      --color: color(display-p3 0 0.207 1);
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: rgb(26, 26, 26);
+    --color: rgb(209, 209, 209);
+    --border-color: rgb(48, 48, 48);
+    --accent-color: rgb(167, 239, 0);
+  }
+  @supports (color: color(display-p3 1 1 1)) {
+    :root {
+      --accent-color: color(display-p3 0.694 1 0);
+    }
+  }
+  .change-bg {
+    filter: contrast(0.7) brightness(0.6);
   }
 }

@@ -1,6 +1,7 @@
 import "./Rating.css";
 // import sets from './sets.json' with {type: 'json'};
 import { getCharacterSets, shortToLong } from "@/app/api/sets/lib";
+import { Match } from "./types";
 
 const example = {
   Date: "2024-03-01T04:01:00.000Z",
@@ -161,7 +162,7 @@ export default async function Page({
       </div>
 
       <section className="">
-        {sets.map((s: any) => {
+        {sets.map((s: Match) => {
           // const pRating = `${g.Rating}±${g.Error}`;
           // const oRating = `${g.OpponentRating}±${g.OpponentError}`;
           const pRating = s.Rating;
@@ -187,7 +188,11 @@ export default async function Page({
             })
             .replace(",", "");
           const isLongName =
-            s.OpponentName.length + s.OpponentCharacter.length > 28;
+            s.OpponentName.length + s.OpponentCharacter.length > 21;
+          const opponent = isLongName
+            ? `${s.OpponentName} (${s.OpponentCharacterShort})`
+            : `${s.OpponentName} (${s.OpponentCharacter})`;
+
           return (
             <div
               key={timestamp}
@@ -226,10 +231,10 @@ export default async function Page({
                 <div className="border-b opponent-name">
                   <div
                     className={`container pl-1 theme-invert overflow-hidden rt-${
-                      isLongName ? "sm" : "lg"
+                      isLongName ? "lg" : "lg"
                     }`}
                   >
-                    {s.OpponentName} ({s.OpponentCharacter})
+                    {opponent}
                   </div>
                 </div>
                 <div className="container border-r rt-xl text-center">
