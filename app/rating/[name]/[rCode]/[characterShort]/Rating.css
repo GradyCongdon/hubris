@@ -65,6 +65,8 @@
   grid-template-rows: 36px;
   justify-content: center;
   align-items: center;
+  margin-left: -2px;
+  margin-right: -2px;
 }
 .character-meta {
   display: grid ;
@@ -72,6 +74,8 @@
   grid-template-rows: 36px;
   justify-content: center;
   align-items: center;
+  margin-left: -2px;
+  margin-right: -2px;
 }
 .set {
   display: grid;
@@ -81,6 +85,22 @@
   line-height: 60px;
   gap:1px;
   transition: transform 0.5s;
+}
+@media screen and (min-width: 768px){
+  .player-meta {
+    grid-template-rows: 48px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .character-meta {
+    grid-template-rows: 48px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .set {
+    height: 72px;
+    line-height: 72px
+  };
 }
 .set:hover {
   transform: scale(1.01);
@@ -94,6 +114,14 @@
   align-items: center;
   line-height: 32px;
 }
+.opponent-name {
+  grid-column: span 2;
+  text-align: end;
+}
+.oppponent-character {
+  display: none;
+}
+
 .container {
   container-type: inline-size;
 }
@@ -112,4 +140,22 @@
 }
 .rt-xs{
   font-size: 2cqi;
+}
+/* decreased the rt class font sizes by 10% */
+@media screen and (min-width: 768px) {
+  .rt-xl {
+    font-size: 6.7cqi;
+  }
+  .rt-lg {
+    font-size: 5.6cqi;
+  }
+  .rt-md {
+    font-size: 4.5cqi;
+  }
+  .rt-sm {
+    font-size: 3.4cqi;
+  }
+  .rt-xs {
+    font-size: 1.2cqi;
+  }
 }

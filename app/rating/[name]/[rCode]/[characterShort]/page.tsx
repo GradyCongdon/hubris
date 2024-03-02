@@ -99,19 +99,19 @@ export default async function Page({
         <span className="mono-100 text-full-width-sm">±{error}</span>
       </h1>
       <div className="container player-meta divide-x border-t">
-        <h2 className="rt-md text-left pl-2">{rCode}</h2>
+        <h2 className="rt-md text-left pl-1">{rCode}</h2>
         <div
-          className="pr-2 theme-invert min-h-full flex align-middle justify-end"
-          style={{ alignItems: "center" }}
+          className="pr-1 theme-invert flex align-middle justify-end"
+          style={{ alignItems: "center", height: "100%" }}
         >
           <h2 className="rt-md text-right align-middle">{name}</h2>
         </div>
       </div>
       <div className="container player-meta divide-x border-t">
-        <h2 className="rt-md pl-2 flex justify-between">
+        <h2 className="rt-md pl-1 flex justify-between">
           {shortToLong[characterShort as keyof typeof shortToLong]}
         </h2>
-        <h2 className="rt-sm text-right pr-2">
+        <h2 className="rt-md text-right pr-1">
           {gameCount.wins}W:{gameCount.losses}L
         </h2>
       </div>
@@ -181,7 +181,8 @@ export default async function Page({
               hour12: true
             })
             .replace(",", "");
-          const isLongName = s.OpponentName.length > 12;
+          const isLongName =
+            s.OpponentName.length + s.OpponentCharacter.length > 28;
           return (
             <div
               key={timestamp}
@@ -217,23 +218,20 @@ export default async function Page({
                 {oRating}
               </div>
               <div className="container set-meta">
-                <div className="border-b border-r">
-                  <div className="container rt-md text-center">{timestamp}</div>
-                </div>
-                <div className="border-b">
+                <div className="border-b opponent-name">
                   <div
                     className={`container pl-1 theme-invert overflow-hidden rt-${
                       isLongName ? "sm" : "lg"
                     }`}
                   >
-                    {s.OpponentName}
+                    {s.OpponentName} ({s.OpponentCharacter})
                   </div>
                 </div>
                 <div className="container border-r rt-xl text-center">
                   {record}
                 </div>
-                <div className="container pl-1 rt-lg">
-                  {s.OpponentCharacter}
+                <div className="border-b border-r">
+                  <div className="container rt-md text-center">{timestamp}</div>
                 </div>
               </div>
             </div>
