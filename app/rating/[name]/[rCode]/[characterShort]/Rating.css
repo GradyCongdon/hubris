@@ -2,6 +2,9 @@
   --player-grid-height: 48px;
   --set-grid-height: 64px;
   --set-grid-height-2: 32px;
+  --bar-height: 42px;
+  --bar-container-width: 8px;
+  --bar-width: 7.5px;
 }
 @media screen and (min-width: 768px) {
   :root {
@@ -21,9 +24,12 @@
   line-height: var(--player-grid-height);
   justify-content: center;
   align-items: center;
-  /* FIXME */
+  /* FIXME - required to allign center columns between meta and sets*/
   margin-left: 4px;
   margin-right: 4px;
+}
+.bars {
+  height: var(--bar-height);
 }
 .set {
   display: grid;

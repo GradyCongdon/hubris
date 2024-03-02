@@ -1,5 +1,6 @@
 import { uniq } from "lodash";
 import { tabletojson } from "tabletojson";
+import heckSets from './heckSets.json' with { type: 'json' };
 
 export const shortToLong = {
   SO: "Sol",
@@ -18,6 +19,7 @@ export const shortToLong = {
   AN: "Anji",
   IN: "I-No",
   GO: "Goldlewis",
+  JC: "Jack-O'",
   JC: "Jack-O",
   HA: "Happy Chaos",
   BA: "Baiken",
@@ -25,6 +27,7 @@ export const shortToLong = {
   BI: "Bridget",
   SI: "Sin",
   BE: "Bedman",
+  BE: "Bedman?",
   AS: "Asuka",
   JN: "Johnny",
   EL: "Elphelt",
@@ -193,8 +196,12 @@ export const getAllSets = async (rCode) => {
 
 export const getCharacterSets = async (
   rCode,
-  characterShort
+  characterShort,
+  cached = false
 ) => {
+  if (cached) {
+    return heckSets
+  }
   const sets = await player(rCode, characterShort);
   const clean = fixSheet(sets);
   return clean;
