@@ -13,7 +13,9 @@ export async function generateMetadata({
   params: { name: string; rCode: string; characterShort: string };
 }) {
   return {
-    title: `${params.name} - ${params.rCode} - ${params.characterShort}`,
+    title: `${decodeURIComponent(params.name)} - ${params.rCode} - ${
+      params.characterShort
+    }`,
     description: `Rating history for ${params.name} in Guilty Gear Strive`,
   };
 }
@@ -23,7 +25,8 @@ export default async function Page({
 }: {
   params: { name: string; rCode: string; characterShort: string };
 }) {
-  const { name, rCode, characterShort } = params;
+  const { name: _name, rCode, characterShort } = params;
+  const name = decodeURIComponent(_name);
   const sets = await getCharacterSets(rCode, characterShort, cached);
   const rating = sets[0].Rating;
   const error = sets[0].Error;

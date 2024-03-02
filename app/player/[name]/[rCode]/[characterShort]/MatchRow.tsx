@@ -1,4 +1,4 @@
-import { rgbScale } from "@/app/rating/utils";
+import { rgbScale } from "@/app/player/utils";
 import { Match as MatchType } from "./types";
 
 type Props = {
