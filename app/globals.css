@@ -3,31 +3,119 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 16, 16, 16;
+  --background-end-rgb: 8, 8, 8;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 240, 240, 244;
+    --background-end-rgb: 224, 224, 228;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+:root {
+  --polynesian-blue: #004586ff;
+  --dim-gray: #717171ff;
+  --dartmouth-green: #006e44ff;
+  --castleton-green: #005232ff;
+  --rosewood: #510000ff;
+}
+
+.bg-x-blue {
+  background-color: var(--polynesian-blue);
+}
+
+.bg-x-gray {
+  background-color: var(--dim-gray);
+}
+
+.bg-x-light-green {
+  background-color: var(--dartmouth-green);
+}
+
+.bg-x-dark-green {
+  background-color: var(--castleton-green);
+}
+
+.bg-x-red {
+  background-color: var(--rosewood);
+}
+
+.bg-x-offwhite {
+  background-color: #fcf2f0;
+}
+
+.text-x-offwhite {
+  color: #fff9f7;
+}
+
+.bg-x-offblack {
+  background-color: #00001c;
+}
+
+.text-x-offblack {
+  color: #00001c;
+}
+
+.mono-100 {
+  font-family: "Azeret Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.mono-300 {
+  font-family: "Azeret Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mono-400 {
+  font-family: "Azeret Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mono-500 {
+  font-family: "Azeret Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  container-type: inline-size;
+}
+
+.text-full-width-2 {
+  font-size: 8rem;
+  font-size: 27cqi;
+}
+
+.text-full-width-3 {
+  font-size: 8rem;
+  font-size: 22cqi;
+}
+
+.text-full-width-sm {
+  font-size: 6rem;
+  font-size: 15cqi;
 }

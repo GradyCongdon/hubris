@@ -1,0 +1,113 @@
+.theme {
+  background-color: var(--bg); 
+  color: var(--color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --bg: white;
+  --color : blue;
+  --border-color: rgb(192, 200, 255);
+  --accent-color: rgb(132, 132, 255);
+  --accent-color: blue;
+  }
+  /* Display-P3 color, when supported. */
+  @supports (color: color(display-p3 1 1 1)) {
+    :root {
+      --color: color(display-p3 0 0.207 1);
+    }
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+  --bg: rgb(26, 26, 26);
+  /* --color : rgb(181, 183, 57); */
+  --color: rgb(209, 209, 209);
+  --border-color: rgb(48, 48, 48);
+  --accent-color: rgb(167, 239, 0);
+  }
+  @supports (color: color(display-p3 1 1 1)) {
+    :root {
+      --accent-color: color(display-p3 0.694 1 0);
+    }
+  }
+  .change-bg {
+    filter: contrast(.7) brightness(.6);
+  }
+}
+.change-bg {
+  filter: contrast(.88) brightness(1);
+}
+* {
+  border-color: var(--border-color) !important;
+}
+.theme-invert {
+  color: var(--bg); 
+  background-color: var(--color);
+}
+  .change .value {
+    filter: brightness(1);
+    /* color: var(--color);  */
+    color: white;
+  }
+
+.wr {
+  --bg: red;
+  --color : white;
+}
+.gg {
+  background-color: rgb(48, 48, 48) !important;
+  color: rgb(0, 238, 52) !important;
+}
+.player-meta {
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 42px;
+  justify-content: center;
+}
+.character-meta {
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 42px;
+  justify-content: center;
+}
+.set {
+  display: grid;
+  grid-template-columns: 1.8fr 1.5fr 1.8fr 5fr;
+  height: 64px;
+  align-items: baseline;
+  line-height: 64px;
+  gap:1px;
+  transition: transform 0.5s;
+}
+.set:hover {
+  transform: scale(1.01);
+}
+.set-meta {
+  align-self: flex-start;
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 32px 32px;
+  align-items: center;
+  line-height: 32px;
+}
+.container {
+  container-type: inline-size;
+}
+
+.rt-xl{
+  font-size: 7cqi;
+}
+.rt-lg{
+  font-size: 5.15cqi;
+}
+.rt-md{
+  font-size: 4cqi;
+}
+.rt-sm{
+  font-size: 4cqi;
+}
+.rt-xs{
+  font-size: 2cqi;
+}

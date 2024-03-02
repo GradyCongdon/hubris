@@ -1,7 +1,7 @@
 import { uniq } from "lodash";
 import { tabletojson } from "tabletojson";
 
-const shortToLong = {
+export const shortToLong = {
   SO: "Sol",
   KY: "Ky",
   MA: "May",
@@ -113,7 +113,7 @@ const fixSet = (set) => {
     const [_odds, _oddsFactor] = set["Odds"].split("%");
     const Odds = parseInt(_odds, 10) / 100;
     const OddsFactor = _oddsFactor.length;
-    const Change = parseFloat(set["Rating change"], 10);
+    const Change = parseFloat(set["Rating change"], 10) || 0;
     return {
       Date: date,
       _DateString,
