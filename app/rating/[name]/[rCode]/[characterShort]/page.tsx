@@ -27,7 +27,7 @@ const example = {
   GameCount: 1,
   RCode: "2EC3DCA33129F30",
   Name: "oval",
-  Outcome: 1
+  Outcome: 1,
 };
 
 const blocks = " ▁▂▃▄▅▆▇█".split("");
@@ -62,18 +62,18 @@ const rgbScale = (value: number, min: number, max: number, opacity = 1) => {
 const heckCode = "2EC3DCA33129F30";
 
 export async function generateMetadata({
-  params
+  params,
 }: {
   params: { name: string; rCode: string; characterShort: string };
 }) {
   return {
     title: `${params.name} - ${params.rCode} - ${params.characterShort}`,
-    description: `Rating history for ${params.name} in Guilty Gear Strive`
+    description: `Rating history for ${params.name} in Guilty Gear Strive`,
   };
 }
 
 export default async function Page({
-  params
+  params,
 }: {
   params: { name: string; rCode: string; characterShort: string };
 }) {
@@ -122,7 +122,7 @@ export default async function Page({
       <div
         className="border-t overflow-hidden"
         style={{
-          maxHeight: maxHeight + "px"
+          maxHeight: maxHeight + "px",
         }}
       >
         {sets.map((s: any) => {
@@ -139,7 +139,7 @@ export default async function Page({
                 display: "inline-block",
                 minHeight: maxHeight + "px",
                 width: "8px",
-                position: "relative"
+                position: "relative",
               }}
               data-percent={Math.round(winPercent)}
               // onClick={() => (window.location.hash = s.Date)}
@@ -152,7 +152,7 @@ export default async function Page({
                   width: "7.25px",
                   position: "absolute",
                   bottom: displace + "px",
-                  backgroundColor: "var(--accent-color)"
+                  backgroundColor: "var(--accent-color)",
                 }}
               ></span>
             </span>
@@ -183,7 +183,7 @@ export default async function Page({
               day: "numeric",
               hour: "numeric",
               minute: "numeric",
-              hour12: true
+              hour12: true,
             })
             .replace(",", "");
           const isLongName =
@@ -208,7 +208,7 @@ export default async function Page({
                     bottom: 0,
                     // height: "8px",
                     zIndex: 100,
-                    background: rgbScale(s.Change, s.Error / -6, s.Error / 6)
+                    background: rgbScale(s.Change, s.Error / -6, s.Error / 6),
                     // color: changeAbsolute < 1 ? "currentColor" : "white"
                   }}
                 ></div>
@@ -235,7 +235,7 @@ export default async function Page({
                 <div className="container border-r rt-xl text-center">
                   {record}
                 </div>
-                <div className="border-b border-r">
+                <div className="">
                   <div className="container rt-md text-center">{timestamp}</div>
                 </div>
               </div>
