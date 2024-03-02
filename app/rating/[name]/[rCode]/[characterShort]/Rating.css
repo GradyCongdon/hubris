@@ -62,21 +62,23 @@
 .player-meta {
   display: grid ;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 42px;
+  grid-template-rows: 36px;
   justify-content: center;
+  align-items: center;
 }
 .character-meta {
   display: grid ;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 42px;
+  grid-template-rows: 36px;
   justify-content: center;
+  align-items: center;
 }
 .set {
   display: grid;
   grid-template-columns: 1.8fr 1.5fr 1.8fr 5fr;
-  height: 64px;
+  height: 60px;
   align-items: baseline;
-  line-height: 64px;
+  line-height: 60px;
   gap:1px;
   transition: transform 0.5s;
 }
@@ -100,10 +102,10 @@
   font-size: 7cqi;
 }
 .rt-lg{
-  font-size: 5.15cqi;
+  font-size: 6cqi;
 }
 .rt-md{
-  font-size: 4cqi;
+  font-size: 5cqi;
 }
 .rt-sm{
   font-size: 4cqi;

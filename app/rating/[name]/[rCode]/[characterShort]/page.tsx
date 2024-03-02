@@ -100,7 +100,12 @@ export default async function Page({
       </h1>
       <div className="container player-meta divide-x border-t">
         <h2 className="rt-md text-left pl-2">{rCode}</h2>
-        <h2 className="rt-md text-right pr-2 theme-invert">{name}</h2>
+        <div
+          className="pr-2 theme-invert min-h-full flex align-middle justify-end"
+          style={{ alignItems: "center" }}
+        >
+          <h2 className="rt-md text-right align-middle">{name}</h2>
+        </div>
       </div>
       <div className="container player-meta divide-x border-t">
         <h2 className="rt-md pl-2 flex justify-between">
@@ -183,10 +188,10 @@ export default async function Page({
               id={s.Date}
               className="set border-b divide-x mono-300"
             >
-              <div className="container rating rt-lg text-center">
+              <div className="container rating rt-md text-center">
                 {pRating}
               </div>
-              <div className="container change rt-md text-center relative">
+              <div className="container change rt-sm text-center relative">
                 <div
                   className="change-bg"
                   style={{
@@ -208,14 +213,12 @@ export default async function Page({
                   {change}
                 </span>
               </div>
-              <div className="container rating rt-lg text-center">
+              <div className="container rating rt-md text-center">
                 {oRating}
               </div>
               <div className="container set-meta">
                 <div className="border-b border-r">
-                  <div className="container pl-1 rt-md text-center">
-                    {timestamp}
-                  </div>
+                  <div className="container rt-md text-center">{timestamp}</div>
                 </div>
                 <div className="border-b">
                   <div
