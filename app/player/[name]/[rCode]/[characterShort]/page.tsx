@@ -28,7 +28,7 @@ export default async function Page({
   const { name: _name, rCode, characterShort } = params;
   const name = decodeURIComponent(_name);
   const sets = await getCharacterSets(rCode, characterShort, cached);
-  const rating = sets[0].Rating;
+  const rating = Math.round(sets[0].Rating + sets[0].Change);
   const error = sets[0].Error;
   const gameCount = sets.reduce(
     (acc: { wins: any; losses: any }, s: { Wins: any; Losses: any }) => {

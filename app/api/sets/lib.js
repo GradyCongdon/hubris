@@ -47,9 +47,9 @@ const fetchHistory = async (rCode, characterShort) => {
     urls.map(async (url) => {
       console.log("fetching", url);
       const offset = parseInt(url.split("offset=")[1], 10);
-      const revalidate = offset == 0 ? 30 : 60 * 60 * 24 * (offset / 100);
-      const resp = await fetch(url, { next: { revalidate} });
-    
+      const revalidate = offset == 0 ? 0 : 60 * 60 * 24 * (offset / 100);
+      const resp = await fetch(url, { next: { revalidate } });
+
       const text = await resp.text();
       const slug = url.replace('http://ratingupdate.info/player/', '').replace('/history?offset=', '-').padEnd(22, ' ');
       const tables = tabletojson.convert(text);
@@ -220,17 +220,17 @@ export const getPlayerData = async (rCode, characterShort) => {
   // const regex = /<p class="title">\s+(?<vip><span class="tag is-warning is-medium">VIP<\/span>)?\s+(?<name>.*?)\s+<span class="tag is-medium"><\/span>/;
   const regex = /<title>(?<title>.*?)<\/title>/;
   try {
-  const match = text.match(regex);
-  const title = match.groups.title;
-  const [name, other] = title.split(" (");
-  const character = other.split(")")[0];
-  const data = {
-    name,
-    characterShort,
-    character,
-    rCode,
-  };
-  return data;
+    const match = text.match(regex);
+    const title = match.groups.title;
+    const [name, other] = title.split(" (");
+    const character = other.split(")")[0];
+    const data = {
+      name,
+      characterShort,
+      character,
+      rCode,
+    };
+    return data;
   } catch (e) {
     console.log(e);
     return {
