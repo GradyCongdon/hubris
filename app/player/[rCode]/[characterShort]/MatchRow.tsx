@@ -1,5 +1,5 @@
 import { rgbScale } from "@/app/player/utils";
-import { Match as MatchType } from "./types";
+import { Match as MatchType } from "../../../types";
 
 type Props = {
   id: string;

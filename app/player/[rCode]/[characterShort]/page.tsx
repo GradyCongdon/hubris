@@ -6,7 +6,8 @@ import {
 import { Bar, formatBar } from "./Bar";
 import { MatchRow, formatMatch } from "./MatchRow";
 import "./Rating.css";
-import { Match } from "./types";
+import { Match } from "../../../types";
+import { Session } from "./Session";
 
 const _heckCode = "2EC3DCA33129F30";
 const cached = false;
@@ -14,13 +15,19 @@ const cached = false;
 export async function generateMetadata({
   params
 }: {
-  params: { name: string; rCode: string; characterShort: string };
+  params: { rCode: string; characterShort: string };
 }) {
+  const player = await getPlayerData(params.rCode, params.characterShort);
+  if ("error" in player) {
+    return {
+      title: "Error",
+      description: "Error"
+    };
+  }
+  const { name } = player;
   return {
-    title: `${decodeURIComponent(params.name)} - ${params.rCode} - ${
-      params.characterShort
-    }`,
-    description: `Rating history for ${params.name} in Guilty Gear Strive`
+    title: `${name} - ${params.rCode} - ${params.characterShort}`,
+    description: `Rating history for ${name} in Guilty Gear Strive`
   };
 }
 
@@ -83,9 +90,10 @@ export default async function Page({
           return <Bar key={props.id} {...props} />;
         })}
       </div>
+      <Session />
 
       <section className="">
-        {sets.map((s: Match) => {
+        {sets.slice(0, 100).map((s: Match) => {
           const props = formatMatch(s);
           return <MatchRow key={props.id} {...props} />;
         })}

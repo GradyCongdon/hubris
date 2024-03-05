@@ -1,4 +1,4 @@
-import { Match } from "./types";
+import { Match } from "../../../types";
 
 export const formatBar = (s: Match) => {
   const wins = s.Wins;
@@ -11,7 +11,7 @@ export const formatBar = (s: Match) => {
     id: s.Date,
     height,
     displace,
-    winPercent,
+    winPercent
   };
 };
 
@@ -28,7 +28,7 @@ export const Bar = ({ id, height, displace, winPercent }: Props) => (
       display: "inline-block",
       minHeight: "var(--bar-height)",
       width: "var(--bar-container-width)",
-      position: "relative",
+      position: "relative"
     }}
     data-percent={Math.round(winPercent)}
   >
@@ -40,7 +40,7 @@ export const Bar = ({ id, height, displace, winPercent }: Props) => (
         width: "var(--bar-width)",
         position: "absolute",
         bottom: displace,
-        backgroundColor: "var(--accent-color)",
+        backgroundColor: "var(--accent-color)"
       }}
     ></span>
   </span>
