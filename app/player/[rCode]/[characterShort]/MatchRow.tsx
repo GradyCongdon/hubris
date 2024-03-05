@@ -31,7 +31,7 @@ export const formatMatch = (s: MatchType): Props => {
       day: "numeric",
       hour: "numeric",
       minute: "numeric",
-      hour12: true,
+      hour12: true
     })
     .replace(",", "");
   const isLongName = s.OpponentName.length + s.OpponentCharacter.length > 21;
@@ -47,7 +47,7 @@ export const formatMatch = (s: MatchType): Props => {
     opponent,
     record,
     timestamp,
-    rgb,
+    rgb
   };
 };
 
@@ -59,9 +59,9 @@ export const MatchRow = ({
   opponent,
   record,
   timestamp,
-  rgb,
+  rgb
 }: Props) => (
-  <div id={id} className="set border-b divide-x mono-300">
+  <div id={id} className="set border-b mono-300">
     <div className="container rating rt-md text-center">{pRating}</div>
     <div className="container change rt-sm text-center relative">
       <div
@@ -69,11 +69,11 @@ export const MatchRow = ({
         style={{
           position: "absolute",
           top: 0,
-          left: "-1px",
-          right: "-1px",
+          left: 0,
+          right: 0,
           bottom: 0,
           zIndex: 100,
-          background: rgb,
+          background: rgb
         }}
       ></div>
       <span
@@ -84,7 +84,7 @@ export const MatchRow = ({
       </span>
     </div>
     <div className="container rating rt-md text-center">{oRating}</div>
-    <div className="container set-meta">
+    <div className="container set-meta border-l">
       <div className="border-b opponent-name">
         <div className={`container pl-1 theme-invert overflow-hidden rt-lg`}>
           {opponent}

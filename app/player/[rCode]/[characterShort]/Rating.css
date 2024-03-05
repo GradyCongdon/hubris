@@ -1,10 +1,10 @@
 :root {
-  --player-grid-height: 48px;
-  --set-grid-height: 64px;
-  --set-grid-height-2: 32px;
-  --bar-height: 42px;
-  --bar-container-width: 8px;
-  --bar-width: 7.5px;
+  --player-grid-height: 64px;
+  --set-grid-height: 72px;
+  --set-grid-height-2: 36px;
+  --bar-height: 48px;
+  --bar-container-width: 12px;
+  --bar-width: 11px;
 }
 @media screen and (min-width: 768px) {
   :root {

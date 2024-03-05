@@ -1,4 +1,8 @@
-import { getCharacterSets, shortToLong } from "@/app/api/sets/lib";
+import {
+  getCharacterSets,
+  getPlayerData,
+  shortToLong
+} from "@/app/api/sets/lib";
 import { Bar, formatBar } from "./Bar";
 import { MatchRow, formatMatch } from "./MatchRow";
 import "./Rating.css";
@@ -8,7 +12,7 @@ const _heckCode = "2EC3DCA33129F30";
 const cached = false;
 
 export async function generateMetadata({
-  params,
+  params
 }: {
   params: { name: string; rCode: string; characterShort: string };
 }) {
@@ -16,18 +20,24 @@ export async function generateMetadata({
     title: `${decodeURIComponent(params.name)} - ${params.rCode} - ${
       params.characterShort
     }`,
-    description: `Rating history for ${params.name} in Guilty Gear Strive`,
+    description: `Rating history for ${params.name} in Guilty Gear Strive`
   };
 }
 
 export default async function Page({
-  params,
+  params
 }: {
-  params: { name: string; rCode: string; characterShort: string };
+  params: { rCode: string; characterShort: string };
 }) {
-  const { name: _name, rCode, characterShort } = params;
-  const name = decodeURIComponent(_name);
-  const sets = await getCharacterSets(rCode, characterShort, cached);
+  const { rCode, characterShort } = params;
+  const [player, sets] = await Promise.all([
+    getPlayerData(rCode, characterShort),
+    getCharacterSets(rCode, characterShort, cached)
+  ]);
+  if ("error" in player) {
+    return <div>{player.error}</div>;
+  }
+  const name = player.name;
   const rating = Math.round(sets[0].Rating + sets[0].Change);
   const error = sets[0].Error;
   const gameCount = sets.reduce(
