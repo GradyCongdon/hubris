@@ -31,7 +31,7 @@ export const convertFromAPI = (
   };
   // TODO
   const rating = {
-    value: _matches[0].Rating + _matches[0].Change,
+    value: Math.round(_matches[0].Rating + _matches[0].Change),
     error: _matches[0].Error,
   };
   const matches = _matches.map((match: APIMatch) => {

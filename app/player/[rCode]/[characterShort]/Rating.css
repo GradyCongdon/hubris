@@ -9,8 +9,8 @@
 @media screen and (min-width: 768px) {
   :root {
     --player-grid-height: 64px;
-    --set-grid-height: 72px;
-    --set-grid-height-2: 36px;
+    --set-grid-height: 86px;
+    --set-grid-height-2: 43px;
   }
 }
 * {
@@ -24,9 +24,6 @@
   line-height: var(--player-grid-height);
   justify-content: center;
   align-items: center;
-  /* FIXME - required to allign center columns between meta and sets*/
-  margin-left: 4px;
-  margin-right: 4px;
 }
 .bars {
   height: var(--bar-height);
@@ -88,7 +85,10 @@
   font-size: 2cqi;
 }
 .rt-rc {
-  font-size: 4.8cqi;
+  font-size: 4.75cqi;
+}
+.rt-op {
+  font-size: 6.5cqi;
 }
 /* decreased the rt class font sizes by 10% */
 @media screen and (min-width: 768px) {
@@ -106,6 +106,9 @@
   }
   .rt-xs {
     font-size: 1.2cqi;
+  }
+  .rt-op {
+    font-size: 6.25cqi;
   }
 }
 

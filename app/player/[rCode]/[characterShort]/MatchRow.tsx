@@ -5,7 +5,7 @@ export const formatMatch = (match: Match): Props => {
   const { value: rating, error, change } = match.rating;
 
   const isNegative = change < 0;
-  const isDecimal = rating.toString().match(/\./);
+  const isDecimal = change.toString().match(/\./);
   const changeAbsolute = Math.abs(change);
   const isLarge = changeAbsolute >= 100;
   let changeFormatted = `${isNegative ? "" : "+"}${change}${
@@ -91,7 +91,7 @@ export const MatchRow = ({
     <div className="container rating rt-md text-center">{opponentRating}</div>
     <div className="container set-meta border-l">
       <div className="border-b opponent-name">
-        <div className={`container pl-1 theme-invert overflow-hidden rt-lg`}>
+        <div className={`container pl-1 theme-invert overflow-hidden rt-op`}>
           {opponentName}
         </div>
       </div>

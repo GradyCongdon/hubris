@@ -41,7 +41,7 @@ export default async function Page({
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
         <Player {...data} />
         <BarChart matches={data.matches} />
-        <Session />
+        {/* <Session /> */}
         <Matches matches={data.matches} />
       </main>
     );
