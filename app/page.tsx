@@ -25,7 +25,7 @@ export default function Home() {
           <kbd>
             <a
               className="text-sm lg:text-lg underline"
-              href="/player/UMISHO/2EC3DC4435865B9/SO"
+              href="/player/2EC3DC4435865B9/SO"
             >
               UMISHO - /player/2EC3DC4435865B9/SO
             </a>
@@ -35,7 +35,7 @@ export default function Home() {
           <kbd>
             <a
               className="underline text-sm lg:text-lg"
-              href="/player/heckscape/2EC3DCA33129F30/KY"
+              href="/player/2EC3DCA33129F30/KY"
             >
               me - /player/2EC3DCA33129F30/KY
             </a>
