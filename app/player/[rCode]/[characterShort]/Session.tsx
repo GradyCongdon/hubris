@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { LiveFeed } from "./LiveFeed";
-import "./Progress.css";
 
 const Button = ({
   active,
-  setActive
+  setActive,
 }: {
   active: boolean;
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -24,26 +23,6 @@ const Button = ({
         {text}
       </button>
     </div>
-  );
-};
-
-const Progress = ({
-  active,
-  percent
-}: {
-  active: boolean;
-  percent: number;
-}) => {
-  return (
-    <svg
-      width="250"
-      height="250"
-      viewBox="0 0 250 250"
-      className="circular-progress"
-    >
-      <circle className="bg"></circle>
-      <circle className="fg"></circle>
-    </svg>
   );
 };
 

@@ -1,29 +1,21 @@
 import { rgbScale } from "@/app/player/utils";
-import { Match as MatchType } from "../../../types";
+import { Match } from "@/app/types";
 
-type Props = {
-  id: string;
-  pRating: number;
-  oRating: number;
-  change: string;
-  opponent: string;
-  record: string;
-  timestamp: string;
-  rgb: string;
-};
+export const formatMatch = (match: Match): Props => {
+  const { value: rating, error, change } = match.rating;
 
-export const formatMatch = (s: MatchType): Props => {
-  const pRating = s.Rating;
-  const oRating = s.OpponentRating;
-  const isNegative = s.Change < 0;
-  const isDecimal = s.Change.toString().match(/\./);
-  const changeAbsolute = Math.abs(s.Change);
+  const isNegative = change < 0;
+  const isDecimal = rating.toString().match(/\./);
+  const changeAbsolute = Math.abs(change);
   const isLarge = changeAbsolute >= 100;
-  const _change = `${isNegative ? "" : "+"}${s.Change}${isDecimal ? "" : ".0"}`;
-  const change = isLarge ? _change.split(".")[0] : _change;
-  const rgb = rgbScale(s.Change, s.Error / -6, s.Error / 6);
-  const record = `${s.Wins} - ${s.Losses}`;
-  const _date = new Date(s.Date).getTime();
+  let changeFormatted = `${isNegative ? "" : "+"}${change}${
+    isDecimal ? "" : ".0"
+  }`;
+  changeFormatted = isLarge ? changeFormatted.split(".")[0] : changeFormatted;
+
+  const rgb = rgbScale(change, error / -6, error / 6);
+  const record = `${match.record.wins} - ${match.record.losses}`;
+  const _date = match.timePeriod.date.getTime();
   const date = new Date(_date - new Date().getTimezoneOffset() * 60000);
   const timestamp = date
     .toLocaleString("en-US", {
@@ -31,38 +23,51 @@ export const formatMatch = (s: MatchType): Props => {
       day: "numeric",
       hour: "numeric",
       minute: "numeric",
-      hour12: true
+      hour12: true,
     })
     .replace(",", "");
-  const isLongName = s.OpponentName.length + s.OpponentCharacter.length > 21;
-  const opponent = isLongName
-    ? `${s.OpponentName} (${s.OpponentCharacterShort})`
-    : `${s.OpponentName} (${s.OpponentCharacter})`;
+  const { name: oName } = match.opponent.player;
+  const { name: oCharacter, shortCode: oShortCode } = match.opponent.character;
+  const isLongName = oName.length + oCharacter.length > 21;
+  const opponentName = isLongName
+    ? `${oName} (${oShortCode})`
+    : `${oName} (${oCharacter})`;
+  const oRating = match.opponent.rating.value;
 
   return {
-    id: s._DateString,
-    pRating,
-    oRating,
-    change,
-    opponent,
-    record,
+    id: match.id,
+    playerRating: rating,
+    change: changeFormatted,
+    opponentRating: oRating,
+    opponentName: opponentName,
+    record: record,
     timestamp,
-    rgb
+    rgb,
   };
 };
 
+type Props = {
+  id: string;
+  playerRating: number;
+  change: string;
+  opponentRating: number;
+  opponentName: string;
+  record: string;
+  timestamp: string;
+  rgb: string;
+};
 export const MatchRow = ({
   id,
-  pRating,
-  oRating,
+  playerRating,
   change,
-  opponent,
+  opponentRating,
+  opponentName,
   record,
   timestamp,
-  rgb
+  rgb,
 }: Props) => (
   <div id={id} className="set border-b mono-300">
-    <div className="container rating rt-md text-center">{pRating}</div>
+    <div className="container rating rt-md text-center">{playerRating}</div>
     <div className="container change rt-sm text-center relative">
       <div
         className="change-bg"
@@ -73,7 +78,7 @@ export const MatchRow = ({
           right: 0,
           bottom: 0,
           zIndex: 100,
-          background: rgb
+          background: rgb,
         }}
       ></div>
       <span
@@ -83,11 +88,11 @@ export const MatchRow = ({
         {change}
       </span>
     </div>
-    <div className="container rating rt-md text-center">{oRating}</div>
+    <div className="container rating rt-md text-center">{opponentRating}</div>
     <div className="container set-meta border-l">
       <div className="border-b opponent-name">
         <div className={`container pl-1 theme-invert overflow-hidden rt-lg`}>
-          {opponent}
+          {opponentName}
         </div>
       </div>
       <div className="container border-r rt-xl text-center">{record}</div>

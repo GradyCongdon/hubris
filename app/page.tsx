@@ -7,7 +7,7 @@ export default function Home() {
         <br />
         <br />
         <kbd className="text-xs md:text-md lg:text-lg">
-          /player/&lt;name&gt;/&lt;r-code&gt;/&lt;character-short-code&gt;
+          /player/&lt;r-code&gt;/&lt;character-short-code&gt;
         </kbd>
       </p>
       <br />
@@ -27,7 +27,7 @@ export default function Home() {
               className="text-sm lg:text-lg underline"
               href="/player/UMISHO/2EC3DC4435865B9/SO"
             >
-              /player/UMISHO/2EC3DC4435865B9/SO
+              UMISHO - /player/2EC3DC4435865B9/SO
             </a>
           </kbd>
         </li>
@@ -37,7 +37,7 @@ export default function Home() {
               className="underline text-sm lg:text-lg"
               href="/player/heckscape/2EC3DCA33129F30/KY"
             >
-              /player/heckscape/2EC3DCA33129F30/KY
+              me - /player/2EC3DCA33129F30/KY
             </a>
           </kbd>
         </li>

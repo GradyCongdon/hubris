@@ -1,30 +1,30 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { Match } from "@/app/types";
 import { MatchRow, formatMatch } from "./MatchRow";
-import { getSet } from "@/app/api/sets/fake";
+import { FAKE_getPlayerMatch } from "@/app/api/sets/fake";
+import { Match } from "@/app/types";
 
 type Props = {
   active: boolean;
 };
 
 export const LiveFeed = ({ active }: Props) => {
-  const [sets, setSets] = useState<Match[]>([]);
+  const [matches, setMatches] = useState<Match[]>([]);
   useEffect(() => {
     if (!active) return;
     const interval = setInterval(() => {
-      const _set = getSet();
-      setSets((prev) => {
-        return [_set, ...prev];
+      const fakeMatch = FAKE_getPlayerMatch();
+      setMatches((prev) => {
+        return [fakeMatch.matches[0], ...prev];
       });
     }, 2000);
     return () => clearInterval(interval);
   }, [active]);
   return (
     <section>
-      {sets.map((s: Match) => {
-        const props = formatMatch(s);
+      {matches.map((match: Match) => {
+        const props = formatMatch(match);
         return <MatchRow key={props.id} {...props} />;
       })}
     </section>

@@ -31,12 +31,13 @@ export const shortToLong = {
   EL: "Elphelt",
 };
 
-export const longToShort = Object.entries(shortToLong).reduce((acc, [k, v]) => {
+export const longToShort: { [key: string]: string } = Object.entries(shortToLong).reduce((acc, [k, v]) => {
+  // @ts-ignore
   acc[v] = k;
   return acc;
 }, {});
 
-const fetchHistory = async (rCode, characterShort) => {
+const fetchHistory = async (rCode: string, characterShort: string) => {
   const urlTemplate = `http://ratingupdate.info/player/${rCode}/${characterShort}/history`;
   const urls = [0, 100, 200, 300, 400, 500].map(
     (o) => `${urlTemplate}?offset=${o}`
@@ -64,35 +65,35 @@ const fetchHistory = async (rCode, characterShort) => {
     })
   );
   const allSets = allSetsOffsets.flat(Infinity);
-  const unique = uniq(allSets, (x) => x["Date"]);
+  const unique = uniq(allSets);
   const sets = unique.map((set) => {
     const opponentCharacter = set["Character"];
     set["OpponentCharacter"] = opponentCharacter;
-    set["Character"] = shortToLong[characterShort];
+    set["Character"] = shortToLong[characterShort as keyof typeof shortToLong];
     return set;
   });
   const fileName = `${rCode}-${characterShort}.ru.json`;
-  // fs.writeFileSync(fileName, JSON.stringify(sets));
   return sets;
 };
 
-const fixDate = (str) => {
+const fixDate = (str: string) => {
   const [day, time] = str.split(" ");
   const [_hour, min, sec] = time.split(":");
   const hour = _hour.length == 1 ? "0" + _hour : _hour;
   return `${day} ${[hour, min, "00"].join(":")}`;
 };
 
-const getRating = (str) => {
+const getRating = (str: string) => {
   try {
     const [rating, error] = str.split(" ±");
     return [rating, error].map((x) => parseInt(x, 10));
   } catch (e) {
     console.error("Cannot parse Rating", str);
-    throw new Error(e);
+    throw new Error('Cannot parse Rating');
   }
 };
 
+/* @ts-ignore */
 const fixSet = (set) => {
   try {
     const _Date = set["Date"];
@@ -106,7 +107,7 @@ const fixSet = (set) => {
     const Rating1500 = Rating - 1500;
     const [Wins, Losses] = set["Result"]
       .split(" - ")
-      .map((x) => parseInt(x, 10));
+      .map((x: string) => parseInt(x, 10));
     const _opponentRating = set["Rating_2"];
     const [OpponentRating, OpponentError] = getRating(_opponentRating);
     const opponent = set["Opponent"];
@@ -117,7 +118,7 @@ const fixSet = (set) => {
     const [_odds, _oddsFactor] = set["Odds"].split("%");
     const Odds = parseInt(_odds, 10) / 100;
     const OddsFactor = _oddsFactor.length;
-    const Change = parseFloat(set["Rating change"], 10) || 0;
+    const Change = parseFloat(set["Rating change"]) || 0;
     return {
       Date: date,
       _DateString,
@@ -148,7 +149,9 @@ const fixSet = (set) => {
   }
 };
 
-const fixSheet = (data) => {
+type MatchTODO = any;
+const fixSheet = (data: MatchTODO) => {
+  // @ts-ignore
   const gameCount = data.reduce((acc, v) => {
     const char = v["Character"];
     const date = v["Date"];
@@ -161,7 +164,7 @@ const fixSheet = (data) => {
     acc[char][date] = acc[char].count;
     return acc;
   }, {});
-  const getGameCount = (row) => {
+  const getGameCount = (row: MatchTODO) => {
     try {
       const char = row["Character"];
       const date = row["_Date"];
@@ -172,18 +175,19 @@ const fixSheet = (data) => {
     }
   };
   const cleaned = data
-    .map((x) => {
+    .map((x: MatchTODO) => {
       const clean = fixSet(x);
       if (!clean) return;
+      // @ts-ignore
       clean["GameCount"] = getGameCount(clean);
       return clean;
     })
-    .filter((x) => x);
+    .filter((x: any) => x);
   return cleaned;
 };
 
-export const getAllSets = async (rCode) => {
-  const all = [];
+export const getAllSets = async (rCode: string) => {
+  const all: MatchTODO[] = [];
   const chars = Object.keys(shortToLong).map(async (short) => {
     console.log(`downloading ${rCode}...`);
     const sets = await fetchHistory(rCode, short);
@@ -196,8 +200,8 @@ export const getAllSets = async (rCode) => {
 };
 
 export const getCharacterSets = async (
-  rCode,
-  characterShort,
+  rCode: string,
+  characterShort: string,
   cached = false
 ) => {
   if (cached) {
@@ -211,7 +215,7 @@ export const getCharacterSets = async (
 // search
 // http://ratingupdate.info/api/player_lookup?name=glue%20eater
 
-export const getPlayerData = async (rCode, characterShort) => {
+export const getPlayerData = async (rCode: string, characterShort: string) => {
   const url = `http://ratingupdate.info/player/${rCode}/${characterShort}`;
   const resp = await fetch(url);
   const text = await resp.text();
@@ -219,6 +223,7 @@ export const getPlayerData = async (rCode, characterShort) => {
   const regex = /<title>(?<title>.*?)<\/title>/;
   try {
     const match = text.match(regex);
+    if (!match || !match.groups) throw new Error("No Player match from regex");
     const title = match.groups.title;
     const [name, other] = title.split(" (");
     const character = other.split(")")[0];
@@ -233,7 +238,7 @@ export const getPlayerData = async (rCode, characterShort) => {
     console.log(e);
     return {
       text: text,
-      error: e.message,
+      error: (e as Error).message,
     };
   }
 };

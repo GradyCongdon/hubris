@@ -11,6 +11,7 @@
   "dependencies": {
     "lodash": "^4.17.21",
     "next": "14.1.0",
+    "pratica": "^2.2.0",
     "react": "^18",
     "react-dom": "^18",
     "tabletojson": "^4.1.0"
