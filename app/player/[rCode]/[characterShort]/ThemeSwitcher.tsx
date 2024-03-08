@@ -4,7 +4,7 @@ import moon from "@/public/moon.png";
 
 type Props = {
   theme: string | null;
-  setTheme: React.Dispatch<React.SetStateAction<string | null>>;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const SIZE = 24;
