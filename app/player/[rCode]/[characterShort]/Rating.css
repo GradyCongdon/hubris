@@ -115,42 +115,6 @@
     font-size: 6.25cqi;
   }
 }
-
-.theme {
-  background-color: var(--bg);
-  color: var(--color);
-}
-.theme-invert {
-  color: var(--bg);
-  background-color: var(--color);
-}
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: white;
-    --color: blue;
-    --border-color: rgb(192, 200, 255);
-    --accent-color: rgb(132, 132, 255);
-    --accent-color: blue;
-  }
-  @supports (color: color(display-p3 1 1 1)) {
-    :root {
-      --color: color(display-p3 0 0.207 1);
-    }
-  }
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: rgb(26, 26, 26);
-    --color: rgb(201, 201, 201);
-    --border-color: rgb(48, 48, 48);
-    --accent-color: rgb(167, 239, 0);
-  }
-  @supports (color: color(display-p3 1 1 1)) {
-    :root {
-      --accent-color: color(display-p3 0.694 1 0);
-    }
-  }
-  .change-bg {
-    filter: contrast(0.7) brightness(0.6);
-  }
+.theme-switch{
+  animation: fade-in 1s;
 }

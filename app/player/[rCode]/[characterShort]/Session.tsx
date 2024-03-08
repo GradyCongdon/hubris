@@ -1,23 +1,43 @@
 "use client";
 
+import { useCallback, useState } from "react";
+import { useAnimationFrame } from "./useAnimationFrame";
+import { POLLING_INTERVAL } from "./consts";
+
 type Props = {
   active: boolean;
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
-  timer: number;
+  nextPollMs: number;
+  setNextPollMs: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const TIME = 600;
-const Button = ({ active, setActive, timer }: Props) => {
-  const bg = active ? "bg-red-200" : "bg-green-300";
+const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
   const height = active ? "h-10" : "h-20";
-  const text = active ? "Stop Session" : "Start Session";
-  const percent = ((TIME - timer) / TIME) * 100;
+  const text = active ? "End Session" : "Start Session";
+  const [percent, setPercent] = useState(0);
+  const transition = percent === 0 || percent > 100 ? "width 0.3s" : "none";
+  useAnimationFrame(() => {
+    if (!active) return;
+    const elapsed = nextPollMs - Date.now();
+    const percent = ((POLLING_INTERVAL - elapsed) / POLLING_INTERVAL) * 100;
+    setPercent(percent);
+  });
+  const onClick = useCallback(() => {
+    setActive(!active);
+    setNextPollMs(Date.now() + POLLING_INTERVAL);
+    // FIXME
+    setPercent(0);
+  }, [active, setActive, setNextPollMs]);
   return (
     <div className="container text-center session relative ">
       <button
-        className={`${bg} ${height} text-black w-full`}
-        style={{ transition: "all 0.3s" }}
-        onClick={() => setActive(!active)}
+        className={`${height} text-black w-full`}
+        style={{
+          backgroundColor: active ? "var(--bg)" : "var(--accent-color)",
+          transition: "all 0.3s",
+          color: active ? "var(--color)" : "var(--accent-text)",
+        }}
+        onClick={onClick}
       >
         {text}
       </button>
@@ -27,40 +47,49 @@ const Button = ({ active, setActive, timer }: Props) => {
           bottom: 0,
           top: 0,
           left: 0,
-          backgroundColor: "black",
+          backgroundColor: "var(--accent-color)",
           position: "absolute",
-          opacity: 0.2,
+          opacity: 0.7,
           pointerEvents: "none",
-          transition: "width 0.3s",
+          transition,
         }}
       ></div>
     </div>
   );
 };
 
-export const Session = ({ active, setActive, timer }: Props) => {
+export const Session = ({
+  active,
+  setActive,
+  nextPollMs,
+  setNextPollMs,
+}: Props) => {
   return (
     <>
-      <Button active={active} setActive={setActive} timer={timer} />
-      {/* <LiveFeed active={active} /> */}
+      <Button
+        active={active}
+        setActive={setActive}
+        nextPollMs={nextPollMs}
+        setNextPollMs={setNextPollMs}
+      />
     </>
   );
 };
 
 export const SessionSkeleton = () => {
   const active = false;
-  const bg = active ? "bg-red-200" : "bg-green-300";
   const height = active ? "h-10" : "h-20";
   const text = active ? "" : "";
   const percent = 0;
   return (
-    <div
-      className="container text-center session relative"
-      data-active={{ active }}
-    >
+    <div className="container text-center session relative ">
       <button
-        className={`${bg} ${height} text-black w-full`}
-        style={{ transition: "all 0.3s" }}
+        className={`${height} text-black w-full`}
+        style={{
+          backgroundColor: active ? "var(--bg)" : "var(--accent-color)",
+          transition: "all 0.3s",
+          color: active ? "var(--color)" : "var(--accent-text)",
+        }}
       >
         {text}
       </button>
@@ -70,11 +99,10 @@ export const SessionSkeleton = () => {
           bottom: 0,
           top: 0,
           left: 0,
-          backgroundColor: "black",
+          backgroundColor: "white",
           position: "absolute",
           opacity: 0.2,
           pointerEvents: "none",
-          transition: "width 0.3s",
         }}
       ></div>
     </div>

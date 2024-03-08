@@ -46,7 +46,7 @@ export const Bar = ({ id, height, displace, value }: Props) => (
 export const BarChart = ({ matches }: { matches: Match[] }) => {
   return (
     <div className="bars border-t overflow-hidden">
-      {matches.map((match: Match) => {
+      {matches.slice(0, 65).map((match: Match) => {
         const bar = formatBar(match);
         return <Bar key={match.id} {...bar} />;
       })}

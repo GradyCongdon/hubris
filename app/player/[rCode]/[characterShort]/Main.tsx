@@ -6,23 +6,34 @@ import { BarChart, BarChartSkeleton } from "./BarChart";
 import { Matches, MatchesSkeleton } from "./Matches";
 import { useEffect, useState } from "react";
 import { PlayerPage } from "@/app/types";
+import { POLLING_INTERVAL, MATCH_LIMIT } from "./consts";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
-const TIME = 600;
 export default function Main({
   params,
 }: {
   params: { rCode: string; characterShort: string };
 }) {
   const { rCode, characterShort } = params;
+  const themeLocalStorage = localStorage.getItem("theme");
+  const [theme, setTheme] = useState(themeLocalStorage);
   const [data, setData] = useState<PlayerPage | null>(null);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState("init");
   const [active, setActive] = useState(false);
-  const [count, setCount] = useState(Infinity);
-  const [timer, setTimer] = useState(TIME);
+  const [nextPollMs, setNextPollMs] = useState(Date.now() + POLLING_INTERVAL);
+
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.classList.remove("theme-dark", "theme-light");
+      document.documentElement.classList.add("theme-" + theme);
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme]);
+
   useEffect(() => {
     setStatus("loading");
-    fetchPlayerPage(rCode, characterShort, count)
+    fetchPlayerPage(rCode, characterShort, MATCH_LIMIT)
       .then((data) => {
         setData(data);
         setStatus("resolved");
@@ -31,38 +42,38 @@ export default function Main({
         setError(e);
         setStatus("error");
       });
-  }, [rCode, characterShort, count]);
+  }, [rCode, characterShort]);
   useEffect(() => {
     if (active) {
       const interval = setInterval(() => {
-        setCount((prev) => prev + 1);
-        fetchPlayerPage(rCode, characterShort, count)
+        fetchPlayerPage(rCode, characterShort, MATCH_LIMIT)
           .then((data) => {
             setData(data);
-            setTimer(TIME);
+            setStatus("resolved");
           })
           .catch((e) => {
-            setError(e);
-            setTimer(TIME);
+            // skip showing error and keep polling
+            console.error(e);
+          })
+          .finally(() => {
+            setNextPollMs(Date.now() + POLLING_INTERVAL);
           });
-      }, 1000 * 60);
+      }, POLLING_INTERVAL);
       return () => clearInterval(interval);
     }
-  }, [active, characterShort, count, rCode]);
-  useEffect(() => {
-    if (active) {
-      const interval = setInterval(() => {
-        setTimer((prev) => prev - 1);
-      }, 100);
-      return () => clearInterval(interval);
-    }
-  }, [active]);
+  }, [active, characterShort, rCode]);
   if (error) {
-    return <div>{JSON.stringify(error)}</div>;
+    return (
+      <div>
+        <h1>error</h1>
+        <pre>{JSON.stringify(error, null, " ")}</pre>
+      </div>
+    );
   }
   if (status === "init" || status === "loading") {
     return (
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
+        <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <PlayerSkeleton />
         <BarChartSkeleton />
         <SessionSkeleton />
@@ -76,9 +87,15 @@ export default function Main({
   try {
     return (
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
+        <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <Player {...data} />
         <BarChart matches={data.matches} />
-        <Session active={active} setActive={setActive} timer={timer} />
+        <Session
+          active={active}
+          setActive={setActive}
+          nextPollMs={nextPollMs}
+          setNextPollMs={setNextPollMs}
+        />
         <Matches matches={data.matches} />
       </main>
     );
