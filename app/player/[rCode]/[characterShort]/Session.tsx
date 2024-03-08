@@ -39,7 +39,17 @@ const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
         }}
         onClick={onClick}
       >
-        {text}
+        <span
+          style={{
+            position: "relative",
+            background: active ? "var(--bg)" : "none",
+            padding: "0 .3rem",
+            transition: "all 0.3s",
+            zIndex: 102,
+          }}
+        >
+          {text}
+        </span>
       </button>
       <div
         style={{
@@ -49,7 +59,7 @@ const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
           left: 0,
           backgroundColor: "var(--accent-color)",
           position: "absolute",
-          opacity: 0.7,
+          // opacity: 0.7,
           pointerEvents: "none",
           transition,
         }}
