@@ -5,6 +5,7 @@
   --bar-height: 48px;
   --bar-container-width: 12px;
   --bar-width: 11px;
+  --session-height: 80px;
 }
 @media screen and (min-width: 768px) {
   :root {
@@ -67,6 +68,9 @@
 }
 .change .value {
   color: white;
+}
+.session[data-active="true"] {
+  height: var(--session-height);
 }
 
 .rt-xl {

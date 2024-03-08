@@ -43,3 +43,26 @@ export const Player = (props: PlayerPage) => {
     </>
   );
 };
+
+export const PlayerSkeleton = () => {
+  return (
+    <>
+      <h1 className={`text-full-width-2 mx-auto leading-none -mb-1`}>
+        <span style={{ opacity: 0 }}>2000</span>
+      </h1>
+      <div className="container player-meta divide-x border-t">
+        <h2 className="rt-rc text-left pl-2 md:pl-2"></h2>
+        <div
+          className="theme-invert flex align-middle justify-end pr-2 md:pr-2"
+          style={{ alignItems: "center", height: "100%" }}
+        >
+          <h2 className={`text-right align-middle `}></h2>
+        </div>
+      </div>
+      <div className="container player-meta divide-x border-t ">
+        <h1 className="rt-md pl-2 md:pl-2  flex justify-between"></h1>
+        <h2 className="rt-md text-right pr-2 md:pr-2"></h2>
+      </div>
+    </>
+  );
+};

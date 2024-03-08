@@ -1,5 +1,5 @@
 import { Match } from "@/app/types";
-import { formatMatch, MatchRow } from "./MatchRow";
+import { formatMatch, MatchRow, MatchRowSkeleton } from "./MatchRow";
 
 export const Matches = ({ matches }: { matches: Match[] }) => {
   const FIXME = matches
@@ -11,6 +11,18 @@ export const Matches = ({ matches }: { matches: Match[] }) => {
         const props = formatMatch(match);
         return <MatchRow key={props.id} {...props} />;
       })}
+    </section>
+  );
+};
+
+export const MatchesSkeleton = () => {
+  const matches = Array.from({ length: 15 }, (_, i) => i);
+
+  return (
+    <section className="">
+      {matches.map((match) => (
+        <MatchRowSkeleton key={match} />
+      ))}
     </section>
   );
 };

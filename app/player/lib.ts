@@ -1,7 +1,7 @@
 "use server";
 import type { APIMatch as APIMatch, APIPlayer, PlayerPage } from "@/app/types";
 import { getPlayerData, getCharacterSets } from "@/app/api/sets/lib";
-const cached = true;
+const cached = false;
 
 export const fetchPlayerPage = async (
   rCode: string,

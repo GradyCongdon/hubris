@@ -102,3 +102,39 @@ export const MatchRow = ({
     </div>
   </div>
 );
+
+export const MatchRowSkeleton = () => (
+  <div className="set border-b mono-300">
+    <div className="container rating rt-md text-center"></div>
+    <div className="container change rt-sm text-center relative">
+      <div
+        className="change-bg"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 100,
+        }}
+      ></div>
+      <span
+        className="value"
+        style={{ position: "relative", zIndex: 101, left: "-2px" }}
+      ></span>
+    </div>
+    <div className="container rating rt-md text-center"></div>
+    <div className="container set-meta border-l">
+      <div className="border-b opponent-name">
+        <div
+          className={`container pl-1 theme-invert overflow-hidden rt-op`}
+          style={{ minHeight: "var(--set-grid-height-2)" }}
+        ></div>
+      </div>
+      <div className="container border-r rt-xl text-center"></div>
+      <div className="">
+        <div className="container rt-md text-center"></div>
+      </div>
+    </div>
+  </div>
+);

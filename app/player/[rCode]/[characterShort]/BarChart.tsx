@@ -1,14 +1,10 @@
 import { Match } from "@/app/types";
 
-export const BarChart = ({ matches }: { matches: Match[] }) => {
-  return (
-    <div className="bars border-t overflow-hidden">
-      {matches.map((match: Match) => {
-        const bar = formatBar(match);
-        return <Bar key={match.id} {...bar} />;
-      })}
-    </div>
-  );
+type Props = {
+  id: string;
+  height: string;
+  displace: string;
+  value: number;
 };
 
 export const formatBar = (match: Match) => {
@@ -20,13 +16,6 @@ export const formatBar = (match: Match) => {
     displace,
     value: match.record.winPercent,
   };
-};
-
-type Props = {
-  id: string;
-  height: string;
-  displace: string;
-  value: number;
 };
 
 export const Bar = ({ id, height, displace, value }: Props) => (
@@ -53,3 +42,22 @@ export const Bar = ({ id, height, displace, value }: Props) => (
     ></span>
   </span>
 );
+
+export const BarChart = ({ matches }: { matches: Match[] }) => {
+  return (
+    <div className="bars border-t overflow-hidden">
+      {matches.map((match: Match) => {
+        const bar = formatBar(match);
+        return <Bar key={match.id} {...bar} />;
+      })}
+    </div>
+  );
+};
+
+export const BarChartSkeleton = () => {
+  return (
+    <div className="bars border-t overflow-hidden">
+      <Bar key="1" id="skeleton" height="0%" displace="0" value={0} />
+    </div>
+  );
+};
