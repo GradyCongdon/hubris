@@ -1,6 +1,7 @@
 import Image from "next/image";
 import sun from "@/public/sun.png";
 import moon from "@/public/moon.png";
+import { useState } from "react";
 
 type Props = {
   theme: string | null;
@@ -57,6 +58,7 @@ const Moon = () => (
 );
 
 export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
+  const [hasLoaded, setHasLoaded] = useState(false);
   const isLight = theme === "light" || theme === null;
   const onClick = () => {
     if (isLight) {
@@ -76,8 +78,9 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
           right: OFFSET,
           zIndex: 100,
           color: "var(--color)",
-          filter:
-            "invert(8%) sepia(100%) saturate(7499%) hue-rotate(248deg) brightness(96%) contrast(143%)",
+          filter: hasLoaded
+            ? "invert(8%) sepia(100%) saturate(7499%) hue-rotate(248deg) brightness(96%) contrast(143%)"
+            : "",
         }}
       >
         <Image
@@ -86,6 +89,9 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
           className="theme-icon"
           width={SIZE}
           height={SIZE}
+          onLoad={() => {
+            setHasLoaded(true);
+          }}
         />
       </button>
     );
@@ -100,8 +106,9 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
         right: OFFSET,
         zIndex: 100,
         color: "var(--color)",
-        filter:
-          "invert(93%) sepia(36%) saturate(2308%) hue-rotate(21deg) brightness(105%) contrast(108%)",
+        filter: hasLoaded
+          ? "invert(93%) sepia(36%) saturate(2308%) hue-rotate(21deg) brightness(105%) contrast(108%)"
+          : "",
       }}
     >
       <Image
@@ -110,6 +117,9 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
         className="theme-icon"
         width={SIZE}
         height={SIZE}
+        onLoad={() => {
+          setHasLoaded(true);
+        }}
       />
     </button>
   );
