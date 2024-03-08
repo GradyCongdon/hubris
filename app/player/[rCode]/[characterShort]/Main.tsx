@@ -15,7 +15,11 @@ export default function Main({
   params: { rCode: string; characterShort: string };
 }) {
   const { rCode, characterShort } = params;
-  const themeLocalStorage = localStorage.getItem("theme");
+  let themeLocalStorage = localStorage.getItem("theme");
+  if (!themeLocalStorage) {
+    localStorage.setItem("theme", "light");
+    themeLocalStorage = "light";
+  }
   const [theme, setTheme] = useState(themeLocalStorage);
   const [data, setData] = useState<PlayerPage | null>(null);
   const [error, setError] = useState(null);
@@ -24,11 +28,9 @@ export default function Main({
   const [nextPollMs, setNextPollMs] = useState(Date.now() + POLLING_INTERVAL);
 
   useEffect(() => {
-    if (theme) {
-      document.documentElement.classList.remove("theme-dark", "theme-light");
-      document.documentElement.classList.add("theme-" + theme);
-      localStorage.setItem("theme", theme);
-    }
+    document.documentElement.classList.remove("theme-dark", "theme-light");
+    document.documentElement.classList.add("theme-" + theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   useEffect(() => {
