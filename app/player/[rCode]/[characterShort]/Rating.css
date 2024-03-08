@@ -35,7 +35,7 @@
   line-height: var(--set-grid-height);
   align-items: baseline;
   gap: 1px;
-  animation: fade-in 1s;
+  /* animation: fade-in 1s; */
 }
 @keyframes fade-in {
   from {

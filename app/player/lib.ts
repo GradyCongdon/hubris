@@ -1,10 +1,12 @@
+"use server";
 import type { APIMatch as APIMatch, APIPlayer, PlayerPage } from "@/app/types";
 import { getPlayerData, getCharacterSets } from "@/app/api/sets/lib";
-const cached = false;
+const cached = true;
 
 export const fetchPlayerPage = async (
   rCode: string,
-  characterShort: string
+  characterShort: string,
+  number: number
 ): Promise<PlayerPage> => {
   const [_player, _matches] = await Promise.all([
     getPlayerData(rCode, characterShort),
@@ -13,7 +15,9 @@ export const fetchPlayerPage = async (
   if ("error" in _player) {
     throw new Error(_player.error);
   }
-  return convertFromAPI(_player, _matches);
+  const matches = _matches.slice(0, number);
+  const p = convertFromAPI(_player, matches);
+  return p;
 };
 
 export const convertFromAPI = (
