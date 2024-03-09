@@ -16,7 +16,7 @@ type Props = {
 const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
   const height = active ? "h-6" : "h-16";
   const text = active ? "End Session" : "Start Session";
-  const [percent, setPercent] = useState(60);
+  const [percent, setPercent] = useState(0);
   const transition = percent === 0 || percent > 100 ? "width 0.3s" : "none";
   useAnimationFrame(() => {
     if (!active) return;
