@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
-  const height = active ? "h-10" : "h-20";
+  const height = active ? "h-8" : "h-16";
   const text = active ? "End Session" : "Start Session";
   const [percent, setPercent] = useState(0);
   const transition = percent === 0 || percent > 100 ? "width 0.3s" : "none";
@@ -43,9 +43,10 @@ const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
           style={{
             position: "relative",
             background: active ? "var(--bg)" : "none",
-            padding: "0 .3rem",
+            padding: "1px .5rem",
             transition: "all 0.3s",
             zIndex: 102,
+            borderRadius: "100px",
           }}
         >
           {text}
@@ -88,7 +89,7 @@ export const Session = ({
 
 export const SessionSkeleton = () => {
   const active = false;
-  const height = active ? "h-10" : "h-20";
+  const height = active ? "h-10" : "h-16";
   const text = active ? "" : "";
   const percent = 0;
   return (

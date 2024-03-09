@@ -115,10 +115,13 @@
     --accent-color: blue;
     --accent-text: white;
 
-  @supports (color: color(display-p2 1 1 1)) {
-    :root {
+}
+@supports (color: color(display-p2 1 1 1)) {
+  .theme-light {
       --color: color(display-p2 0 0.207 1);
-    }
+  }
+  .theme-dark {
+      --accent-color: color(display-p2 0.694 1 0);
   }
 }
 .theme-dark {
@@ -127,14 +130,9 @@
     --border-color: rgb(47, 48, 48);
     --accent-color: rgb(166, 239, 0);
     --accent-text: rgb(47, 48, 48);
-  @supports (color: color(display-p2 1 1 1)) {
-    :root {
-      --accent-color: color(display-p2 0.694 1 0);
-    }
-  }
-  & .change-bg {
-    filter: contrast(-1.7) brightness(0.6);
-  }
+}
+.theme-dark .change-bg {
+  filter: contrast(-1.7) brightness(0.6);
 }
 
 main {

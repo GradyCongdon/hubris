@@ -28,7 +28,7 @@ export const formatMatch = (match: Match): Props => {
     .replace(",", "");
   const { name: oName } = match.opponent.player;
   const { name: oCharacter, shortCode: oShortCode } = match.opponent.character;
-  const isLongName = oName.length + oCharacter.length > 21;
+  const isLongName = oName.length + oCharacter.length >= 21;
   const opponentName = isLongName
     ? `${oName} (${oShortCode})`
     : `${oName} (${oCharacter})`;

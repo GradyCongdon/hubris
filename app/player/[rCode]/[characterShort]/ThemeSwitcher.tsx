@@ -1,6 +1,3 @@
-import Image from "next/image";
-import sun from "@/public/sun.png";
-import moon from "@/public/moon.png";
 import { useState } from "react";
 
 type Props = {
@@ -20,6 +17,10 @@ const Sun = () => (
     height={SIZE}
     style={{
       fill: "currentColor",
+      transform: "scale(1.4)",
+      position: "relative",
+      top: "3px",
+      left: "2px",
     }}
     id="sun"
   >
@@ -48,6 +49,7 @@ const Moon = () => (
     xmlns="http://www.w3.org/2000/svg"
     style={{
       fill: "currentColor",
+      strokeWidth: 0,
     }}
     id="moon"
     width={SIZE}
@@ -58,7 +60,6 @@ const Moon = () => (
 );
 
 export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
-  const [hasLoaded, setHasLoaded] = useState(false);
   const isLight = theme === "light" || theme === null;
   const onClick = () => {
     if (isLight) {
@@ -74,25 +75,25 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
         onClick={onClick}
         style={{
           position: "absolute",
-          top: OFFSET,
+          top: OFFSET - 2,
           right: OFFSET,
           zIndex: 100,
           color: "var(--color)",
-          filter: hasLoaded
-            ? "invert(8%) sepia(100%) saturate(7499%) hue-rotate(248deg) brightness(96%) contrast(143%)"
-            : "",
         }}
       >
-        <Image
+        {/* <Image
           src={moon}
           alt="moon"
           className="theme-icon"
+          priority
           width={SIZE}
           height={SIZE}
           onLoad={() => {
             setHasLoaded(true);
           }}
-        />
+        /> */}
+
+        <Sun />
       </button>
     );
   }
@@ -106,12 +107,12 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
         right: OFFSET,
         zIndex: 100,
         color: "var(--color)",
-        filter: hasLoaded
-          ? "invert(93%) sepia(36%) saturate(2308%) hue-rotate(21deg) brightness(105%) contrast(108%)"
-          : "",
+        // filter: hasLoaded
+        //   ? "invert(93%) sepia(36%) saturate(2308%) hue-rotate(21deg) brightness(105%) contrast(108%)"
+        //   : "",
       }}
     >
-      <Image
+      {/* <Image
         src={sun}
         alt="sun"
         className="theme-icon"
@@ -120,7 +121,8 @@ export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
         onLoad={() => {
           setHasLoaded(true);
         }}
-      />
+      /> */}
+      <Moon />
     </button>
   );
 };
