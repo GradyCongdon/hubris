@@ -6,7 +6,7 @@ import { BarChart, BarChartSkeleton } from "./BarChart";
 import { Matches, MatchesSkeleton } from "./Matches";
 import { useEffect, useState } from "react";
 import { PlayerPage } from "@/app/types";
-import { POLLING_INTERVAL, MATCH_LIMIT } from "./consts";
+import { POLLING_INTERVAL, MATCH_LIMIT } from "../../../consts";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Main({
@@ -105,4 +105,3 @@ export default function Main({
     return <div>{(e as Error).message}</div>;
   }
 }
-

@@ -1,0 +1,11 @@
+.theme-light .progress {
+    --progress-bg: rgb(50, 50, 254);
+    --progress-fg: blue;
+    --progress-text: white;
+    /* --progress-text-bg: white; */
+}
+.theme-dark .progress {
+    --progress-bg: rgb(131, 187, 0);
+    --progress-fg: rgb(166, 239, 0);
+    --progress-text: rgb(47, 48, 48);
+}

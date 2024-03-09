@@ -2,7 +2,9 @@
 
 import { useCallback, useState } from "react";
 import { useAnimationFrame } from "./useAnimationFrame";
-import { POLLING_INTERVAL } from "./consts";
+import { POLLING_INTERVAL } from "../../../consts";
+
+import "./Session.css";
 
 type Props = {
   active: boolean;
@@ -12,14 +14,17 @@ type Props = {
 };
 
 const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
-  const height = active ? "h-8" : "h-16";
+  const height = active ? "h-6" : "h-16";
   const text = active ? "End Session" : "Start Session";
-  const [percent, setPercent] = useState(0);
+  const [percent, setPercent] = useState(60);
   const transition = percent === 0 || percent > 100 ? "width 0.3s" : "none";
   useAnimationFrame(() => {
     if (!active) return;
     const elapsed = nextPollMs - Date.now();
-    const percent = ((POLLING_INTERVAL - elapsed) / POLLING_INTERVAL) * 100;
+    const percent = Math.min(
+      ((POLLING_INTERVAL - elapsed) / POLLING_INTERVAL) * 100,
+      100
+    );
     setPercent(percent);
   });
   const onClick = useCallback(() => {
@@ -29,42 +34,46 @@ const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
     setPercent(0);
   }, [active, setActive, setNextPollMs]);
   return (
-    <div className="container text-center session relative ">
+    <div className="container text-center session relative progress ">
       <button
-        className={`${height} text-black w-full`}
+        className={`${height} text-black w-full `}
         style={{
-          backgroundColor: active ? "var(--bg)" : "var(--accent-color)",
+          backgroundColor: "var(--progress-bg)",
           transition: "all 0.3s",
-          color: active ? "var(--color)" : "var(--accent-text)",
+          color: "var(--progress-text)",
         }}
         onClick={onClick}
       >
+        <div
+          className="progress-bar"
+          style={{
+            width: `${percent}%`,
+            bottom: 0,
+            top: 0,
+            left: 0,
+            backgroundColor: "var(--progress-fg)",
+            position: "absolute",
+            pointerEvents: "none",
+            transition,
+          }}
+        ></div>
         <span
           style={{
-            position: "relative",
-            background: active ? "var(--bg)" : "none",
-            padding: "1px .5rem",
+            display: "inline-flex",
+            alignItems: "center",
+            backgroundColor: "var(--progress-text-bg)",
+            color: "var(--progress-text)",
             transition: "all 0.3s",
+            height: "100%",
+            padding: "0 11px",
+            position: "relative",
+            lineHeight: "24px",
             zIndex: 102,
-            borderRadius: "100px",
           }}
         >
-          {text}
+          <span style={{ opacity: 1 }}>{text}</span>
         </span>
       </button>
-      <div
-        style={{
-          width: `${percent}%`,
-          bottom: 0,
-          top: 0,
-          left: 0,
-          backgroundColor: "var(--accent-color)",
-          position: "absolute",
-          // opacity: 0.7,
-          pointerEvents: "none",
-          transition,
-        }}
-      ></div>
     </div>
   );
 };

@@ -1,9 +1,5 @@
 import { getPlayerData } from "@/app/api/sets/lib";
-
-// import "./Rating.css";
 import Main from "./Main";
-import { Suspense } from "react";
-import { MainServer, MainSkeleton } from "./MainServer";
 
 const _heckCode = "2EC3DCA33129F30";
 const cached = false;
