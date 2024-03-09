@@ -31,3 +31,16 @@ export const rgbScale = (
   const g = 0;
   return `rgba(${r}, ${g}, ${b}, ${opacity})`;
 };
+export const formatChange = (change: number): string => {
+  const isNegative = change < 0;
+  const hasDecimal = change.toString().match(/\./);
+  const changeAbsolute = Math.abs(change);
+  const isLarge = changeAbsolute >= 100;
+  let changeFormatted = `${isNegative ? "" : "+"}${change}${
+    hasDecimal ? "" : ".0"
+  }`;
+  changeFormatted = isLarge ? changeFormatted.split(".")[0] : changeFormatted;
+  changeFormatted =
+    changeFormatted.length > 5 ? changeFormatted.slice(0, 5) : changeFormatted;
+  return changeFormatted;
+};

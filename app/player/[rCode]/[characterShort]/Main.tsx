@@ -1,12 +1,13 @@
 "use client";
-import { Session, SessionSkeleton } from "./Session";
-import { Player, PlayerSkeleton } from "./Player";
+import { DEFAULT_THEME, MATCH_LIMIT, POLLING_INTERVAL, SESSION_TIMEFRAME } from "@/app/consts";
 import { fetchPlayerPage } from "@/app/player/lib";
-import { BarChart, BarChartSkeleton } from "./BarChart";
-import { Matches, MatchesSkeleton } from "./Matches";
-import { useEffect, useState } from "react";
 import { PlayerPage } from "@/app/types";
-import { POLLING_INTERVAL, MATCH_LIMIT } from "../../../consts";
+import { useCallback, useEffect, useState } from "react";
+import { BarChart, BarChartSkeleton, formatBar } from "./BarChart";
+import { Matches, MatchesSkeleton } from "./Matches";
+import { Player, PlayerSkeleton } from "./Player";
+import { Session, SessionSkeleton } from "./Session";
+import { SessionStats, getSessionStats } from "./SessionStats";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Main({
@@ -17,8 +18,8 @@ export default function Main({
   const { rCode, characterShort } = params;
   let themeLocalStorage = localStorage.getItem("theme");
   if (!themeLocalStorage) {
-    localStorage.setItem("theme", "light");
-    themeLocalStorage = "light";
+    localStorage.setItem("theme", DEFAULT_THEME);
+    themeLocalStorage = DEFAULT_THEME;
   }
   const [theme, setTheme] = useState(themeLocalStorage);
   const [data, setData] = useState<PlayerPage | null>(null);
@@ -26,6 +27,12 @@ export default function Main({
   const [status, setStatus] = useState("init");
   const [active, setActive] = useState(false);
   const [nextPollMs, setNextPollMs] = useState(Date.now() + POLLING_INTERVAL);
+  const [sessionStartTimestamp, setSessionStartTimestamp] = useState(0);
+  const onSessionClick = useCallback(() => {
+    setActive(!active);
+    setNextPollMs(Date.now() + POLLING_INTERVAL);
+    setSessionStartTimestamp(Date.now() - SESSION_TIMEFRAME);
+  }, [active]);
 
   useEffect(() => {
     document.documentElement.classList.remove("theme-dark", "theme-light");
@@ -86,17 +93,25 @@ export default function Main({
   if (!data) {
     return <div>No data</div>;
   }
+  const stats = getSessionStats(data, sessionStartTimestamp);
   try {
     return (
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
         <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <Player {...data} />
-        <BarChart matches={data.matches} />
+        {active ? (
+          <SessionStats
+            changeFormatted={stats.changeFormatted}
+            changeRGB={stats.changeRGB}
+            sessionMatches={stats.matches}
+          />
+        ) : (
+          <BarChart matches={data.matches} formatter={formatBar} />
+        )}
         <Session
           active={active}
-          setActive={setActive}
           nextPollMs={nextPollMs}
-          setNextPollMs={setNextPollMs}
+          onClick={onSessionClick}
         />
         <Matches matches={data.matches} />
       </main>

@@ -1,20 +1,21 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import { useAnimationFrame } from "./useAnimationFrame";
 import { POLLING_INTERVAL } from "../../../consts";
+import { useAnimationFrame } from "./useAnimationFrame";
 
 import "./Session.css";
 
 type Props = {
   active: boolean;
-  setActive: React.Dispatch<React.SetStateAction<boolean>>;
   nextPollMs: number;
-  setNextPollMs: React.Dispatch<React.SetStateAction<number>>;
+  onClick: () => void;
 };
 
-const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
-  const height = active ? "h-6" : "h-16";
+const Button = ({ active, nextPollMs, onClick: _onClick }: Props) => {
+  const height = active
+    ? "var(--session-active-height)"
+    : "var(--session-inactive-height)";
   const text = active ? "End Session" : "Start Session";
   const [percent, setPercent] = useState(0);
   const transition = percent === 0 || percent > 100 ? "width 0.3s" : "none";
@@ -28,19 +29,19 @@ const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
     setPercent(percent);
   });
   const onClick = useCallback(() => {
-    setActive(!active);
-    setNextPollMs(Date.now() + POLLING_INTERVAL);
+    _onClick();
     // FIXME
     setPercent(0);
-  }, [active, setActive, setNextPollMs]);
+  }, [_onClick]);
   return (
     <div className="container text-center session relative progress ">
       <button
-        className={`${height} text-black w-full `}
+        className={`text-black w-full `}
         style={{
           backgroundColor: "var(--progress-bg)",
-          transition: "all 0.3s",
+          transition: "all 0.1s",
           color: "var(--progress-text)",
+          height,
         }}
         onClick={onClick}
       >
@@ -78,20 +79,10 @@ const Button = ({ active, setActive, nextPollMs, setNextPollMs }: Props) => {
   );
 };
 
-export const Session = ({
-  active,
-  setActive,
-  nextPollMs,
-  setNextPollMs,
-}: Props) => {
+export const Session = ({ active, nextPollMs, onClick }: Props) => {
   return (
     <>
-      <Button
-        active={active}
-        setActive={setActive}
-        nextPollMs={nextPollMs}
-        setNextPollMs={setNextPollMs}
-      />
+      <Button active={active} nextPollMs={nextPollMs} onClick={onClick} />
     </>
   );
 };

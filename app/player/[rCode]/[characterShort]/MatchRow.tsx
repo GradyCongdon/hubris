@@ -1,18 +1,10 @@
-import { rgbScale } from "@/app/player/utils";
+import { formatChange, rgbScale } from "@/app/player/utils";
 import { Match } from "@/app/types";
 
 export const formatMatch = (match: Match): Props => {
   const { value: rating, error, change } = match.rating;
 
-  const isNegative = change < 0;
-  const isDecimal = change.toString().match(/\./);
-  const changeAbsolute = Math.abs(change);
-  const isLarge = changeAbsolute >= 100;
-  let changeFormatted = `${isNegative ? "" : "+"}${change}${
-    isDecimal ? "" : ".0"
-  }`;
-  changeFormatted = isLarge ? changeFormatted.split(".")[0] : changeFormatted;
-
+  const changeFormatted = formatChange(change);
   const rgb = rgbScale(change, error / -6, error / 6);
   const record = `${match.record.wins} - ${match.record.losses}`;
   const _date = match.timePeriod.date.getTime();

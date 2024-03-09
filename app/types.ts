@@ -81,3 +81,7 @@ export type PlayerPage = {
   rating: Rating;
   matches: Match[];
 };
+
+export type SessionMatch = Match & {
+  type: "session";
+};

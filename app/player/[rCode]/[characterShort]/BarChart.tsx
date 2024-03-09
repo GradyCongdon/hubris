@@ -5,6 +5,7 @@ type Props = {
   height: string;
   displace: string;
   value: number;
+  backgroundColor?: string;
 };
 
 export const formatBar = (match: Match) => {
@@ -15,10 +16,17 @@ export const formatBar = (match: Match) => {
     height,
     displace,
     value: match.record.winPercent,
+    backgroundColor: "var(--accent-color)",
   };
 };
 
-export const Bar = ({ id, height, displace, value }: Props) => (
+export const Bar = ({
+  id,
+  height,
+  displace,
+  value,
+  backgroundColor,
+}: Props) => (
   <span
     id={id}
     style={{
@@ -37,17 +45,23 @@ export const Bar = ({ id, height, displace, value }: Props) => (
         width: "var(--bar-width)",
         position: "absolute",
         bottom: displace,
-        backgroundColor: "var(--accent-color)",
+        backgroundColor,
       }}
     ></span>
   </span>
 );
 
-export const BarChart = ({ matches }: { matches: Match[] }) => {
+export const BarChart = ({
+  matches,
+  formatter,
+}: {
+  matches: Match[];
+  formatter: (match: Match) => Props;
+}) => {
   return (
     <div className="bars border-t overflow-hidden">
       {matches.slice(0, 65).map((match: Match) => {
-        const bar = formatBar(match);
+        const bar = formatter(match);
         return <Bar key={match.id} {...bar} />;
       })}
     </div>

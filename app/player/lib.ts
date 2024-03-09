@@ -9,7 +9,7 @@ export const fetchPlayerPage = async (
   number: number
 ): Promise<PlayerPage> => {
   const [_player, _matches] = await Promise.all([
-    getPlayerData(rCode, characterShort),
+    getPlayerData(rCode, characterShort, CACHED),
     getCharacterSets(rCode, characterShort, CACHED),
   ]);
   if ("error" in _player) {

@@ -2,10 +2,14 @@
   --player-grid-height: 48px;
   --set-grid-height: 72px;
   --set-grid-height-2: 36px;
+
+  --bar-width: 11px;
   --bar-height: 48px;
   --bar-container-width: 12px;
-  --bar-width: 11px;
-  --session-height: 8px;
+  --session-inactive-height: 64px;
+
+  --session-stats-height: 80px;
+  --session-active-height: 32px;
 }
 @media screen and (min-width: 768px) {
   :root {
@@ -115,6 +119,6 @@
     font-size: 6.25cqi;
   }
 }
-.theme-switch{
+.theme-switch {
   animation: fade-in 1s;
 }

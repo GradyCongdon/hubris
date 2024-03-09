@@ -215,7 +215,15 @@ export const getCharacterSets = async (
 // search
 // http://ratingupdate.info/api/player_lookup?name=glue%20eater
 
-export const getPlayerData = async (rCode: string, characterShort: string) => {
+export const getPlayerData = async (rCode: string, characterShort: string, cached = false) => {
+  if (cached) {
+    return {
+      name: "heckscape",
+      character: "Ky",
+      characterShort: "KY",
+      rCode: "2EC3DCA33129F30",
+    };
+  }
   const url = `http://ratingupdate.info/player/${rCode}/${characterShort}`;
   const resp = await fetch(url);
   const text = await resp.text();

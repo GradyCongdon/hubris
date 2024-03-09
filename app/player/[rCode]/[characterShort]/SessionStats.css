@@ -1,0 +1,18 @@
+.session-stats {
+  display: grid;
+  grid-template-columns: 3fr 2px 3fr 6fr;
+  grid-template-rows: var(--session-stats-height);
+  line-height: var(--session-stats-height);
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
