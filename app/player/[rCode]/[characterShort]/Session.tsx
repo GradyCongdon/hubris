@@ -16,7 +16,8 @@ const Button = ({ active, nextPollMs, onClick: _onClick }: Props) => {
   const height = active
     ? "var(--session-active-height)"
     : "var(--session-inactive-height)";
-  const text = active ? "End Session" : "Start Session";
+  const actionType = active ? "End" : "Start";
+  const text = `${actionType} Session`;
   const [percent, setPercent] = useState(0);
   const transition = percent === 0 || percent > 100 ? "width 0.3s" : "none";
   useAnimationFrame(() => {

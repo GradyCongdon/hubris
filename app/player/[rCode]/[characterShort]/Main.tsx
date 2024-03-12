@@ -1,5 +1,10 @@
 "use client";
-import { DEFAULT_THEME, MATCH_LIMIT, POLLING_INTERVAL, SESSION_TIMEFRAME } from "@/app/consts";
+import {
+  DEFAULT_THEME,
+  MATCH_LIMIT,
+  POLLING_INTERVAL,
+  SESSION_TIMEFRAME
+} from "@/app/consts";
 import { fetchPlayerPage } from "@/app/player/lib";
 import { PlayerPage } from "@/app/types";
 import { useCallback, useEffect, useState } from "react";
@@ -9,9 +14,10 @@ import { Player, PlayerSkeleton } from "./Player";
 import { Session, SessionSkeleton } from "./Session";
 import { SessionStats, getSessionStats } from "./SessionStats";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { act } from "react-dom/test-utils";
 
 export default function Main({
-  params,
+  params
 }: {
   params: { rCode: string; characterShort: string };
 }) {
@@ -32,12 +38,18 @@ export default function Main({
     setActive(!active);
     setNextPollMs(Date.now() + POLLING_INTERVAL);
     setSessionStartTimestamp(Date.now() - SESSION_TIMEFRAME);
-  }, [active]);
+    const actionType = active ? "End" : "Start";
+    window.analytics.track(`Session ${actionType}`, {
+      r_code: rCode,
+      character_short: characterShort
+    });
+  }, [active, characterShort, rCode]);
 
   useEffect(() => {
     document.documentElement.classList.remove("theme-dark", "theme-light");
     document.documentElement.classList.add("theme-" + theme);
     localStorage.setItem("theme", theme);
+    window.analytics.track("Theme Change", { theme });
   }, [theme]);
 
   useEffect(() => {
@@ -63,9 +75,18 @@ export default function Main({
           .catch((e) => {
             // skip showing error and keep polling
             console.error(e);
+            window.analytics.track("Session Poll Error", {
+              r_code: rCode,
+              character_short: characterShort,
+              error: e.message
+            });
           })
           .finally(() => {
             setNextPollMs(Date.now() + POLLING_INTERVAL);
+            window.analytics.track("Session Poll", {
+              r_code: rCode,
+              character_short: characterShort
+            });
           });
       }, POLLING_INTERVAL);
       return () => clearInterval(interval);
