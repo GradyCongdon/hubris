@@ -1,12 +1,12 @@
 import { fetchPlayerPage } from "../../lib";
-import { BarChart, BarChartSkeleton } from "./BarChart";
+import { BarChart, BarChartSkeleton, formatBar } from "./BarChart";
 import { Matches, MatchesSkeleton } from "./Matches";
 import { Player, PlayerSkeleton } from "./Player";
 import { SessionSkeleton } from "./Session";
 
 export const MainServer = async ({
   rCode,
-  characterShort,
+  characterShort
 }: {
   rCode: string;
   characterShort: string;
@@ -15,7 +15,7 @@ export const MainServer = async ({
   return (
     <main className="min-h-screen max-w-3xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
       <Player {...data} />
-      <BarChart matches={data.matches} />
+      <BarChart matches={data.matches} formatter={formatBar} />
       <SessionSkeleton />
       <Matches matches={data.matches} />
     </main>
