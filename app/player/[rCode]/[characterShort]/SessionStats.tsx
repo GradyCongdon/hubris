@@ -23,7 +23,7 @@ export const getSessionStats = (
       matches: sessionMatches,
       change: 0,
       changeRGB: "",
-      changeFormatted: "",
+      changeFormatted: ""
     }
   );
   const rgb = stats.change >= 0 ? "blue" : "red";
@@ -40,22 +40,22 @@ type Props = {
 export const SessionStats = ({
   changeFormatted,
   changeRGB,
-  sessionMatches,
+  sessionMatches
 }: Props) => {
   const gameStats = {
     wins: 0,
     losses: 0,
-    total: sessionMatches.length,
+    total: sessionMatches.length
   };
   const games = sessionMatches.flatMap((match) => {
     const wins = new Array(match.record.wins).fill({
       key: match.timePeriod.dateString,
-      backgroundColor: "blue",
+      backgroundColor: "blue"
     });
     gameStats.wins += match.record.wins;
     const losses = new Array(match.record.losses).fill({
       key: match.timePeriod.dateString,
-      backgroundColor: "red",
+      backgroundColor: "red"
     });
     gameStats.losses += match.record.losses;
     return [...wins, ...losses];
@@ -63,15 +63,16 @@ export const SessionStats = ({
 
   return (
     <div className="session-stats border-t">
-      <div
-        className="flex align-center justify-center"
-        style={{ backgroundColor: changeRGB, color: "white" }}
-      >
-        {changeFormatted}
-      </div>
-      <div></div>
-      <div className="flex align-center justify-center border-r ml-1">
-        {gameStats.wins}W:{gameStats.losses}L
+      <div className="flex fle-col">
+        <div
+          className="flex align-center justify-center"
+          style={{ backgroundColor: changeRGB, color: "white" }}
+        >
+          {changeFormatted}
+        </div>
+        <div className="flex align-center justify-center border-r ml-1">
+          {gameStats.wins}W:{gameStats.losses}L
+        </div>
       </div>
       <div className="session-chart flex h-full ">
         {games.map((game) => (
@@ -80,7 +81,7 @@ export const SessionStats = ({
             style={{
               width: "4px",
               height: "100%",
-              backgroundColor: game.backgroundColor,
+              backgroundColor: game.backgroundColor
             }}
           />
         ))}

@@ -92,6 +92,14 @@ const getRating = (str: string) => {
     throw new Error('Cannot parse Rating');
   }
 };
+const getHidden = (set) => {
+   const _Date = set["Date"];
+    const _DateString = fixDate(set["Date"]);
+    const date = new Date(_DateString);
+    const Character = set["Character"];
+    const CharacterShort = longToShort[Character];
+    
+
 
 /* @ts-ignore */
 const fixSet = (set) => {
@@ -143,7 +151,7 @@ const fixSet = (set) => {
       Change,
     };
   } catch (e) {
-    if (set.Opponent == "(Hidden)") return null;
+    if (set.Opponent == "(Hidden)") return getHidden(set);
     console.error(e, set);
     return null;
   }

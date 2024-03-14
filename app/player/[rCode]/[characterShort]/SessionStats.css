@@ -1,6 +1,6 @@
 .session-stats {
   display: grid;
-  grid-template-columns: 3fr 2px 3fr 6fr;
+  grid-template-columns: 6fr 6fr;
   grid-template-rows: var(--session-stats-height);
   line-height: var(--session-stats-height);
   justify-content: center;

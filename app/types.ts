@@ -85,3 +85,4 @@ export type PlayerPage = {
 export type SessionMatch = Match & {
   type: "session";
 };
+
