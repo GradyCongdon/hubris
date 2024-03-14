@@ -85,8 +85,7 @@ const fixDate = (str: string) => {
 
 const fixTimezone = (str: string) => {
   const old = new Date(str);
-  const offset = old.getTimezoneOffset();
-  const newDate = new Date(old.getTime() + offset * 60000);
+  const newDate = new Date(old.getTime());
   return newDate;
 }
 
