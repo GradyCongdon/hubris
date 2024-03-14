@@ -63,18 +63,16 @@ export const SessionStats = ({
 
   return (
     <div className="session-stats border-t">
-      <div className="flex fle-col">
-        <div
-          className="flex align-center justify-center"
-          style={{ backgroundColor: changeRGB, color: "white" }}
-        >
-          {changeFormatted}
-        </div>
-        <div className="flex align-center justify-center border-r ml-1">
-          {gameStats.wins}W:{gameStats.losses}L
-        </div>
+      <div
+        className="flex align-center justify-center rt-md"
+        style={{ backgroundColor: changeRGB, color: "white" }}
+      >
+        {changeFormatted}
       </div>
-      <div className="session-chart flex h-full ">
+      <div className="flex align-center justify-center border-r ml-1 rt-md">
+        {gameStats.wins}W:{gameStats.losses}L
+      </div>
+      <div className="session-chart">
         {games.map((game) => (
           <div
             key={game.key}

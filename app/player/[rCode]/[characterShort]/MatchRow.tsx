@@ -15,7 +15,7 @@ export const formatMatch = (match: Match): Props => {
       day: "numeric",
       hour: "numeric",
       minute: "numeric",
-      hour12: true,
+      hour12: true
     })
     .replace(",", "");
   const { name: oName } = match.opponent.player;
@@ -35,6 +35,7 @@ export const formatMatch = (match: Match): Props => {
     record: record,
     timestamp,
     rgb,
+    onClick: () => {}
   };
 };
 
@@ -47,6 +48,7 @@ type Props = {
   record: string;
   timestamp: string;
   rgb: string;
+  onClick: () => void;
 };
 export const MatchRow = ({
   id,
@@ -57,8 +59,9 @@ export const MatchRow = ({
   record,
   timestamp,
   rgb,
+  onClick
 }: Props) => (
-  <div id={id} className="set border-b mono-300">
+  <div id={id} className="set border-b mono-300" onClick={onClick}>
     <div className="container rating rt-md text-center">{playerRating}</div>
     <div className="container change rt-sm text-center relative">
       <div
@@ -70,7 +73,7 @@ export const MatchRow = ({
           right: 0,
           bottom: 0,
           zIndex: 100,
-          background: rgb,
+          background: rgb
         }}
       ></div>
       <span
@@ -107,7 +110,7 @@ export const MatchRowSkeleton = () => (
           left: 0,
           right: 0,
           bottom: 0,
-          zIndex: 100,
+          zIndex: 100
         }}
       ></div>
       <span

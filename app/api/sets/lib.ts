@@ -83,6 +83,13 @@ const fixDate = (str: string) => {
   return `${day} ${[hour, min, "00"].join(":")}`;
 };
 
+const fixTimezone = (str: string) => {
+  const old = new Date(str);
+  const offset = old.getTimezoneOffset();
+  const newDate = new Date(old.getTime() + offset * 60000);
+  return newDate;
+}
+
 const getRating = (str: string) => {
   try {
     const [rating, error] = str.split(" ±");
@@ -92,12 +99,12 @@ const getRating = (str: string) => {
     throw new Error('Cannot parse Rating');
   }
 };
-const getHidden = (set) => {
-   const _Date = set["Date"];
-    const _DateString = fixDate(set["Date"]);
-    const date = new Date(_DateString);
-    const Character = set["Character"];
-    const CharacterShort = longToShort[Character];
+// const getHidden = (set) => {
+//    const _Date = set["Date"];
+//     const _DateString = fixDate(set["Date"]);
+//     const date = new Date(_DateString);
+//     const Character = set["Character"];
+//     const CharacterShort = longToShort[Character];
     
 
 
@@ -106,7 +113,7 @@ const fixSet = (set) => {
   try {
     const _Date = set["Date"];
     const _DateString = fixDate(set["Date"]);
-    const date = new Date(_DateString);
+    const date = fixTimezone(_DateString);
     const Character = set["Character"];
     const CharacterShort = longToShort[Character];
     const [Rating, Error] = getRating(set["Rating"]);
@@ -151,7 +158,7 @@ const fixSet = (set) => {
       Change,
     };
   } catch (e) {
-    if (set.Opponent == "(Hidden)") return getHidden(set);
+    if (set.Opponent == "(Hidden)") return null;
     console.error(e, set);
     return null;
   }
@@ -209,12 +216,13 @@ export const getAllSets = async (rCode: string) => {
 
 export const getCharacterSets = async (
   rCode: string,
-  characterShort: string,
+  _characterShort: string,
   cached = false
 ) => {
   if (cached) {
     return heckSets
   }
+  const characterShort = _characterShort.toUpperCase();
   const sets = await fetchHistory(rCode, characterShort);
   const clean = fixSheet(sets);
   return clean;
@@ -223,7 +231,7 @@ export const getCharacterSets = async (
 // search
 // http://ratingupdate.info/api/player_lookup?name=glue%20eater
 
-export const getPlayerData = async (rCode: string, characterShort: string, cached = false) => {
+export const getPlayerData = async (rCode: string, _characterShort: string, cached = false) => {
   if (cached) {
     return {
       name: "heckscape",
@@ -232,6 +240,7 @@ export const getPlayerData = async (rCode: string, characterShort: string, cache
       rCode: "2EC3DCA33129F30",
     };
   }
+  const characterShort = _characterShort.toUpperCase();
   const url = `http://ratingupdate.info/player/${rCode}/${characterShort}`;
   const resp = await fetch(url);
   const text = await resp.text();

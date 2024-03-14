@@ -6,7 +6,7 @@ import {
   SESSION_TIMEFRAME
 } from "@/app/consts";
 import { fetchPlayerPage } from "@/app/player/lib";
-import { PlayerPage } from "@/app/types";
+import { Match, PlayerPage } from "@/app/types";
 import { useCallback, useEffect, useState } from "react";
 import { BarChart, BarChartSkeleton, formatBar } from "./BarChart";
 import { Matches, MatchesSkeleton } from "./Matches";
@@ -14,7 +14,6 @@ import { Player, PlayerSkeleton } from "./Player";
 import { Session, SessionSkeleton } from "./Session";
 import { SessionStats, getSessionStats } from "./SessionStats";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { act } from "react-dom/test-utils";
 
 export default function Main({
   params
@@ -34,7 +33,33 @@ export default function Main({
   const [active, setActive] = useState(false);
   const [nextPollMs, setNextPollMs] = useState(Date.now() + POLLING_INTERVAL);
   const [sessionStartTimestamp, setSessionStartTimestamp] = useState(0);
+
+  const fetchUpdate = useCallback(() => {
+    fetchPlayerPage(rCode, characterShort, MATCH_LIMIT)
+      .then((data) => {
+        setData(data);
+        setStatus("resolved");
+      })
+      .catch((e) => {
+        // skip showing error and keep polling
+        console.error(e);
+        window.analytics.track("Session Poll Error", {
+          r_code: rCode,
+          character_short: characterShort,
+          error: e.message
+        });
+      })
+      .finally(() => {
+        setNextPollMs(Date.now() + POLLING_INTERVAL);
+        window.analytics.track("Session Poll", {
+          r_code: rCode,
+          character_short: characterShort
+        });
+      });
+  }, [rCode, characterShort]);
+
   const onSessionClick = useCallback(() => {
+    if (!active) fetchUpdate();
     setActive(!active);
     setNextPollMs(Date.now() + POLLING_INTERVAL);
     setSessionStartTimestamp(Date.now() - SESSION_TIMEFRAME);
@@ -43,7 +68,7 @@ export default function Main({
       r_code: rCode,
       character_short: characterShort
     });
-  }, [active, characterShort, rCode]);
+  }, [active, characterShort, fetchUpdate, rCode]);
 
   useEffect(() => {
     document.documentElement.classList.remove("theme-dark", "theme-light");
@@ -64,34 +89,15 @@ export default function Main({
         setStatus("error");
       });
   }, [rCode, characterShort]);
+
   useEffect(() => {
     if (active) {
       const interval = setInterval(() => {
-        fetchPlayerPage(rCode, characterShort, MATCH_LIMIT)
-          .then((data) => {
-            setData(data);
-            setStatus("resolved");
-          })
-          .catch((e) => {
-            // skip showing error and keep polling
-            console.error(e);
-            window.analytics.track("Session Poll Error", {
-              r_code: rCode,
-              character_short: characterShort,
-              error: e.message
-            });
-          })
-          .finally(() => {
-            setNextPollMs(Date.now() + POLLING_INTERVAL);
-            window.analytics.track("Session Poll", {
-              r_code: rCode,
-              character_short: characterShort
-            });
-          });
+        fetchUpdate();
       }, POLLING_INTERVAL);
       return () => clearInterval(interval);
     }
-  }, [active, characterShort, rCode]);
+  }, [active, characterShort, fetchUpdate, rCode]);
   if (error) {
     return (
       <div>
@@ -115,6 +121,11 @@ export default function Main({
     return <div>No data</div>;
   }
   const stats = getSessionStats(data, sessionStartTimestamp);
+  const onMatchClickBuilder = (match: Match) => {
+    return () => {
+      setSessionStartTimestamp(match.timePeriod.date.getTime());
+    }
+  }
   try {
     return (
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
@@ -134,7 +145,7 @@ export default function Main({
           nextPollMs={nextPollMs}
           onClick={onSessionClick}
         />
-        <Matches matches={data.matches} />
+        <Matches matches={data.matches} onMatchClickBuilder={onMatchClickBuilder} />
       </main>
     );
   } catch (e) {
