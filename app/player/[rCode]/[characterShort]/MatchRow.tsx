@@ -48,7 +48,7 @@ type Props = {
   record: string;
   timestamp: string;
   rgb: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 export const MatchRow = ({
   id,

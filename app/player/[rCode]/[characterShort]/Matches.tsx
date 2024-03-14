@@ -6,7 +6,7 @@ export const Matches = ({
   onMatchClickBuilder
 }: {
   matches: Match[];
-  onMatchClickBuilder: (match: Match) => () => void;
+  onMatchClickBuilder?: (match: Match) => () => void;
 }) => {
   const FIXME = matches
     .sort((a, b) => b.timePeriod.date.getTime() - a.timePeriod.date.getTime())
@@ -15,7 +15,7 @@ export const Matches = ({
     <section className="">
       {FIXME.map((match: Match) => {
         const props = formatMatch(match);
-        const onClick = onMatchClickBuilder(match);
+        const onClick = onMatchClickBuilder && onMatchClickBuilder(match);
         return <MatchRow key={props.id} {...props} onClick={onClick} />;
       })}
     </section>
