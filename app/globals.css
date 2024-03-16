@@ -109,35 +109,28 @@
 }
 
 .theme-light {
-    --bg: rgb(255, 252, 251);
-    --color: blue;
-    --border-color: rgb(191, 200, 255);
-    --accent-color: blue;
-    --accent-text: rgb(255, 252, 251);
-
+  --bg: rgb(255, 252, 251);
+  --color: blue;
+  --border-color: rgb(191, 200, 255);
+  --accent-color: blue;
+  --accent-text: rgb(255, 252, 251);
 }
 
 @supports (color: color(display-p2 1 1 1)) {
   .theme-light {
-      --color: color(display-p2 0 0.207 1);
+    --color: color(display-p2 0 0.207 1);
   }
   .theme-dark {
-      --accent-color: color(display-p2 0.694 1 0);
+    --accent-color: color(display-p2 0.694 1 0);
   }
 }
 .theme-dark {
-    --bg: rgb(25, 26, 26);
-    --color: rgb(200, 201, 201);
-    --border-color: rgb(47, 48, 48);
-    --accent-color: rgb(166, 239, 0);
-    --accent-text: rgb(47, 48, 48);
+  --bg: rgb(25, 26, 26);
+  --color: rgb(200, 201, 201);
+  --border-color: rgb(47, 48, 48);
+  --accent-color: rgb(166, 239, 0);
+  --accent-text: rgb(47, 48, 48);
 }
 .theme-dark .change-bg {
   filter: contrast(-1.7) brightness(0.6);
-}
-
-
-main {
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
 }

@@ -18,9 +18,9 @@
     --set-grid-height-2: 43px;
   }
 }
-* {
+/* * {
   border-color: var(--border-color) !important;
-}
+} */
 .character-meta,
 .player-meta {
   display: grid;

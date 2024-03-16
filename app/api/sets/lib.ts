@@ -157,11 +157,58 @@ const fixSet = (set) => {
       Change,
     };
   } catch (e) {
-    if (set.Opponent == "(Hidden)") return null;
+    if (set.Opponent == "(Hidden)") return getHidden(set);
     console.error(e, set);
     return null;
   }
 };
+
+const getHidden = (set: MatchTODO) => {
+  const _Date = set["Date"];
+  const _DateString = fixDate(set["Date"]);
+  const date = new Date(_DateString);
+  const Character = set["Character"];
+  const CharacterShort = longToShort[Character];
+  const [Rating, Error] = getRating(set["Rating"]);
+  const Min = Rating - Error;
+  const Max = Rating + Error;
+  const Rating1500 = Rating - 1500;
+  const [Wins, Losses] = set["Result"]
+    .split(" - ")
+    .map((x: string) => parseInt(x, 10));
+  const [OpponentRating, OpponentError] = [0, 0];
+  const opponent = set["Opponent"];
+  const OpponentCharacter = set["OpponentCharacter"];
+  const OpponentCharacterShort = longToShort[OpponentCharacter];
+  const OpponentName = opponent.trim();
+  const OpponentSystem = '??';
+  const Odds = -1
+  const OddsFactor = -1;
+  const Change = parseFloat(set["Rating change"]) || 0;
+  return {
+    Date: date,
+    _DateString,
+    _Date,
+    Character,
+    CharacterShort,
+    Rating,
+    Rating1500,
+    Error,
+    Min,
+    Max,
+    Wins,
+    Losses,
+    OpponentCharacter,
+    OpponentCharacterShort,
+    OpponentRating,
+    OpponentError,
+    OpponentName,
+    OpponentSystem,
+    Odds,
+    OddsFactor,
+    Change,
+  };
+}
 
 type MatchTODO = any;
 const fixSheet = (data: MatchTODO) => {

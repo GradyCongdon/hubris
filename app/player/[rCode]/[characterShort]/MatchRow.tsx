@@ -1,5 +1,25 @@
 import { formatChange, rgbScale } from "@/app/player/utils";
-import { Match } from "@/app/types";
+import { Character, Match, Player } from "@/app/types";
+import { ReactNode } from "react";
+
+const getIdentifier = (player: Player, _character: Character) => {
+  const { name } = player;
+  const { name: character, shortCode } = _character;
+
+  const isHidden = name === "(Hidden)";
+  if (isHidden) {
+    return (
+      <span>
+        <i>Hidden</i> ({character})
+      </span>
+    );
+  }
+  const isLongName = name.length + character.length >= 21;
+  const opponentIdentifier = isLongName
+    ? `${name} (${shortCode})`
+    : `${name} (${shortCode})`;
+  return opponentIdentifier;
+};
 
 export const formatMatch = (match: Match): Props => {
   const { value: rating, error, change } = match.rating;
@@ -15,38 +35,37 @@ export const formatMatch = (match: Match): Props => {
       day: "numeric",
       hour: "numeric",
       minute: "numeric",
-      hour12: true
+      hour12: true,
     })
     .replace(",", "");
-  const { name: oName } = match.opponent.player;
-  const { name: oCharacter, shortCode: oShortCode } = match.opponent.character;
-  const isLongName = oName.length + oCharacter.length >= 21;
-  const opponentName = isLongName
-    ? `${oName} (${oShortCode})`
-    : `${oName} (${oCharacter})`;
+  const opponentIdentifier = getIdentifier(
+    match.opponent.player,
+    match.opponent.character
+  );
   const oRating = match.opponent.rating.value;
+  const opponentRating = oRating === 0 ? "????" : oRating.toString();
+  const playerRating = rating.toString();
 
   return {
     id: match.id,
-    playerRating: rating,
+    playerRating,
     change: changeFormatted,
-    opponentRating: oRating,
-    opponentName: opponentName,
+    opponentRating,
+    opponentIdentifier: opponentIdentifier,
     record: record,
     timestamp,
     rgb,
-    onClick: () => {}
   };
 };
 
 type Props = {
   id: string;
-  playerRating: number;
-  change: string;
-  opponentRating: number;
-  opponentName: string;
-  record: string;
-  timestamp: string;
+  playerRating: ReactNode;
+  change: ReactNode;
+  opponentRating: ReactNode;
+  opponentIdentifier: ReactNode;
+  record: ReactNode;
+  timestamp: ReactNode;
   rgb: string;
   onClick?: () => void;
 };
@@ -55,11 +74,11 @@ export const MatchRow = ({
   playerRating,
   change,
   opponentRating,
-  opponentName,
+  opponentIdentifier,
   record,
   timestamp,
   rgb,
-  onClick
+  onClick,
 }: Props) => (
   <div id={id} className="set border-b mono-300" onClick={onClick}>
     <div className="container rating rt-md text-center">{playerRating}</div>
@@ -73,7 +92,7 @@ export const MatchRow = ({
           right: 0,
           bottom: 0,
           zIndex: 100,
-          background: rgb
+          background: rgb,
         }}
       ></div>
       <span
@@ -87,7 +106,7 @@ export const MatchRow = ({
     <div className="container set-meta border-l">
       <div className="border-b opponent-name">
         <div className={`container pl-1 theme-invert overflow-hidden rt-op`}>
-          {opponentName}
+          {opponentIdentifier}
         </div>
       </div>
       <div className="container border-r rt-xl text-center">{record}</div>
@@ -110,7 +129,7 @@ export const MatchRowSkeleton = () => (
           left: 0,
           right: 0,
           bottom: 0,
-          zIndex: 100
+          zIndex: 100,
         }}
       ></div>
       <span

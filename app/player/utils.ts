@@ -36,11 +36,13 @@ export const formatChange = (change: number): string => {
   const hasDecimal = change.toString().match(/\./);
   const changeAbsolute = Math.abs(change);
   const isLarge = changeAbsolute >= 100;
-  let changeFormatted = `${isNegative ? "" : "+"}${change}${
+  const changeFormatted = `${isNegative ? "" : "+"}${change}${
     hasDecimal ? "" : ".0"
   }`;
-  changeFormatted = isLarge ? changeFormatted.split(".")[0] : changeFormatted;
-  changeFormatted =
-    changeFormatted.length > 5 ? changeFormatted.slice(0, 5) : changeFormatted;
-  return changeFormatted;
+  const [whole, decimal] = changeFormatted.split(".");
+  if (isLarge) {
+    return whole;
+  }
+  const singleDecimal = decimal ? decimal.slice(0, 1) : "0";
+  return `${whole}.${singleDecimal}`;
 };
