@@ -3,7 +3,7 @@ import {
   DEFAULT_THEME,
   MATCH_LIMIT,
   POLLING_INTERVAL,
-  SESSION_TIMEFRAME,
+  SESSION_TIMEFRAME
 } from "@/app/consts";
 import { fetchPlayerPage } from "@/app/player/lib";
 import { Match, PlayerPage } from "@/app/types";
@@ -16,7 +16,7 @@ import { SessionStats, getSessionStats } from "./SessionStats";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function Main({
-  params,
+  params
 }: {
   params: { rCode: string; characterShort: string };
 }) {
@@ -46,14 +46,14 @@ export default function Main({
         window.analytics.track("Session Poll Error", {
           r_code: rCode,
           character_short: characterShort,
-          error: e.message,
+          error: e.message
         });
       })
       .finally(() => {
         setNextPollMs(Date.now() + POLLING_INTERVAL);
         window.analytics.track("Session Poll", {
           r_code: rCode,
-          character_short: characterShort,
+          character_short: characterShort
         });
       });
   }, [rCode, characterShort]);
@@ -66,7 +66,7 @@ export default function Main({
     const actionType = active ? "End" : "Start";
     window.analytics.track(`Session ${actionType}`, {
       r_code: rCode,
-      character_short: characterShort,
+      character_short: characterShort
     });
   }, [active, characterShort, fetchUpdate, rCode]);
 
@@ -108,7 +108,7 @@ export default function Main({
   }
   if (status === "init" || status === "loading") {
     return (
-      <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
+      <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme player-page">
         <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <PlayerSkeleton />
         <BarChartSkeleton />
@@ -128,7 +128,7 @@ export default function Main({
   };
   try {
     return (
-      <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme">
+      <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme player-page">
         <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <Player {...data} />
         {active ? (

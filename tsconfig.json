@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/sets/lib.ts", "app/player/[rCode]/[characterShort]/useAnimationFrame.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/player/useAnimationFrame.js"],
   "exclude": ["node_modules"]
 }

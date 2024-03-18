@@ -18,9 +18,14 @@
     --set-grid-height-2: 43px;
   }
 }
-/* * {
+* {
   border-color: var(--border-color) !important;
-} */
+}
+.player-page {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
 .character-meta,
 .player-meta {
   display: grid;

@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import { POLLING_INTERVAL } from "../../../consts";
-import { useAnimationFrame } from "./useAnimationFrame";
+import { useAnimationFrame } from "../../useAnimationFrame";
 
 import "./Session.css";
 
@@ -42,7 +42,7 @@ const Button = ({ active, nextPollMs, onClick: _onClick }: Props) => {
           backgroundColor: "var(--progress-bg)",
           transition: "all 0.1s",
           color: "var(--progress-text)",
-          height,
+          height
         }}
         onClick={onClick}
       >
@@ -56,7 +56,7 @@ const Button = ({ active, nextPollMs, onClick: _onClick }: Props) => {
             backgroundColor: "var(--progress-fg)",
             position: "absolute",
             pointerEvents: "none",
-            transition,
+            transition
           }}
         ></div>
         <span
@@ -70,7 +70,7 @@ const Button = ({ active, nextPollMs, onClick: _onClick }: Props) => {
             padding: "0 11px",
             position: "relative",
             lineHeight: "24px",
-            zIndex: 102,
+            zIndex: 102
           }}
         >
           <span style={{ opacity: 1 }}>{text}</span>
@@ -100,7 +100,7 @@ export const SessionSkeleton = () => {
         style={{
           backgroundColor: active ? "var(--bg)" : "var(--accent-color)",
           transition: "all 0.3s",
-          color: active ? "var(--color)" : "var(--accent-text)",
+          color: active ? "var(--color)" : "var(--accent-text)"
         }}
       >
         {text}
@@ -114,7 +114,7 @@ export const SessionSkeleton = () => {
           backgroundColor: "white",
           position: "absolute",
           opacity: 0.2,
-          pointerEvents: "none",
+          pointerEvents: "none"
         }}
       ></div>
     </div>
