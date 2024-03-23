@@ -1,0 +1,5 @@
+.progress {
+    --progress-fg: var(--accent-color-bg);
+    --progress-bg: var(--accent-color);
+    --progress-text: var(--accent-text);
+}
