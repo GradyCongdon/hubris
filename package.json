@@ -6,7 +6,9 @@
     "dev": "next dev -H 0.0.0.0",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check": "tsc",
+    "lc": "next lint && tsc"
   },
   "dependencies": {
     "@next/third-parties": "^14.1.3",
