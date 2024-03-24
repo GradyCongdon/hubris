@@ -48,12 +48,12 @@ const fixDate = (str: string) => {
   const [day, time] = str.split(" ");
   const [_hour, min, sec] = time.split(":");
   const hour = _hour.length == 1 ? "0" + _hour : _hour;
-  return `${day} ${[hour, min, "00"].join(":")}`;
+  return `${day} ${[hour, min, "00"].join(":")}Z`;
 };
 
 const fixTimezone = (str: string) => {
   const old = new Date(str);
-  const offset = 4 * 60 * 60 * 1000
+  const offset = 0; 
   const newDate = new Date(old.getTime() - offset);
   return newDate;
 }
