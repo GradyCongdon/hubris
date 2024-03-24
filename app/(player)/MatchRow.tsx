@@ -110,9 +110,7 @@ export const MatchRow = ({
         </div>
       </div>
       <div className="container border-r rt-xl text-center">{record}</div>
-      <div className="">
-        <div className="container rt-md text-center">{timestamp}</div>
-      </div>
+      <div className="container rt-md text-center">{timestamp}</div>
     </div>
   </div>
 );

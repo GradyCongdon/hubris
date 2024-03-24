@@ -58,7 +58,7 @@
 .set-meta {
   align-self: flex-start;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .8fr 1.2fr;
   align-items: center;
   grid-template-rows: repeat(2, var(--set-grid-height-2));
   line-height: var(--set-grid-height);
