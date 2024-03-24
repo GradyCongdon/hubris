@@ -45,7 +45,11 @@ export const Player = (props: PlayerCharacterMatchIndex) => {
   );
 };
 
-export const PlayerSkeleton = ({ rCode, characterShort }) => {
+type SkeletonProps = {
+  rCode: string;
+  characterShort: string;
+};
+export const PlayerSkeleton = ({ rCode, characterShort }: SkeletonProps) => {
   return (
     <>
       <h1 className={`text-full-width-2 mx-auto leading-none -mb-1`}>
