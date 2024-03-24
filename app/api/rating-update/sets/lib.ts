@@ -1,9 +1,7 @@
 import { uniq } from "lodash";
 import { tabletojson } from "tabletojson";
 import heckSets from './heckSets.json' with { type: 'json' };
-import type { PlayerCharactersIndex} from "@/app/api/hubris/types";
-import { EXAMPLE } from "@/app/consts";
-import { shortToLong, longToShort } from "../../character";
+import { shortToLong, longToShort, shortKey } from "../../character";
 
 const fetchHistory = async (rCode: string, characterShort: string) => {
   const urlTemplate = `http://ratingupdate.info/player/${rCode}/${characterShort}/history`;
@@ -37,7 +35,7 @@ const fetchHistory = async (rCode: string, characterShort: string) => {
   const sets = unique.map((set) => {
     const opponentCharacter = set["Character"];
     set["OpponentCharacter"] = opponentCharacter;
-    set["Character"] = shortToLong[characterShort as keyof typeof shortToLong];
+    set["Character"] = shortToLong[characterShort as shortKey];
     return set;
   });
   const fileName = `${rCode}-${characterShort}.ru.json`;

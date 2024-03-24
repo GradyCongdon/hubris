@@ -28,8 +28,12 @@ export const shortToLong = {
   EL: "Elphelt",
 };
 
+export type shortKey = keyof typeof shortToLong;
+
 export const longToShort: { [key: string]: string; } = Object.entries(shortToLong).reduce((acc, [k, v]) => {
   // @ts-ignore
   acc[v] = k;
   return acc;
 }, {});
+
+export type longKey = keyof typeof longToShort;

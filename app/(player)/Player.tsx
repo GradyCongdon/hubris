@@ -1,4 +1,5 @@
 import type { PlayerCharacterMatchIndex } from "@/app/api/hubris/types";
+import { shortKey, shortToLong } from "../api/character";
 
 export const Player = (props: PlayerCharacterMatchIndex) => {
   const { player, character, rating, matches } = props;
@@ -44,14 +45,14 @@ export const Player = (props: PlayerCharacterMatchIndex) => {
   );
 };
 
-export const PlayerSkeleton = () => {
+export const PlayerSkeleton = ({ rCode, characterShort }) => {
   return (
     <>
       <h1 className={`text-full-width-2 mx-auto leading-none -mb-1`}>
         <span style={{ opacity: 0 }}>2000</span>
       </h1>
       <div className="container player-meta divide-x border-t">
-        <h2 className="rt-rc text-left pl-2 md:pl-2"></h2>
+        <h2 className="rt-rc text-left pl-2 md:pl-2">{rCode}</h2>
         <div
           className="theme-invert flex align-middle justify-end pr-2 md:pr-2"
           style={{ alignItems: "center", height: "100%" }}
@@ -60,7 +61,9 @@ export const PlayerSkeleton = () => {
         </div>
       </div>
       <div className="container player-meta divide-x border-t ">
-        <h1 className="rt-md pl-2 md:pl-2  flex justify-between"></h1>
+        <h1 className="rt-md pl-2 md:pl-2  flex justify-between">
+          {shortToLong[characterShort as shortKey]}
+        </h1>
         <h2 className="rt-md text-right pr-2 md:pr-2"></h2>
       </div>
     </>

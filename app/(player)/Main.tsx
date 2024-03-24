@@ -106,7 +106,7 @@ export default function Main({ rCode, characterShort, themeCookie }: Props) {
     return (
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme player-page">
         <ThemeSwitcher theme={theme} setTheme={setTheme} />
-        <PlayerSkeleton />
+        <PlayerSkeleton rCode={rCode} characterShort={characterShort} />
         <BarChartSkeleton />
         <SessionSkeleton />
         <MatchesSkeleton />
