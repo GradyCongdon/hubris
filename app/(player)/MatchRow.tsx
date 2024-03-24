@@ -37,7 +37,8 @@ export const formatMatch = (match: Match): Props => {
       minute: "numeric",
       hour12: true,
     })
-    .replace(",", "");
+    .replace(",", "")
+    .replace(" at ", " ");
   const opponentIdentifier = getIdentifier(
     match.opponent.player,
     match.opponent.character
