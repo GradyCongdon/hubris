@@ -28,7 +28,7 @@ export const formatMatch = (match: Match): Props => {
   const rgb = rgbScale(change, error / -6, error / 6);
   const record = `${match.record.wins} - ${match.record.losses}`;
   const _date = match.timePeriod.date.getTime();
-  const date = new Date(_date - new Date().getTimezoneOffset() * 60000);
+  const date = new Date(_date);
   const timestamp = date
     .toLocaleString("en-US", {
       month: "short",

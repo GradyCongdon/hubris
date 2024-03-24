@@ -53,7 +53,8 @@ const fixDate = (str: string) => {
 
 const fixTimezone = (str: string) => {
   const old = new Date(str);
-  const newDate = new Date(old.getTime());
+  const offset = 4 * 60 * 60 * 1000
+  const newDate = new Date(old.getTime() - offset);
   return newDate;
 }
 
