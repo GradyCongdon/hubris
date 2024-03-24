@@ -39,8 +39,8 @@ const Button = ({ active, nextPollMs, onClick: _onClick }: Props) => {
       <button
         className={`text-black w-full `}
         style={{
-          backgroundColor:"var(--accent-color)",
-          transition: "all 0.1s",
+          backgroundColor: "var(--accent-color)",
+          transition: "all 0.2s",
           color: "var(--progress-text)",
           height,
         }}
@@ -90,33 +90,51 @@ export const Session = ({ active, nextPollMs, onClick }: Props) => {
 
 export const SessionSkeleton = () => {
   const active = false;
-  const height = active ? "h-10" : "h-16";
+  const height = active
+    ? "var(--session-active-height)"
+    : "var(--session-inactive-height)";
   const text = active ? "" : "";
   const percent = 0;
   return (
-    <div className="container text-center session relative ">
+    <div className="container text-center session relative progress ">
       <button
-        className={`${height} text-black w-full`}
+        className={`text-black w-full `}
         style={{
-          backgroundColor: active ? "var(--bg)" : "var(--accent-color)",
-          transition: "all 0.3s",
-          color: active ? "var(--color)" : "var(--accent-text)",
+          backgroundColor: "var(--accent-color)",
+          transition: "all 0.1s",
+          color: "var(--progress-text)",
+          height,
         }}
       >
-        {text}
+        <div
+          className="progress-bar"
+          style={{
+            width: `${percent}%`,
+            bottom: 0,
+            top: 0,
+            left: 0,
+            backgroundColor: "var(--progress-fg)",
+            position: "absolute",
+            pointerEvents: "none",
+          }}
+        ></div>
+        <span
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            backgroundColor: "var(--progress-text-bg)",
+            color: "var(--progress-text)",
+            transition: "all 0.3s",
+            height: "100%",
+            padding: "0 11px",
+            position: "relative",
+            lineHeight: "24px",
+            zIndex: 102,
+          }}
+        >
+          <span style={{ opacity: 1 }}>{text}</span>
+        </span>
       </button>
-      <div
-        style={{
-          width: `${percent}%`,
-          bottom: 0,
-          top: 0,
-          left: 0,
-          backgroundColor: "white",
-          position: "absolute",
-          opacity: 0.2,
-          pointerEvents: "none",
-        }}
-      ></div>
     </div>
   );
 };
