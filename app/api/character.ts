@@ -26,6 +26,7 @@ export const shortToLong = {
   AS: "Asuka",
   JN: "Johnny",
   EL: "Elphelt",
+  AB: "A.B.A",
 };
 
 export type shortKey = keyof typeof shortToLong;
