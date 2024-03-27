@@ -1,4 +1,3 @@
-
 export const shortToLong = {
   SO: "Sol",
   KY: "Ky",
@@ -29,12 +28,24 @@ export const shortToLong = {
   AB: "A.B.A",
 };
 
+const others = {
+  "A.B.A.": "AB",
+  "Jack-O": "JC",
+  "Jack O": "JC",
+  Bedman: "BE",
+};
+
 export type shortKey = keyof typeof shortToLong;
 
-export const longToShort: { [key: string]: string; } = Object.entries(shortToLong).reduce((acc, [k, v]) => {
-  // @ts-ignore
-  acc[v] = k;
-  return acc;
-}, {});
+export const longToShort: { [key: string]: string } = Object.entries(
+  shortToLong
+).reduce(
+  (acc, [k, v]) => {
+    // @ts-ignore
+    acc[v] = k;
+    return acc;
+  },
+  { ...others }
+);
 
 export type longKey = keyof typeof longToShort;
