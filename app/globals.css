@@ -156,3 +156,17 @@
     --accent-color: color(display-p3 0.694 1 0);
   }
 }
+
+.change-bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 100;
+}
+.change-value {
+  position: relative;
+  color: white;
+  z-index: 101;
+}

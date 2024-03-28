@@ -63,11 +63,9 @@ export const SessionStats = ({
 
   return (
     <div className="session-stats border-t">
-      <div
-        className="flex align-center justify-center rt-md"
-        style={{ backgroundColor: changeRGB, color: "white" }}
-      >
-        {changeFormatted}
+      <div className="rt-md relative w-full h-full flex justify-center align-middle">
+        <div className="change-bg" style={{ backgroundColor: changeRGB }}></div>
+        <span className="change-value">{changeFormatted}</span>
       </div>
       <div className="flex align-center justify-center border-r ml-1 rt-md">
         {gameStats.wins}W:{gameStats.losses}L

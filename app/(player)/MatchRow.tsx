@@ -87,19 +87,10 @@ export const MatchRow = ({
       <div
         className="change-bg"
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 100,
           background: rgb,
         }}
       ></div>
-      <span
-        className="value"
-        style={{ position: "relative", zIndex: 101, left: "-2px" }}
-      >
+      <span className="change-value" style={{ left: "-2px" }}>
         {change}
       </span>
     </div>

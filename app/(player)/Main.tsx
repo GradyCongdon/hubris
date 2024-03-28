@@ -68,8 +68,8 @@ export default function Main({ rCode, characterShort, themeCookie }: Props) {
   }, [active, characterShort, fetchUpdate, rCode]);
   useEffect(() => {
     const themes = THEMES.map((theme) => "theme-" + theme);
-    document.documentElement.classList.remove(...themes);
-    document.documentElement.classList.add("theme-" + theme);
+    document.body.classList.remove(...themes);
+    document.body.classList.add("theme-" + theme);
     window.analytics.track("Theme Change", { theme: theme });
     setThemeCookie(theme);
     console.debug("theme change", theme);
