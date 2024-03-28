@@ -72,8 +72,8 @@
   grid-column: span 2;
   text-align: end;
 }
-.change-bg {
-  filter: contrast(0.88) brightness(1);
+.opponent-name > div {
+  padding-right: 1px;
 }
 .change .value {
   color: white;

@@ -1,5 +1,10 @@
 "use client";
-import { MATCH_LIMIT, POLLING_INTERVAL, SESSION_TIMEFRAME } from "@/app/consts";
+import {
+  MATCH_LIMIT,
+  POLLING_INTERVAL,
+  SESSION_TIMEFRAME,
+  THEMES,
+} from "@/app/consts";
 import { getPlayerCharacterMatchIndex } from "@/app/api/hubris/actions";
 import { Match, PlayerCharacterMatchIndex } from "@/app/api/hubris/types";
 import { SetStateAction, useCallback, useEffect, useState } from "react";
@@ -62,7 +67,8 @@ export default function Main({ rCode, characterShort, themeCookie }: Props) {
     });
   }, [active, characterShort, fetchUpdate, rCode]);
   useEffect(() => {
-    document.documentElement.classList.remove("theme-dark", "theme-light");
+    const themes = THEMES.map((theme) => "theme-" + theme);
+    document.documentElement.classList.remove(...themes);
     document.documentElement.classList.add("theme-" + theme);
     window.analytics.track("Theme Change", { theme: theme });
     setThemeCookie(theme);

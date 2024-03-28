@@ -117,16 +117,6 @@
   --accent-text: rgb(255, 252, 251);
 }
 
-@supports (color: color(display-p3 1 1 1)) {
-  .theme-light {
-    --accent-color: color(display-p3 1 0.525 0.879);
-    --accent-color-bg: color(display-p3 1 0.65 0.91);
-    --color: color(display-p3 0 0.207 1);
-  }
-  .theme-dark {
-    --accent-color: color(display-p3 0.694 1 0);
-  }
-}
 .theme-dark {
   --bg: rgb(25, 26, 26);
   --color: rgb(200, 201, 201);
@@ -135,6 +125,34 @@
   --accent-color: rgb(166, 239, 0);
   --accent-text: rgb(47, 48, 48);
 }
+
+.theme-utah {
+  --bg: rgb(207, 199, 191);
+  --color: rgb(31, 28, 0);
+  --color: rgb(45, 71, 139);
+  --border-color: rgb(162, 154, 116);
+  --accent-color-bg: rgb(83, 136, 120);
+  --accent-color: rgb(70, 115, 101);
+  --accent-text: rgb(255, 252, 251);
+}
+.theme-light .change-bg {
+  filter: contrast(0.88) brightness(1);
+}
+.theme-utah .change-bg {
+  filter: contrast(.55) brightness(0.85);
+}
 .theme-dark .change-bg {
-  filter: contrast(-1.7) brightness(0.6);
+  filter: contrast(.9) brightness(0.7);
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  .theme-light {
+    --accent-color: color(display-p3 1 0.525 0.879);
+    --accent-color-bg: color(display-p3 1 0.65 0.91);
+    --color: color(display-p3 0 0.207 1);
+  }
+  .theme-dark {
+    --accent-color-bg: color(display-p3 0.62 .9 0);
+    --accent-color: color(display-p3 0.694 1 0);
+  }
 }
