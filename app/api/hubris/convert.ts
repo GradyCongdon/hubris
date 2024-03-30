@@ -1,8 +1,9 @@
 "use server";
 import type { APIMatch, APIPlayer } from "@/app/api/rating-update/types";
 import { PlayerCharacterMatchIndex } from "@/app/api/hubris/types";
-import { getPlayerCharacterData, getCharacterSets } from "@/app/api/rating-update/sets/lib";
+import { fetchPlayerCharacterData, fetchCharacterSets } from "@/app/api/rating-update/sets/lib";
 import { EXAMPLE } from "@/app/consts";
+import { longKey, shortKey } from "../character";
 
 
 export const fetchCharacterMatchIndex = async (
@@ -11,12 +12,9 @@ export const fetchCharacterMatchIndex = async (
   number: number
 ): Promise<PlayerCharacterMatchIndex> => {
   const [_player, _matches] = await Promise.all([
-    getPlayerCharacterData(rCode, characterShort, EXAMPLE),
-    getCharacterSets(rCode, characterShort, EXAMPLE),
+    fetchPlayerCharacterData(rCode, characterShort, EXAMPLE),
+    fetchCharacterSets(rCode, characterShort, EXAMPLE),
   ]);
-  if ("error" in _player) {
-    throw new Error(_player.error);
-  }
   const matches = _matches.slice(0, number);
   const p = convertFromRatingUpdate(_player, matches);
   return p;
@@ -33,12 +31,12 @@ export const convertFromRatingUpdate = (
   };
   const character = {
     name: _player.character,
-    shortCode: _player.characterShort,
+    shortCode: _player.characterShort as shortKey,
   };
   // TODO
   const rating = {
     value: Math.round(_matches[0].Rating + _matches[0].Change),
-    error: _matches[0].Error,
+    deviation: _matches[0].Error,
   };
   const matches = _matches.map((match: APIMatch) => {
     // const player = {
@@ -58,7 +56,7 @@ export const convertFromRatingUpdate = (
     };
     const rating = {
       value: match.Rating,
-      error: match.Error,
+      deviation: match.Error,
       change: match.Change,
     };
     const record = {
@@ -79,11 +77,11 @@ export const convertFromRatingUpdate = (
       },
       rating: {
         value: match.OpponentRating,
-        error: match.OpponentError,
+        deviation: match.OpponentError,
       },
       character: {
         name: match.OpponentCharacter,
-        shortCode: match.OpponentCharacterShort,
+        shortCode: match.OpponentCharacterShort as shortKey,
       },
     };
     return {

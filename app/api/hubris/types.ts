@@ -1,3 +1,5 @@
+import type { shortKey } from "../character";
+
 export type Player = {
   name: string;
   rCode: string;
@@ -5,11 +7,11 @@ export type Player = {
 };
 export type Character = {
   name: string;
-  shortCode: string;
+  shortCode: shortKey;
 };
 export type Rating = {
   value: number;
-  error: number;
+  deviation: number;
 };
 export type MatchRating = Rating & {
   change: number;
@@ -54,10 +56,11 @@ export type PlayerCharacter = {
   rating: Rating;
 };
 
+export type CharacterRatings = Record<shortKey, Rating>;
+
 export type PlayerCharactersIndex = {
   player: Player;
-  characters: Record<string, Character>;
-  ratings: Record<string, Rating>;
+  characterRatings: CharacterRatings;
 };
 
 export type PlayerCharacterMatchIndex = PlayerCharacter & {

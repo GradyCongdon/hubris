@@ -2,6 +2,7 @@ import { uniq } from "lodash";
 import { tabletojson } from "tabletojson";
 import heckSets from './heckSets.json' with { type: 'json' };
 import { shortToLong, longToShort, shortKey } from "../../character";
+import { APIPlayer } from "../types";
 
 const fetchHistory = async (rCode: string, characterShort: string) => {
   const urlTemplate = `http://ratingupdate.info/player/${rCode}/${characterShort}/history`;
@@ -214,7 +215,7 @@ const fixSheet = (data: MatchTODO) => {
   return cleaned;
 };
 
-export const getAllSets = async (rCode: string) => {
+export const fetchAllSets = async (rCode: string) => {
   const all: MatchTODO[] = [];
   const chars = Object.keys(shortToLong).map(async (short) => {
     console.log(`downloading ${rCode}...`);
@@ -227,7 +228,7 @@ export const getAllSets = async (rCode: string) => {
   return allChars;
 };
 
-export const getCharacterSets = async (
+export const fetchCharacterSets = async (
   rCode: string,
   _characterShort: string,
   cached = false
@@ -245,8 +246,7 @@ export const getCharacterSets = async (
 // http://ratingupdate.info/api/player_lookup?name=glue%20eater
 
 
-
-export const getPlayerCharacterData = async (rCode: string, _characterShort: string, cached = false) => {
+export const fetchPlayerCharacterData = async (rCode: string, _characterShort: string, cached = false): Promise<APIPlayer> => {
   if (cached) {
     return {
       name: "heckscape",
@@ -255,30 +255,22 @@ export const getPlayerCharacterData = async (rCode: string, _characterShort: str
       rCode: "2EC3DCA33129F30",
     };
   }
-  const characterShort = _characterShort.toUpperCase();
+  const characterShort = _characterShort.toUpperCase() as shortKey;
   const url = `http://ratingupdate.info/player/${rCode}/${characterShort}`;
-  const resp = await fetch(url);
+  const resp = await fetch(url, { next: { revalidate: 360 } });
   const text = await resp.text();
   // const regex = /<p class="title">\s+(?<vip><span class="tag is-warning is-medium">VIP<\/span>)?\s+(?<name>.*?)\s+<span class="tag is-medium"><\/span>/;
   const regex = /<title>(?<title>.*?)<\/title>/;
-  try {
-    const match = text.match(regex);
-    if (!match || !match.groups) throw new Error("No Player match from regex");
-    const title = match.groups.title;
-    const [name, other] = title.split(" (");
-    const character = other.split(")")[0];
-    const data = {
-      name,
-      characterShort,
-      character,
-      rCode,
-    };
-    return data;
-  } catch (e) {
-    console.log(e);
-    return {
-      text: text,
-      error: (e as Error).message,
-    };
-  }
+  const match = text.match(regex);
+  if (!match || !match.groups) throw new Error("No Player match from regex");
+  const title = match.groups.title;
+  const [name, other] = title.split(" (");
+  const character = other.split(")")[0];
+  const data = {
+    name,
+    characterShort,
+    character,
+    rCode,
+  };
+  return data;
 };

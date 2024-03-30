@@ -1,4 +1,4 @@
-import { getPlayerCharacterData } from "@/app/api/rating-update/sets/lib";
+import { fetchPlayerCharacterData } from "@/app/api/rating-update/sets/lib";
 import Main from "@/app/(player)/Main";
 import { cookies } from "next/headers";
 import { DEFAULT_THEME } from "@/app/consts";
@@ -8,7 +8,7 @@ export async function generateMetadata({
 }: {
   params: { rCode: string; characterShort: string };
 }) {
-  const player = await getPlayerCharacterData(
+  const player = await fetchPlayerCharacterData(
     params.rCode,
     params.characterShort
   );

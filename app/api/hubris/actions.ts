@@ -1,25 +1,40 @@
 "use server";
-import { PlayerCharacter, PlayerCharacterMatchIndex, PlayerCharactersIndex } from "@/app/api/hubris/types";
+import { Player, PlayerCharacter, PlayerCharacterMatchIndex, PlayerCharactersIndex } from "@/app/api/hubris/types";
 import { fetchCharacterMatchIndex } from "./convert";
 import { EXAMPLE, MATCH_LIMIT } from "@/app/consts";
-import { examplePlayerCharacter, examplePlayerCharacterMatchIndex, examplePlayerCharactersIndex } from "./example";
+import { examplePlayer, examplePlayerCharacter, examplePlayerCharacterMatchIndex, examplePlayerCharactersIndex } from "./example";
+import { getCharacterRatings } from "./player/[rCode]/characters/lib";
+import { getPlayer as _getPlayer } from "./player/[rCode]/lib";
+
 
 /*
 /search/:name - PlayerSearch
 
-/player/:rCode - PlayerCharactersIndex 
+/player/:rCode - PlayerCharactersIndex
 /player/:rCode/characters - PlayerCharactersIndex
-/player/:rCode/Character/:characterShort - PlayerCharacter [redirect on charlong]
-/player/:rCode/Character/:characterShort/matches - PlayerCharacterMatchIndex
+/player/:rCode/character/:characterShort - PlayerCharacter [redirect on charlong]
+/player/:rCode/rharacter/:characterShort/matches - PlayerCharacterMatchIndex
 /player/:rCode/Character/:characterShort/match/:matchId - PlayerCharacterMatch
 */
 
 // /player/:rCode - PlayerCharactersIndex 
+export const getPlayer = async (rCode: string): Promise<Player> => {
+  if (EXAMPLE) return examplePlayer;
+  const player = await _getPlayer(rCode);
+  return player;
+};
+
 // /player/:rCode/characters - PlayerCharactersIndex
-export const TODO_getPlayerCharactersIndex = async (rCode: string): Promise<PlayerCharactersIndex> => {
+export const getPlayerCharactersIndex = async (rCode: string): Promise<PlayerCharactersIndex> => {
   if (EXAMPLE) return examplePlayerCharactersIndex;
-  return examplePlayerCharactersIndex;
-}
+  const characterRatings = await getCharacterRatings(rCode);
+  const player = await _getPlayer(rCode);
+  return {
+    player,
+    characterRatings
+  };
+};
+
 
 // /player/:rCode/Character/:characterShort - PlayerCharacter
 export const getPlayerCharacter = async (rCode: string, characterShort: string): Promise<PlayerCharacter> => {

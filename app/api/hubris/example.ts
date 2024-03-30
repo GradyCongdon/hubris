@@ -1,5 +1,9 @@
-import { Character, Player, PlayerCharacter, PlayerCharactersIndex, Rating } from "./types";
+import { Character, CharacterRatings, Player, PlayerCharacter, PlayerCharactersIndex, Rating } from "./types";
 import { matches }  from "./example-matches.js";
+import { characterShorts, shortKey } from "../character";
+
+const KY = "KY" as shortKey;
+const AX = "AX" as shortKey;
 
 const examplePlayerHeckscape = {
   name: "heckscape",
@@ -11,23 +15,23 @@ export const examplePlayer : Player = examplePlayerHeckscape;
 
 const exampleCharacterKY = {
   name: "Ky",
-  shortCode: "KY",
+  shortCode: KY,
 };
 
 const exampleCharacterAX = {
   name: "Axl",
-  shortCode: "AX",
+  shortCode: AX,
 };
 
 export const exampleCharacter : Character = exampleCharacterKY;
 
 const exampleRating1 = {
   value: 1169,
-  error: 69,
+  deviation: 69,
 };
 const exampleRating2 = {
   value: 1322,
-  error: 123,
+  deviation: 123,
 };
 
 export const exampleRating : Rating = exampleRating1;
@@ -38,16 +42,18 @@ export const examplePlayerCharacter: PlayerCharacter = {
   rating: exampleRating1,
 };
 
+const genRating = () => ({
+  value: Math.floor(Math.random() * 2200),
+  deviation: Math.floor(Math.random() * 100),
+});
+
 export const examplePlayerCharactersIndex: PlayerCharactersIndex = {
   player: examplePlayerHeckscape,
-  characters: {
-    KY: exampleCharacterKY,
-    AX: exampleCharacterAX
-  },
-  ratings: {
-    KY: exampleRating1,
-    AX: exampleRating2,
-  },
+  characterRatings: characterShorts.reduce((acc, short) => {
+  // @ts-ignore
+    acc[short] = genRating();
+    return acc;
+  }, {} as CharacterRatings),
 };
 
 const exampleMatch1 = {
@@ -60,7 +66,7 @@ const exampleMatch1 = {
   player: examplePlayerHeckscape,
   rating: {
     value: 1652,
-    error: 69,
+    deviation: 69,
     change: 2.4,
   },
   record: {

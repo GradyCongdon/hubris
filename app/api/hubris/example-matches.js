@@ -11,7 +11,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1623, "error": 84, "change": 6.9 },
+    "rating": { "value": 1623, "deviation": 84, "change": 6.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -22,7 +22,7 @@ export const matches = `[
     "probability": { "odds": 0.56, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "EXAMPLE", "rCode": "Sleeps", "system": "PC" },
-      "rating": { "value": 1584, "error": 66 },
+      "rating": { "value": 1584, "deviation": 66 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -38,13 +38,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 70, "change": 0 },
+    "rating": { "value": 1603, "deviation": 70, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -60,7 +60,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1624, "error": 79, "change": -1.7 },
+    "rating": { "value": 1624, "deviation": 79, "change": -1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -75,7 +75,7 @@ export const matches = `[
         "rCode": "@SHIN_Tamazuki",
         "system": "PC"
       },
-      "rating": { "value": 1705, "error": 89 },
+      "rating": { "value": 1705, "deviation": 89 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -91,7 +91,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1625, "error": 80, "change": -0.8 },
+    "rating": { "value": 1625, "deviation": 80, "change": -0.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -102,7 +102,7 @@ export const matches = `[
     "probability": { "odds": 0.72, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Kit", "rCode": "Kit", "system": "PC" },
-      "rating": { "value": 1462, "error": 73 },
+      "rating": { "value": 1462, "deviation": 73 },
       "character": { "name": "Baiken", "shortCode": "BA" }
     }
   },
@@ -118,7 +118,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1638, "error": 82, "change": -13.2 },
+    "rating": { "value": 1638, "deviation": 82, "change": -13.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.48, "oddsFactor": 0 },
@@ -128,7 +128,7 @@ export const matches = `[
         "rCode": "All Of Guardin'",
         "system": "PS"
       },
-      "rating": { "value": 1654, "error": 71 },
+      "rating": { "value": 1654, "deviation": 71 },
       "character": { "name": "Goldlewis", "shortCode": "GO" }
     }
   },
@@ -144,13 +144,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1627, "error": 83, "change": 11.2 },
+    "rating": { "value": 1627, "deviation": 83, "change": 11.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.51, "oddsFactor": 3 },
     "opponent": {
       "player": { "name": "Kirb_Boi", "rCode": "Kirb_Boi", "system": "PC" },
-      "rating": { "value": 1621, "error": 331 },
+      "rating": { "value": 1621, "deviation": 331 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -166,7 +166,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1619, "error": 84, "change": 7.4 },
+    "rating": { "value": 1619, "deviation": 84, "change": 7.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.77, "oddsFactor": 0 },
@@ -176,7 +176,7 @@ export const matches = `[
         "rCode": "Sir Quagsire",
         "system": "XB"
       },
-      "rating": { "value": 1407, "error": 71 },
+      "rating": { "value": 1407, "deviation": 71 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -192,7 +192,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1617, "error": 85, "change": 2 },
+    "rating": { "value": 1617, "deviation": 85, "change": 2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.92, "oddsFactor": 0 },
@@ -202,7 +202,7 @@ export const matches = `[
         "rCode": "ElmersEnthusiast",
         "system": "PC"
       },
-      "rating": { "value": 1184, "error": 87 },
+      "rating": { "value": 1184, "deviation": 87 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -218,13 +218,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1609, "error": 86, "change": 8.4 },
+    "rating": { "value": 1609, "deviation": 86, "change": 8.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.58, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "SolBadKy", "rCode": "SolBadKy", "system": "PC" },
-      "rating": { "value": 1551, "error": 152 },
+      "rating": { "value": 1551, "deviation": 152 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -240,7 +240,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1609, "error": 73, "change": 0.1 },
+    "rating": { "value": 1609, "deviation": 73, "change": 0.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -251,7 +251,7 @@ export const matches = `[
     "probability": { "odds": 0.68, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "MB_Roddy", "rCode": "MB_Roddy", "system": "PC" },
-      "rating": { "value": 1476, "error": 117 },
+      "rating": { "value": 1476, "deviation": 117 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -267,7 +267,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1613, "error": 74, "change": -4.1 },
+    "rating": { "value": 1613, "deviation": 74, "change": -4.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -282,7 +282,7 @@ export const matches = `[
         "rCode": "Schemingbanaenae",
         "system": "PC"
       },
-      "rating": { "value": 1600, "error": 61 },
+      "rating": { "value": 1600, "deviation": 61 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -298,7 +298,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1615, "error": 76, "change": -1.6 },
+    "rating": { "value": 1615, "deviation": 76, "change": -1.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -309,7 +309,7 @@ export const matches = `[
     "probability": { "odds": 0.39, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Duckbot", "rCode": "Duckbot", "system": "PC" },
-      "rating": { "value": 1696, "error": 79 },
+      "rating": { "value": 1696, "deviation": 79 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -325,13 +325,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1631, "error": 77, "change": -16 },
+    "rating": { "value": 1631, "deviation": 77, "change": -16 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.67, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Baararak", "rCode": "Baararak", "system": "PC" },
-      "rating": { "value": 1505, "error": 68 },
+      "rating": { "value": 1505, "deviation": 68 },
       "character": { "name": "Sin", "shortCode": "SI" }
     }
   },
@@ -347,13 +347,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1629, "error": 77, "change": 2.1 },
+    "rating": { "value": 1629, "deviation": 77, "change": 2.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.94, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Kurare", "rCode": "Kurare", "system": "PC" },
-      "rating": { "value": 1157, "error": 64 },
+      "rating": { "value": 1157, "deviation": 64 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -369,7 +369,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1627, "error": 77, "change": 1.2 },
+    "rating": { "value": 1627, "deviation": 77, "change": 1.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.88, "oddsFactor": 2 },
@@ -379,7 +379,7 @@ export const matches = `[
         "rCode": "OPS MattChinase",
         "system": "XB"
       },
-      "rating": { "value": 1268, "error": 167 },
+      "rating": { "value": 1268, "deviation": 167 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -395,7 +395,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1627, "error": 79, "change": 0.9 },
+    "rating": { "value": 1627, "deviation": 79, "change": 0.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -406,7 +406,7 @@ export const matches = `[
     "probability": { "odds": 0.64, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Baararak", "rCode": "Baararak", "system": "PC" },
-      "rating": { "value": 1524, "error": 74 },
+      "rating": { "value": 1524, "deviation": 74 },
       "character": { "name": "Sin", "shortCode": "SI" }
     }
   },
@@ -422,7 +422,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1619, "error": 80, "change": 7.3 },
+    "rating": { "value": 1619, "deviation": 80, "change": 7.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -433,7 +433,7 @@ export const matches = `[
     "probability": { "odds": 0.37, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "INeedAHug", "rCode": "INeedAHug", "system": "PC" },
-      "rating": { "value": 1712, "error": 180 },
+      "rating": { "value": 1712, "deviation": 180 },
       "character": { "name": "Happy Chaos", "shortCode": "HA" }
     }
   },
@@ -449,13 +449,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1628, "error": 72, "change": -8.4 },
+    "rating": { "value": 1628, "deviation": 72, "change": -8.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 0, "losses": 2, "winPercent": 0 },
     "probability": { "odds": 0.59, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Dman5952", "rCode": "Dman5952", "system": "PC" },
-      "rating": { "value": 1563, "error": 78 },
+      "rating": { "value": 1563, "deviation": 78 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -471,7 +471,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1626, "error": 73, "change": 1.4 },
+    "rating": { "value": 1626, "deviation": 73, "change": 1.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -486,7 +486,7 @@ export const matches = `[
         "rCode": "NA Hypocrites",
         "system": "PS"
       },
-      "rating": { "value": 1544, "error": 73 },
+      "rating": { "value": 1544, "deviation": 73 },
       "character": { "name": "Bedman?", "shortCode": "BE" }
     }
   },
@@ -502,13 +502,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1621, "error": 74, "change": 4.7 },
+    "rating": { "value": 1621, "deviation": 74, "change": 4.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.81, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "HondaCivic", "rCode": "HondaCivic", "system": "PS" },
-      "rating": { "value": 1364, "error": 101 },
+      "rating": { "value": 1364, "deviation": 101 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -524,13 +524,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1619, "error": 69, "change": 2.3 },
+    "rating": { "value": 1619, "deviation": 69, "change": 2.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.68, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Thyrat", "rCode": "Thyrat", "system": "PC" },
-      "rating": { "value": 1487, "error": 119 },
+      "rating": { "value": 1487, "deviation": 119 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -546,7 +546,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1615, "error": 70, "change": 4.2 },
+    "rating": { "value": 1615, "deviation": 70, "change": 4.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -557,7 +557,7 @@ export const matches = `[
     "probability": { "odds": 0.45, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Xnotfound", "rCode": "Xnotfound", "system": "PS" },
-      "rating": { "value": 1648, "error": 73 },
+      "rating": { "value": 1648, "deviation": 73 },
       "character": { "name": "Asuka", "shortCode": "AS" }
     }
   },
@@ -573,7 +573,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1614, "error": 70, "change": 1.4 },
+    "rating": { "value": 1614, "deviation": 70, "change": 1.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.94, "oddsFactor": 3 },
@@ -583,7 +583,7 @@ export const matches = `[
         "rCode": "Dynamite Lobster",
         "system": "PC"
       },
-      "rating": { "value": 1068, "error": 378 },
+      "rating": { "value": 1068, "deviation": 378 },
       "character": { "name": "Ramlethal", "shortCode": "RA" }
     }
   },
@@ -599,7 +599,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1617, "error": 70, "change": -3.2 },
+    "rating": { "value": 1617, "deviation": 70, "change": -3.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -614,7 +614,7 @@ export const matches = `[
         "rCode": "Retrodude442",
         "system": "PS"
       },
-      "rating": { "value": 1630, "error": 95 },
+      "rating": { "value": 1630, "deviation": 95 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -630,7 +630,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 71, "change": 5.4 },
+    "rating": { "value": 1611, "deviation": 71, "change": 5.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -641,7 +641,7 @@ export const matches = `[
     "probability": { "odds": 0.4, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Piblus", "rCode": "Piblus", "system": "PC" },
-      "rating": { "value": 1681, "error": 71 },
+      "rating": { "value": 1681, "deviation": 71 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -657,7 +657,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1610, "error": 72, "change": 1.5 },
+    "rating": { "value": 1610, "deviation": 72, "change": 1.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -672,7 +672,7 @@ export const matches = `[
         "rCode": "painting fan",
         "system": "PC"
       },
-      "rating": { "value": 1809, "error": 83 },
+      "rating": { "value": 1809, "deviation": 83 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -688,7 +688,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1610, "error": 72, "change": 0 },
+    "rating": { "value": 1610, "deviation": 72, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 1, "oddsFactor": 0 },
@@ -698,7 +698,7 @@ export const matches = `[
         "rCode": "Thatguythesav",
         "system": "PS"
       },
-      "rating": { "value": 368, "error": 77 },
+      "rating": { "value": 368, "deviation": 77 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -714,13 +714,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1606, "error": 73, "change": 3.5 },
+    "rating": { "value": 1606, "deviation": 73, "change": 3.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.86, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Synopsis", "rCode": "Synopsis", "system": "PC" },
-      "rating": { "value": 1280, "error": 173 },
+      "rating": { "value": 1280, "deviation": 173 },
       "character": { "name": "Nagoriyuki", "shortCode": "NA" }
     }
   },
@@ -736,7 +736,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1604, "error": 73, "change": 2 },
+    "rating": { "value": 1604, "deviation": 73, "change": 2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.92, "oddsFactor": 2 },
@@ -746,7 +746,7 @@ export const matches = `[
         "rCode": "Johnny's Wife",
         "system": "PC"
       },
-      "rating": { "value": 1142, "error": 252 },
+      "rating": { "value": 1142, "deviation": 252 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -762,13 +762,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1606, "error": 59, "change": -1.4 },
+    "rating": { "value": 1606, "deviation": 59, "change": -1.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 0, "losses": 1, "winPercent": 0 },
     "probability": { "odds": 0.26, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "cure", "rCode": "cure", "system": "PS" },
-      "rating": { "value": 1790, "error": 55 },
+      "rating": { "value": 1790, "deviation": 55 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -784,7 +784,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1595, "error": 61, "change": 10.3 },
+    "rating": { "value": 1595, "deviation": 61, "change": 10.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 9,
@@ -795,7 +795,7 @@ export const matches = `[
     "probability": { "odds": 0.53, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Hyakkimaru", "rCode": "Hyakkimaru", "system": "PC" },
-      "rating": { "value": 1574, "error": 95 },
+      "rating": { "value": 1574, "deviation": 95 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -811,7 +811,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1594, "error": 62, "change": 1.7 },
+    "rating": { "value": 1594, "deviation": 62, "change": 1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -822,7 +822,7 @@ export const matches = `[
     "probability": { "odds": 0.56, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Loashes", "rCode": "Loashes", "system": "PC" },
-      "rating": { "value": 1549, "error": 65 },
+      "rating": { "value": 1549, "deviation": 65 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -838,13 +838,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 63, "change": -6.5 },
+    "rating": { "value": 1600, "deviation": 63, "change": -6.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.38, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "merciful", "rCode": "merciful", "system": "PS" },
-      "rating": { "value": 1685, "error": 60 },
+      "rating": { "value": 1685, "deviation": 60 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -860,13 +860,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 63, "change": -4.8 },
+    "rating": { "value": 1603, "deviation": 63, "change": -4.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.27, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Zayters", "rCode": "Zayters", "system": "PC" },
-      "rating": { "value": 1782, "error": 71 },
+      "rating": { "value": 1782, "deviation": 71 },
       "character": { "name": "Bridget", "shortCode": "BI" }
     }
   },
@@ -882,7 +882,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1608, "error": 63, "change": -2.8 },
+    "rating": { "value": 1608, "deviation": 63, "change": -2.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 0, "losses": 1, "winPercent": 0 },
     "probability": { "odds": 0.49, "oddsFactor": 0 },
@@ -892,7 +892,7 @@ export const matches = `[
         "rCode": "monotonoroboCOPA",
         "system": "PS"
       },
-      "rating": { "value": 1614, "error": 59 },
+      "rating": { "value": 1614, "deviation": 59 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -908,7 +908,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1604, "error": 65, "change": 3.3 },
+    "rating": { "value": 1604, "deviation": 65, "change": 3.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 5, "wins": 3, "losses": 2, "winPercent": 60 },
     "probability": { "odds": 0.48, "oddsFactor": 0 },
@@ -918,7 +918,7 @@ export const matches = `[
         "rCode": "monotonoroboCOPA",
         "system": "PS"
       },
-      "rating": { "value": 1617, "error": 60 },
+      "rating": { "value": 1617, "deviation": 60 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -934,13 +934,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1612, "error": 66, "change": -7.4 },
+    "rating": { "value": 1612, "deviation": 66, "change": -7.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.46, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Margarita", "rCode": "Margarita", "system": "PC" },
-      "rating": { "value": 1640, "error": 228 },
+      "rating": { "value": 1640, "deviation": 228 },
       "character": { "name": "Zato-1", "shortCode": "ZA" }
     }
   },
@@ -956,7 +956,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 66, "change": 0.8 },
+    "rating": { "value": 1611, "deviation": 66, "change": 0.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -967,7 +967,7 @@ export const matches = `[
     "probability": { "odds": 0.64, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "story", "rCode": "story", "system": "PC" },
-      "rating": { "value": 1513, "error": 101 },
+      "rating": { "value": 1513, "deviation": 101 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -983,7 +983,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1605, "error": 67, "change": 5.9 },
+    "rating": { "value": 1605, "deviation": 67, "change": 5.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.7, "oddsFactor": 0 },
@@ -993,7 +993,7 @@ export const matches = `[
         "rCode": "Evil | Xiii",
         "system": "PC"
       },
-      "rating": { "value": 1453, "error": 82 },
+      "rating": { "value": 1453, "deviation": 82 },
       "character": { "name": "Jack-O'", "shortCode": "JC" }
     }
   },
@@ -1009,7 +1009,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1609, "error": 68, "change": -3.7 },
+    "rating": { "value": 1609, "deviation": 68, "change": -3.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1020,7 +1020,7 @@ export const matches = `[
     "probability": { "odds": 0.88, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Smoked", "rCode": "Smoked", "system": "PC" },
-      "rating": { "value": 1252, "error": 104 },
+      "rating": { "value": 1252, "deviation": 104 },
       "character": { "name": "Bedman?", "shortCode": "BE" }
     }
   },
@@ -1036,7 +1036,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1605, "error": 69, "change": 3.9 },
+    "rating": { "value": 1605, "deviation": 69, "change": 3.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1051,7 +1051,7 @@ export const matches = `[
         "rCode": "snacklepackle",
         "system": "PC"
       },
-      "rating": { "value": 1632, "error": 64 },
+      "rating": { "value": 1632, "deviation": 64 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -1067,13 +1067,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 69, "change": 6.4 },
+    "rating": { "value": 1599, "deviation": 69, "change": 6.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.68, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "xmaniwani", "rCode": "xmaniwani", "system": "XB" },
-      "rating": { "value": 1463, "error": 140 },
+      "rating": { "value": 1463, "deviation": 140 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -1089,13 +1089,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 70, "change": -4.7 },
+    "rating": { "value": 1603, "deviation": 70, "change": -4.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.21, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "foam root", "rCode": "foam root", "system": "PC" },
-      "rating": { "value": 1837, "error": 98 },
+      "rating": { "value": 1837, "deviation": 98 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -1111,13 +1111,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 70, "change": 0 },
+    "rating": { "value": 1603, "deviation": 70, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -1133,13 +1133,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 70, "change": 3.4 },
+    "rating": { "value": 1600, "deviation": 70, "change": 3.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.86, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Type2Fun", "rCode": "Type2Fun", "system": "PC" },
-      "rating": { "value": 1284, "error": 58 },
+      "rating": { "value": 1284, "deviation": 58 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -1155,7 +1155,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1602, "error": 71, "change": -2.2 },
+    "rating": { "value": 1602, "deviation": 71, "change": -2.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1166,7 +1166,7 @@ export const matches = `[
     "probability": { "odds": 0.79, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "KyOT0", "rCode": "KyOT0", "system": "PC" },
-      "rating": { "value": 1365, "error": 110 },
+      "rating": { "value": 1365, "deviation": 110 },
       "character": { "name": "Baiken", "shortCode": "BA" }
     }
   },
@@ -1182,7 +1182,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 71, "change": 2.9 },
+    "rating": { "value": 1599, "deviation": 71, "change": 2.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.88, "oddsFactor": 2 },
@@ -1192,7 +1192,7 @@ export const matches = `[
         "rCode": "CouchMuffin",
         "system": "PS"
       },
-      "rating": { "value": 1240, "error": 172 },
+      "rating": { "value": 1240, "deviation": 172 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -1208,13 +1208,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1596, "error": 72, "change": 3.2 },
+    "rating": { "value": 1596, "deviation": 72, "change": 3.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.87, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Bobby", "rCode": "Bobby", "system": "PC" },
-      "rating": { "value": 1258, "error": 76 },
+      "rating": { "value": 1258, "deviation": 76 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -1230,13 +1230,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 73, "change": -3.2 },
+    "rating": { "value": 1599, "deviation": 73, "change": -3.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 0, "losses": 2, "winPercent": 0 },
     "probability": { "odds": 0.2, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Bazel :)", "rCode": "Bazel :)", "system": "PC" },
-      "rating": { "value": 1845, "error": 127 },
+      "rating": { "value": 1845, "deviation": 127 },
       "character": { "name": "I-No", "shortCode": "IN" }
     }
   },
@@ -1252,7 +1252,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1607, "error": 74, "change": -7.7 },
+    "rating": { "value": 1607, "deviation": 74, "change": -7.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1263,7 +1263,7 @@ export const matches = `[
     "probability": { "odds": 0.71, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "jaquavious", "rCode": "jaquavious", "system": "PC" },
-      "rating": { "value": 1450, "error": 131 },
+      "rating": { "value": 1450, "deviation": 131 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -1279,13 +1279,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1605, "error": 74, "change": 2.2 },
+    "rating": { "value": 1605, "deviation": 74, "change": 2.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.73, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "kylej#3661", "rCode": "kylej#3661", "system": "PS" },
-      "rating": { "value": 1424, "error": 137 },
+      "rating": { "value": 1424, "deviation": 137 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -1301,13 +1301,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 74, "change": 4.6 },
+    "rating": { "value": 1600, "deviation": 74, "change": 4.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.82, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Emilliards", "rCode": "Emilliards", "system": "PC" },
-      "rating": { "value": 1330, "error": 100 },
+      "rating": { "value": 1330, "deviation": 100 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -1323,13 +1323,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1595, "error": 75, "change": 4.9 },
+    "rating": { "value": 1595, "deviation": 75, "change": 4.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.81, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "AudiZYX", "rCode": "AudiZYX", "system": "PC" },
-      "rating": { "value": 1336, "error": 63 },
+      "rating": { "value": 1336, "deviation": 63 },
       "character": { "name": "Asuka", "shortCode": "AS" }
     }
   },
@@ -1345,7 +1345,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 76, "change": 4.4 },
+    "rating": { "value": 1591, "deviation": 76, "change": 4.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1356,7 +1356,7 @@ export const matches = `[
     "probability": { "odds": 0.08, "oddsFactor": 3 },
     "opponent": {
       "player": { "name": "OlyTRC", "rCode": "OlyTRC", "system": "PC" },
-      "rating": { "value": 2059, "error": 294 },
+      "rating": { "value": 2059, "deviation": 294 },
       "character": { "name": "Sin", "shortCode": "SI" }
     }
   },
@@ -1372,13 +1372,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1588, "error": 76, "change": 2.6 },
+    "rating": { "value": 1588, "deviation": 76, "change": 2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.91, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Zyn Kiske", "rCode": "Zyn Kiske", "system": "PC" },
-      "rating": { "value": 1173, "error": 71 },
+      "rating": { "value": 1173, "deviation": 71 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -1394,7 +1394,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 78, "change": -2.6 },
+    "rating": { "value": 1591, "deviation": 78, "change": -2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1409,7 +1409,7 @@ export const matches = `[
         "rCode": "rip my pc:(",
         "system": "PS"
       },
-      "rating": { "value": 1633, "error": 106 },
+      "rating": { "value": 1633, "deviation": 106 },
       "character": { "name": "Sin", "shortCode": "SI" }
     }
   },
@@ -1425,13 +1425,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1583, "error": 79, "change": 8.2 },
+    "rating": { "value": 1583, "deviation": 79, "change": 8.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.69, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "CDMaster", "rCode": "CDMaster", "system": "PS" },
-      "rating": { "value": 1440, "error": 96 },
+      "rating": { "value": 1440, "deviation": 96 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -1447,13 +1447,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1580, "error": 79, "change": 2.6 },
+    "rating": { "value": 1580, "deviation": 79, "change": 2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.58, "oddsFactor": 5 },
     "opponent": {
       "player": { "name": "Spleen", "rCode": "Spleen", "system": "PC" },
-      "rating": { "value": 1500, "error": 700 },
+      "rating": { "value": 1500, "deviation": 700 },
       "character": { "name": "Jack-O'", "shortCode": "JC" }
     }
   },
@@ -1469,7 +1469,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1581, "error": 80, "change": -0.9 },
+    "rating": { "value": 1581, "deviation": 80, "change": -0.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1480,7 +1480,7 @@ export const matches = `[
     "probability": { "odds": 0.35, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "BoyeBall", "rCode": "BoyeBall", "system": "PC" },
-      "rating": { "value": 1693, "error": 106 },
+      "rating": { "value": 1693, "deviation": 106 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -1496,7 +1496,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1588, "error": 82, "change": -7.7 },
+    "rating": { "value": 1588, "deviation": 82, "change": -7.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1507,7 +1507,7 @@ export const matches = `[
     "probability": { "odds": 0.62, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Laddie134", "rCode": "Laddie134", "system": "PC" },
-      "rating": { "value": 1501, "error": 70 },
+      "rating": { "value": 1501, "deviation": 70 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -1523,13 +1523,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 83, "change": 6.3 },
+    "rating": { "value": 1582, "deviation": 83, "change": 6.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.69, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Avianben", "rCode": "Avianben", "system": "PC" },
-      "rating": { "value": 1443, "error": 73 },
+      "rating": { "value": 1443, "deviation": 73 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -1545,7 +1545,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 83, "change": 0 },
+    "rating": { "value": 1582, "deviation": 83, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1556,7 +1556,7 @@ export const matches = `[
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -1572,7 +1572,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1584, "error": 84, "change": -8.2 },
+    "rating": { "value": 1584, "deviation": 84, "change": -8.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1587,7 +1587,7 @@ export const matches = `[
         "rCode": "Mr. IBFDurString",
         "system": "PC"
       },
-      "rating": { "value": 1504, "error": 95 },
+      "rating": { "value": 1504, "deviation": 95 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -1603,7 +1603,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1586, "error": 85, "change": 4.2 },
+    "rating": { "value": 1586, "deviation": 85, "change": 4.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.88, "oddsFactor": 0 },
@@ -1613,7 +1613,7 @@ export const matches = `[
         "rCode": "db1 enjoyer",
         "system": "PC"
       },
-      "rating": { "value": 1229, "error": 79 },
+      "rating": { "value": 1229, "deviation": 79 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -1629,13 +1629,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1592, "error": 86, "change": -5.9 },
+    "rating": { "value": 1592, "deviation": 86, "change": -5.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.19, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Yemma", "rCode": "Yemma", "system": "PC" },
-      "rating": { "value": 1862, "error": 238 },
+      "rating": { "value": 1862, "deviation": 238 },
       "character": { "name": "Bridget", "shortCode": "BI" }
     }
   },
@@ -1651,7 +1651,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1596, "error": 88, "change": -3.8 },
+    "rating": { "value": 1596, "deviation": 88, "change": -3.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1662,7 +1662,7 @@ export const matches = `[
     "probability": { "odds": 0.44, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Killroll", "rCode": "Killroll", "system": "PC" },
-      "rating": { "value": 1636, "error": 95 },
+      "rating": { "value": 1636, "deviation": 95 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -1678,13 +1678,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1596, "error": 88, "change": 0 },
+    "rating": { "value": 1596, "deviation": 88, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -1700,13 +1700,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 91, "change": 4.7 },
+    "rating": { "value": 1591, "deviation": 91, "change": 4.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 5, "wins": 3, "losses": 2, "winPercent": 60 },
     "probability": { "odds": 0.51, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "0wen2_", "rCode": "0wen2_", "system": "PC" },
-      "rating": { "value": 1581, "error": 69 },
+      "rating": { "value": 1581, "deviation": 69 },
       "character": { "name": "Nagoriyuki", "shortCode": "NA" }
     }
   },
@@ -1722,7 +1722,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1596, "error": 93, "change": -5.1 },
+    "rating": { "value": 1596, "deviation": 93, "change": -5.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1733,7 +1733,7 @@ export const matches = `[
     "probability": { "odds": 0.83, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "MochaDog", "rCode": "MochaDog", "system": "PC" },
-      "rating": { "value": 1314, "error": 64 },
+      "rating": { "value": 1314, "deviation": 64 },
       "character": { "name": "Bridget", "shortCode": "BI" }
     }
   },
@@ -1749,13 +1749,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1594, "error": 93, "change": 1.9 },
+    "rating": { "value": 1594, "deviation": 93, "change": 1.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.94, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Zatchari", "rCode": "Zatchari", "system": "XB" },
-      "rating": { "value": 1116, "error": 71 },
+      "rating": { "value": 1116, "deviation": 71 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -1771,13 +1771,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1592, "error": 94, "change": 2 },
+    "rating": { "value": 1592, "deviation": 94, "change": 2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.94, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Zatchari", "rCode": "Zatchari", "system": "XB" },
-      "rating": { "value": 1117, "error": 72 },
+      "rating": { "value": 1117, "deviation": 72 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -1793,7 +1793,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1584, "error": 96, "change": 8 },
+    "rating": { "value": 1584, "deviation": 96, "change": 8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -1804,7 +1804,7 @@ export const matches = `[
     "probability": { "odds": 0.45, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Tushy", "rCode": "Tushy", "system": "PC" },
-      "rating": { "value": 1620, "error": 81 },
+      "rating": { "value": 1620, "deviation": 81 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -1820,7 +1820,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 77, "change": 2.5 },
+    "rating": { "value": 1582, "deviation": 77, "change": 2.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.92, "oddsFactor": 0 },
@@ -1830,7 +1830,7 @@ export const matches = `[
         "rCode": "Silversnowflake",
         "system": "PC"
       },
-      "rating": { "value": 1151, "error": 84 },
+      "rating": { "value": 1151, "deviation": 84 },
       "character": { "name": "Happy Chaos", "shortCode": "HA" }
     }
   },
@@ -1846,13 +1846,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 61, "change": 0 },
+    "rating": { "value": 1582, "deviation": 61, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 1, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Kevman34", "rCode": "Kevman34", "system": "XB" },
-      "rating": { "value": 202, "error": 227 },
+      "rating": { "value": 202, "deviation": 227 },
       "character": { "name": "Leo", "shortCode": "LE" }
     }
   },
@@ -1868,13 +1868,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 62, "change": -8.9 },
+    "rating": { "value": 1591, "deviation": 62, "change": -8.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.58, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Zom", "rCode": "Zom", "system": "PC" },
-      "rating": { "value": 1534, "error": 104 },
+      "rating": { "value": 1534, "deviation": 104 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -1890,13 +1890,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1597, "error": 61, "change": -6.1 },
+    "rating": { "value": 1597, "deviation": 61, "change": -6.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.38, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "SpaceDyno_", "rCode": "SpaceDyno_", "system": "PC" },
-      "rating": { "value": 1683, "error": 92 },
+      "rating": { "value": 1683, "deviation": 92 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -1912,13 +1912,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1608, "error": 62, "change": -11.3 },
+    "rating": { "value": 1608, "deviation": 62, "change": -11.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.72, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Cr0i55ant", "rCode": "Cr0i55ant", "system": "PC" },
-      "rating": { "value": 1440, "error": 73 },
+      "rating": { "value": 1440, "deviation": 73 },
       "character": { "name": "I-No", "shortCode": "IN" }
     }
   },
@@ -1934,13 +1934,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1604, "error": 63, "change": 4.1 },
+    "rating": { "value": 1604, "deviation": 63, "change": 4.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.77, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Icecrust", "rCode": "Icecrust", "system": "PC" },
-      "rating": { "value": 1390, "error": 62 },
+      "rating": { "value": 1390, "deviation": 62 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -1956,7 +1956,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 63, "change": 1.4 },
+    "rating": { "value": 1603, "deviation": 63, "change": 1.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.93, "oddsFactor": 0 },
@@ -1966,7 +1966,7 @@ export const matches = `[
         "rCode": "前辈我喜欢你",
         "system": "PC"
       },
-      "rating": { "value": 1139, "error": 69 },
+      "rating": { "value": 1139, "deviation": 69 },
       "character": { "name": "Nagoriyuki", "shortCode": "NA" }
     }
   },
@@ -1982,13 +1982,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 63, "change": 0 },
+    "rating": { "value": 1603, "deviation": 63, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.98, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "PhatMan206", "rCode": "PhatMan206", "system": "PC" },
-      "rating": { "value": 942, "error": 59 },
+      "rating": { "value": 942, "deviation": 59 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -2004,13 +2004,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 63, "change": 0 },
+    "rating": { "value": 1603, "deviation": 63, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -2026,7 +2026,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1607, "error": 63, "change": -4.5 },
+    "rating": { "value": 1607, "deviation": 63, "change": -4.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2037,7 +2037,7 @@ export const matches = `[
     "probability": { "odds": 0.61, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "SingedMain", "rCode": "SingedMain", "system": "PC" },
-      "rating": { "value": 1524, "error": 123 },
+      "rating": { "value": 1524, "deviation": 123 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2053,13 +2053,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1615, "error": 64, "change": -7.1 },
+    "rating": { "value": 1615, "deviation": 64, "change": -7.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.41, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "BlackJack", "rCode": "BlackJack", "system": "PC" },
-      "rating": { "value": 1679, "error": 61 },
+      "rating": { "value": 1679, "deviation": 61 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -2075,7 +2075,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1615, "error": 65, "change": -0.1 },
+    "rating": { "value": 1615, "deviation": 65, "change": -0.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2086,7 +2086,7 @@ export const matches = `[
     "probability": { "odds": 0.69, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Flyne", "rCode": "Flyne", "system": "PC" },
-      "rating": { "value": 1475, "error": 66 },
+      "rating": { "value": 1475, "deviation": 66 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -2102,13 +2102,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 65, "change": 4 },
+    "rating": { "value": 1611, "deviation": 65, "change": 4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.73, "oddsFactor": 3 },
     "opponent": {
       "player": { "name": "curryoh", "rCode": "curryoh", "system": "PC" },
-      "rating": { "value": 1414, "error": 366 },
+      "rating": { "value": 1414, "deviation": 366 },
       "character": { "name": "Bedman?", "shortCode": "BE" }
     }
   },
@@ -2124,7 +2124,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1613, "error": 65, "change": -1.1 },
+    "rating": { "value": 1613, "deviation": 65, "change": -1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2135,7 +2135,7 @@ export const matches = `[
     "probability": { "odds": 0.75, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Yemma", "rCode": "Yemma", "system": "PC" },
-      "rating": { "value": 1414, "error": 110 },
+      "rating": { "value": 1414, "deviation": 110 },
       "character": { "name": "Happy Chaos", "shortCode": "HA" }
     }
   },
@@ -2151,7 +2151,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1610, "error": 66, "change": 2 },
+    "rating": { "value": 1610, "deviation": 66, "change": 2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.66, "oddsFactor": 2 },
@@ -2161,7 +2161,7 @@ export const matches = `[
         "rCode": "KingOfKings2810",
         "system": "PS"
       },
-      "rating": { "value": 1485, "error": 228 },
+      "rating": { "value": 1485, "deviation": 228 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -2177,7 +2177,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1614, "error": 66, "change": -4.1 },
+    "rating": { "value": 1614, "deviation": 66, "change": -4.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.2, "oddsFactor": 0 },
@@ -2187,7 +2187,7 @@ export const matches = `[
         "rCode": "ScrimbusMcBimbus",
         "system": "PC"
       },
-      "rating": { "value": 1854, "error": 60 },
+      "rating": { "value": 1854, "deviation": 60 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -2203,13 +2203,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1612, "error": 66, "change": 1.6 },
+    "rating": { "value": 1612, "deviation": 66, "change": 1.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.93, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Bird", "rCode": "Bird", "system": "XB" },
-      "rating": { "value": 1152, "error": 176 },
+      "rating": { "value": 1152, "deviation": 176 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -2225,7 +2225,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1617, "error": 68, "change": -5.2 },
+    "rating": { "value": 1617, "deviation": 68, "change": -5.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 9,
@@ -2236,7 +2236,7 @@ export const matches = `[
     "probability": { "odds": 0.9, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "GDM", "rCode": "GDM", "system": "PC" },
-      "rating": { "value": 1233, "error": 104 },
+      "rating": { "value": 1233, "deviation": 104 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -2252,7 +2252,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1610, "error": 68, "change": 7.2 },
+    "rating": { "value": 1610, "deviation": 68, "change": 7.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.63, "oddsFactor": 0 },
@@ -2262,7 +2262,7 @@ export const matches = `[
         "rCode": "☆*:.｡.o(≧▽≦)o.｡.",
         "system": "PC"
       },
-      "rating": { "value": 1513, "error": 96 },
+      "rating": { "value": 1513, "deviation": 96 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -2278,7 +2278,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 69, "change": -0.9 },
+    "rating": { "value": 1611, "deviation": 69, "change": -0.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2293,7 +2293,7 @@ export const matches = `[
         "rCode": "rice is life",
         "system": "PS"
       },
-      "rating": { "value": 1706, "error": 54 },
+      "rating": { "value": 1706, "deviation": 54 },
       "character": { "name": "Zato-1", "shortCode": "ZA" }
     }
   },
@@ -2309,13 +2309,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 70, "change": 8.5 },
+    "rating": { "value": 1603, "deviation": 70, "change": 8.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.59, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Azazel", "rCode": "Azazel", "system": "XB" },
-      "rating": { "value": 1538, "error": 71 },
+      "rating": { "value": 1538, "deviation": 71 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2331,7 +2331,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 69, "change": 0 },
+    "rating": { "value": 1603, "deviation": 69, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 15,
@@ -2346,7 +2346,7 @@ export const matches = `[
         "rCode": "MercuryRose",
         "system": "PC"
       },
-      "rating": { "value": 1582, "error": 74 },
+      "rating": { "value": 1582, "deviation": 74 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -2362,7 +2362,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1601, "error": 69, "change": 1.9 },
+    "rating": { "value": 1601, "deviation": 69, "change": 1.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2373,7 +2373,7 @@ export const matches = `[
     "probability": { "odds": 0.22, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Xylophone", "rCode": "Xylophone", "system": "PS" },
-      "rating": { "value": 1825, "error": 65 },
+      "rating": { "value": 1825, "deviation": 65 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -2389,7 +2389,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 70, "change": 1 },
+    "rating": { "value": 1600, "deviation": 70, "change": 1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.96, "oddsFactor": 2 },
@@ -2399,7 +2399,7 @@ export const matches = `[
         "rCode": "LegendaryJiggXV",
         "system": "PC"
       },
-      "rating": { "value": 993, "error": 268 },
+      "rating": { "value": 993, "deviation": 268 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -2415,7 +2415,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1602, "error": 56, "change": -2.1 },
+    "rating": { "value": 1602, "deviation": 56, "change": -2.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2430,7 +2430,7 @@ export const matches = `[
         "rCode": "AvocadoGallardo",
         "system": "PC"
       },
-      "rating": { "value": 1296, "error": 122 },
+      "rating": { "value": 1296, "deviation": 122 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -2446,7 +2446,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 57, "change": 2.6 },
+    "rating": { "value": 1599, "deviation": 57, "change": 2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.83, "oddsFactor": 0 },
@@ -2456,7 +2456,7 @@ export const matches = `[
         "rCode": "sKiTzOFrENiA",
         "system": "PC"
       },
-      "rating": { "value": 1324, "error": 102 },
+      "rating": { "value": 1324, "deviation": 102 },
       "character": { "name": "Jack-O'", "shortCode": "JC" }
     }
   },
@@ -2472,7 +2472,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1597, "error": 57, "change": 1.9 },
+    "rating": { "value": 1597, "deviation": 57, "change": 1.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.89, "oddsFactor": 0 },
@@ -2482,7 +2482,7 @@ export const matches = `[
         "rCode": "twinkundeath",
         "system": "PC"
       },
-      "rating": { "value": 1239, "error": 66 },
+      "rating": { "value": 1239, "deviation": 66 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -2498,13 +2498,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1595, "error": 57, "change": 1.8 },
+    "rating": { "value": 1595, "deviation": 57, "change": 1.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.62, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "LowSol", "rCode": "LowSol", "system": "PS" },
-      "rating": { "value": 1510, "error": 115 },
+      "rating": { "value": 1510, "deviation": 115 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -2520,13 +2520,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1597, "error": 58, "change": -1.1 },
+    "rating": { "value": 1597, "deviation": 58, "change": -1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 1, "losses": 1, "winPercent": 50 },
     "probability": { "odds": 0.63, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "LowSol", "rCode": "LowSol", "system": "PS" },
-      "rating": { "value": 1505, "error": 118 },
+      "rating": { "value": 1505, "deviation": 118 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -2542,13 +2542,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1594, "error": 58, "change": 2.2 },
+    "rating": { "value": 1594, "deviation": 58, "change": 2.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.86, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Dtu6h9t", "rCode": "Dtu6h9t", "system": "PC" },
-      "rating": { "value": 1271, "error": 124 },
+      "rating": { "value": 1271, "deviation": 124 },
       "character": { "name": "Zato-1", "shortCode": "ZA" }
     }
   },
@@ -2564,7 +2564,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 58, "change": -5.1 },
+    "rating": { "value": 1599, "deviation": 58, "change": -5.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2575,7 +2575,7 @@ export const matches = `[
     "probability": { "odds": 0.71, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Stroodel", "rCode": "Stroodel", "system": "PC" },
-      "rating": { "value": 1445, "error": 63 },
+      "rating": { "value": 1445, "deviation": 63 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -2591,7 +2591,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1608, "error": 59, "change": -8.8 },
+    "rating": { "value": 1608, "deviation": 59, "change": -8.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.61, "oddsFactor": 0 },
@@ -2601,7 +2601,7 @@ export const matches = `[
         "rCode": "Saint Szura",
         "system": "PC"
       },
-      "rating": { "value": 1526, "error": 76 },
+      "rating": { "value": 1526, "deviation": 76 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -2617,7 +2617,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1610, "error": 57, "change": -2.2 },
+    "rating": { "value": 1610, "deviation": 57, "change": -2.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.14, "oddsFactor": 0 },
@@ -2627,7 +2627,7 @@ export const matches = `[
         "rCode": "Fool's Errand",
         "system": "PC"
       },
-      "rating": { "value": 1934, "error": 107 },
+      "rating": { "value": 1934, "deviation": 107 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -2643,7 +2643,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1609, "error": 58, "change": 1 },
+    "rating": { "value": 1609, "deviation": 58, "change": 1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2654,7 +2654,7 @@ export const matches = `[
     "probability": { "odds": 0.61, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Pollodyne", "rCode": "Pollodyne", "system": "PC" },
-      "rating": { "value": 1530, "error": 75 },
+      "rating": { "value": 1530, "deviation": 75 },
       "character": { "name": "Jack-O'", "shortCode": "JC" }
     }
   },
@@ -2670,13 +2670,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 58, "change": -1.7 },
+    "rating": { "value": 1611, "deviation": 58, "change": -1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.1, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Fuzion", "rCode": "Fuzion", "system": "PC" },
-      "rating": { "value": 2006, "error": 129 },
+      "rating": { "value": 2006, "deviation": 129 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -2692,13 +2692,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1603, "error": 58, "change": 7.6 },
+    "rating": { "value": 1603, "deviation": 58, "change": 7.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.46, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Armpit", "rCode": "Armpit", "system": "PC" },
-      "rating": { "value": 1629, "error": 89 },
+      "rating": { "value": 1629, "deviation": 89 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -2714,7 +2714,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1612, "error": 60, "change": -8.5 },
+    "rating": { "value": 1612, "deviation": 60, "change": -8.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 6,
@@ -2729,7 +2729,7 @@ export const matches = `[
         "rCode": "RainwaterBot",
         "system": "PC"
       },
-      "rating": { "value": 1510, "error": 62 },
+      "rating": { "value": 1510, "deviation": 62 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -2745,13 +2745,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 60, "change": 1.1 },
+    "rating": { "value": 1611, "deviation": 60, "change": 1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.94, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "LightSoul", "rCode": "LightSoul", "system": "PC" },
-      "rating": { "value": 1119, "error": 83 },
+      "rating": { "value": 1119, "deviation": 83 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -2767,7 +2767,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1611, "error": 60, "change": -0.3 },
+    "rating": { "value": 1611, "deviation": 60, "change": -0.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2782,7 +2782,7 @@ export const matches = `[
         "rCode": "Der_Shingen",
         "system": "PC"
       },
-      "rating": { "value": 1463, "error": 82 },
+      "rating": { "value": 1463, "deviation": 82 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2798,7 +2798,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1609, "error": 61, "change": 1.7 },
+    "rating": { "value": 1609, "deviation": 61, "change": 1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2809,7 +2809,7 @@ export const matches = `[
     "probability": { "odds": 0.56, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Mutorcs", "rCode": "Mutorcs", "system": "PC" },
-      "rating": { "value": 1568, "error": 95 },
+      "rating": { "value": 1568, "deviation": 95 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2825,13 +2825,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1605, "error": 62, "change": 4.5 },
+    "rating": { "value": 1605, "deviation": 62, "change": 4.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.74, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "BOX", "rCode": "BOX", "system": "PC" },
-      "rating": { "value": 1424, "error": 85 },
+      "rating": { "value": 1424, "deviation": 85 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2847,13 +2847,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1602, "error": 62, "change": 2.7 },
+    "rating": { "value": 1602, "deviation": 62, "change": 2.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.76, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Luke", "rCode": "Luke", "system": "PC" },
-      "rating": { "value": 1392, "error": 135 },
+      "rating": { "value": 1392, "deviation": 135 },
       "character": { "name": "Bridget", "shortCode": "BI" }
     }
   },
@@ -2869,13 +2869,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1601, "error": 62, "change": 1.1 },
+    "rating": { "value": 1601, "deviation": 62, "change": 1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.91, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "LucasBoss", "rCode": "LucasBoss", "system": "XB" },
-      "rating": { "value": 1182, "error": 116 },
+      "rating": { "value": 1182, "deviation": 116 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2891,13 +2891,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 62, "change": 1.7 },
+    "rating": { "value": 1599, "deviation": 62, "change": 1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.7, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "yukkirango", "rCode": "yukkirango", "system": "PC" },
-      "rating": { "value": 1447, "error": 62 },
+      "rating": { "value": 1447, "deviation": 62 },
       "character": { "name": "Ramlethal", "shortCode": "RA" }
     }
   },
@@ -2913,7 +2913,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1594, "error": 63, "change": 4.9 },
+    "rating": { "value": 1594, "deviation": 63, "change": 4.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2928,7 +2928,7 @@ export const matches = `[
         "rCode": "Haramlethal",
         "system": "PS"
       },
-      "rating": { "value": 1706, "error": 85 },
+      "rating": { "value": 1706, "deviation": 85 },
       "character": { "name": "Ramlethal", "shortCode": "RA" }
     }
   },
@@ -2944,13 +2944,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 63, "change": 3 },
+    "rating": { "value": 1591, "deviation": 63, "change": 3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.84, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "TiredMango", "rCode": "TiredMango", "system": "PC" },
-      "rating": { "value": 1294, "error": 101 },
+      "rating": { "value": 1294, "deviation": 101 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -2966,13 +2966,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1589, "error": 63, "change": 2.1 },
+    "rating": { "value": 1589, "deviation": 63, "change": 2.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.89, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Bird", "rCode": "Bird", "system": "XB" },
-      "rating": { "value": 1203, "error": 193 },
+      "rating": { "value": 1203, "deviation": 193 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -2988,7 +2988,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1594, "error": 64, "change": -5.1 },
+    "rating": { "value": 1594, "deviation": 64, "change": -5.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -2999,7 +2999,7 @@ export const matches = `[
     "probability": { "odds": 0.64, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Ya boi T2", "rCode": "Ya boi T2", "system": "PS" },
-      "rating": { "value": 1490, "error": 91 },
+      "rating": { "value": 1490, "deviation": 91 },
       "character": { "name": "Sin", "shortCode": "SI" }
     }
   },
@@ -3015,7 +3015,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1595, "error": 65, "change": -0.6 },
+    "rating": { "value": 1595, "deviation": 65, "change": -0.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3026,7 +3026,7 @@ export const matches = `[
     "probability": { "odds": 0.71, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Acsel", "rCode": "Acsel", "system": "XB" },
-      "rating": { "value": 1433, "error": 106 },
+      "rating": { "value": 1433, "deviation": 106 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -3042,7 +3042,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1593, "error": 65, "change": 1.7 },
+    "rating": { "value": 1593, "deviation": 65, "change": 1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3057,7 +3057,7 @@ export const matches = `[
         "rCode": "Misto Fisto",
         "system": "XB"
       },
-      "rating": { "value": 1822, "error": 79 },
+      "rating": { "value": 1822, "deviation": 79 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -3073,13 +3073,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1592, "error": 65, "change": 1.5 },
+    "rating": { "value": 1592, "deviation": 65, "change": 1.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.89, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Bird", "rCode": "Bird", "system": "XB" },
-      "rating": { "value": 1214, "error": 88 },
+      "rating": { "value": 1214, "deviation": 88 },
       "character": { "name": "Baiken", "shortCode": "BA" }
     }
   },
@@ -3095,7 +3095,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1590, "error": 63, "change": 2.3 },
+    "rating": { "value": 1590, "deviation": 63, "change": 2.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.82, "oddsFactor": 5 },
@@ -3105,7 +3105,7 @@ export const matches = `[
         "rCode": "leon badguy",
         "system": "PS"
       },
-      "rating": { "value": 1245, "error": 516 },
+      "rating": { "value": 1245, "deviation": 516 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -3121,13 +3121,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1588, "error": 63, "change": 1.2 },
+    "rating": { "value": 1588, "deviation": 63, "change": 1.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.81, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Blackout", "rCode": "Blackout", "system": "PS" },
-      "rating": { "value": 1328, "error": 62 },
+      "rating": { "value": 1328, "deviation": 62 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -3143,7 +3143,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1589, "error": 64, "change": -0.6 },
+    "rating": { "value": 1589, "deviation": 64, "change": -0.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3154,7 +3154,7 @@ export const matches = `[
     "probability": { "odds": 0.36, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Shubot", "rCode": "Shubot", "system": "PC" },
-      "rating": { "value": 1694, "error": 59 },
+      "rating": { "value": 1694, "deviation": 59 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -3170,13 +3170,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1581, "error": 65, "change": 7.7 },
+    "rating": { "value": 1581, "deviation": 65, "change": 7.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 5, "wins": 5, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.75, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Flitzz", "rCode": "Flitzz", "system": "PC" },
-      "rating": { "value": 1390, "error": 93 },
+      "rating": { "value": 1390, "deviation": 93 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -3192,7 +3192,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1574, "error": 65, "change": 7 },
+    "rating": { "value": 1574, "deviation": 65, "change": 7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.56, "oddsFactor": 2 },
@@ -3202,7 +3202,7 @@ export const matches = `[
         "rCode": "Mae The Cat",
         "system": "PC"
       },
-      "rating": { "value": 1526, "error": 226 },
+      "rating": { "value": 1526, "deviation": 226 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -3218,7 +3218,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1570, "error": 67, "change": 4.1 },
+    "rating": { "value": 1570, "deviation": 67, "change": 4.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 6,
@@ -3229,7 +3229,7 @@ export const matches = `[
     "probability": { "odds": 0.74, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Flitzz", "rCode": "Flitzz", "system": "PC" },
-      "rating": { "value": 1389, "error": 100 },
+      "rating": { "value": 1389, "deviation": 100 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -3245,13 +3245,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 62, "change": -7.3 },
+    "rating": { "value": 1578, "deviation": 62, "change": -7.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.45, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "imgaine", "rCode": "imgaine", "system": "PC" },
-      "rating": { "value": 1611, "error": 71 },
+      "rating": { "value": 1611, "deviation": 71 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -3267,7 +3267,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 62, "change": -4.8 },
+    "rating": { "value": 1582, "deviation": 62, "change": -4.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 0, "losses": 2, "winPercent": 0 },
     "probability": { "odds": 0.45, "oddsFactor": 0 },
@@ -3277,7 +3277,7 @@ export const matches = `[
         "rCode": "fusrokameha",
         "system": "PC"
       },
-      "rating": { "value": 1617, "error": 79 },
+      "rating": { "value": 1617, "deviation": 79 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -3293,7 +3293,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1583, "error": 62, "change": -1.1 },
+    "rating": { "value": 1583, "deviation": 62, "change": -1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3308,7 +3308,7 @@ export const matches = `[
         "rCode": "LLN | DT Kay",
         "system": "PC"
       },
-      "rating": { "value": 1388, "error": 86 },
+      "rating": { "value": 1388, "deviation": 86 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -3324,7 +3324,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1580, "error": 63, "change": 3.1 },
+    "rating": { "value": 1580, "deviation": 63, "change": 3.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3335,7 +3335,7 @@ export const matches = `[
     "probability": { "odds": 0.47, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Sidsi", "rCode": "Sidsi", "system": "PC" },
-      "rating": { "value": 1605, "error": 159 },
+      "rating": { "value": 1605, "deviation": 159 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -3351,13 +3351,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 63, "change": 2.6 },
+    "rating": { "value": 1578, "deviation": 63, "change": 2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.79, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Throngster", "rCode": "Throngster", "system": "PC" },
-      "rating": { "value": 1343, "error": 116 },
+      "rating": { "value": 1343, "deviation": 116 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -3373,13 +3373,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1577, "error": 63, "change": 1.3 },
+    "rating": { "value": 1577, "deviation": 63, "change": 1.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.78, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Throngster", "rCode": "Throngster", "system": "PC" },
-      "rating": { "value": 1347, "error": 117 },
+      "rating": { "value": 1347, "deviation": 117 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -3395,7 +3395,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1577, "error": 64, "change": -0.2 },
+    "rating": { "value": 1577, "deviation": 64, "change": -0.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3406,7 +3406,7 @@ export const matches = `[
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -3422,7 +3422,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 64, "change": -1.1 },
+    "rating": { "value": 1578, "deviation": 64, "change": -1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3437,7 +3437,7 @@ export const matches = `[
         "rCode": "Actual Garbage",
         "system": "PC"
       },
-      "rating": { "value": 1387, "error": 64 },
+      "rating": { "value": 1387, "deviation": 64 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -3453,7 +3453,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 65, "change": -0.5 },
+    "rating": { "value": 1578, "deviation": 65, "change": -0.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3464,7 +3464,7 @@ export const matches = `[
     "probability": { "odds": 0.34, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "???", "rCode": "???", "system": "PC" },
-      "rating": { "value": 1692, "error": 51 },
+      "rating": { "value": 1692, "deviation": 51 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -3480,7 +3480,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 67, "change": 0.3 },
+    "rating": { "value": 1578, "deviation": 67, "change": 0.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 6,
@@ -3491,7 +3491,7 @@ export const matches = `[
     "probability": { "odds": 0.68, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Laplace", "rCode": "Laplace", "system": "PC" },
-      "rating": { "value": 1445, "error": 83 },
+      "rating": { "value": 1445, "deviation": 83 },
       "character": { "name": "Asuka", "shortCode": "AS" }
     }
   },
@@ -3507,13 +3507,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1586, "error": 67, "change": -7.6 },
+    "rating": { "value": 1586, "deviation": 67, "change": -7.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.43, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "NJOL Boys", "rCode": "NJOL Boys", "system": "XB" },
-      "rating": { "value": 1634, "error": 197 },
+      "rating": { "value": 1634, "deviation": 197 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -3529,13 +3529,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1586, "error": 69, "change": -0.1 },
+    "rating": { "value": 1586, "deviation": 69, "change": -0.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 6, "wins": 3, "losses": 3, "winPercent": 50 },
     "probability": { "odds": 0.47, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Deez", "rCode": "Deez", "system": "PS" },
-      "rating": { "value": 1608, "error": 247 },
+      "rating": { "value": 1608, "deviation": 247 },
       "character": { "name": "Nagoriyuki", "shortCode": "NA" }
     }
   },
@@ -3551,7 +3551,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 70, "change": 7.8 },
+    "rating": { "value": 1578, "deviation": 70, "change": 7.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.63, "oddsFactor": 0 },
@@ -3561,7 +3561,7 @@ export const matches = `[
         "rCode": "Homasexcha?",
         "system": "PS"
       },
-      "rating": { "value": 1487, "error": 70 },
+      "rating": { "value": 1487, "deviation": 70 },
       "character": { "name": "Bridget", "shortCode": "BI" }
     }
   },
@@ -3577,13 +3577,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1571, "error": 71, "change": 6.5 },
+    "rating": { "value": 1571, "deviation": 71, "change": 6.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.7, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Schoopy", "rCode": "Schoopy", "system": "PS" },
-      "rating": { "value": 1418, "error": 102 },
+      "rating": { "value": 1418, "deviation": 102 },
       "character": { "name": "Happy Chaos", "shortCode": "HA" }
     }
   },
@@ -3599,7 +3599,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1570, "error": 60, "change": 1.2 },
+    "rating": { "value": 1570, "deviation": 60, "change": 1.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3614,7 +3614,7 @@ export const matches = `[
         "rCode": "Iron_nelson",
         "system": "XB"
       },
-      "rating": { "value": 1779, "error": 66 },
+      "rating": { "value": 1779, "deviation": 66 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -3630,7 +3630,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1567, "error": 61, "change": 3.5 },
+    "rating": { "value": 1567, "deviation": 61, "change": 3.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3645,7 +3645,7 @@ export const matches = `[
         "rCode": "Chargey McFuujin",
         "system": "PC"
       },
-      "rating": { "value": 1615, "error": 74 },
+      "rating": { "value": 1615, "deviation": 74 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -3661,7 +3661,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1569, "error": 61, "change": -2.5 },
+    "rating": { "value": 1569, "deviation": 61, "change": -2.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3672,7 +3672,7 @@ export const matches = `[
     "probability": { "odds": 0.49, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "racc", "rCode": "racc", "system": "PC" },
-      "rating": { "value": 1579, "error": 104 },
+      "rating": { "value": 1579, "deviation": 104 },
       "character": { "name": "Sin", "shortCode": "SI" }
     }
   },
@@ -3688,7 +3688,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1561, "error": 62, "change": 7.8 },
+    "rating": { "value": 1561, "deviation": 62, "change": 7.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3703,7 +3703,7 @@ export const matches = `[
         "rCode": "JRU | CC | Yin",
         "system": "PC"
       },
-      "rating": { "value": 1856, "error": 63 },
+      "rating": { "value": 1856, "deviation": 63 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -3719,7 +3719,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1560, "error": 62, "change": 1.6 },
+    "rating": { "value": 1560, "deviation": 62, "change": 1.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3730,7 +3730,7 @@ export const matches = `[
     "probability": { "odds": 0.57, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Dp Wife", "rCode": "Dp Wife", "system": "PC" },
-      "rating": { "value": 1507, "error": 68 },
+      "rating": { "value": 1507, "deviation": 68 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -3746,7 +3746,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1560, "error": 63, "change": 0.2 },
+    "rating": { "value": 1560, "deviation": 63, "change": 0.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3757,7 +3757,7 @@ export const matches = `[
     "probability": { "odds": 0.67, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Gonguron", "rCode": "Gonguron", "system": "PC" },
-      "rating": { "value": 1434, "error": 81 },
+      "rating": { "value": 1434, "deviation": 81 },
       "character": { "name": "Leo", "shortCode": "LE" }
     }
   },
@@ -3773,7 +3773,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1562, "error": 64, "change": -2.6 },
+    "rating": { "value": 1562, "deviation": 64, "change": -2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3788,7 +3788,7 @@ export const matches = `[
         "rCode": "W2 Tax Form",
         "system": "PC"
       },
-      "rating": { "value": 1573, "error": 70 },
+      "rating": { "value": 1573, "deviation": 70 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -3804,7 +3804,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1569, "error": 64, "change": -7.3 },
+    "rating": { "value": 1569, "deviation": 64, "change": -7.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.43, "oddsFactor": 2 },
@@ -3814,7 +3814,7 @@ export const matches = `[
         "rCode": "umm sweaty no",
         "system": "PC"
       },
-      "rating": { "value": 1618, "error": 131 },
+      "rating": { "value": 1618, "deviation": 131 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -3830,13 +3830,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1572, "error": 64, "change": -2.2 },
+    "rating": { "value": 1572, "deviation": 64, "change": -2.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 0, "losses": 2, "winPercent": 0 },
     "probability": { "odds": 0.17, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "foam root", "rCode": "foam root", "system": "PC" },
-      "rating": { "value": 1852, "error": 84 },
+      "rating": { "value": 1852, "deviation": 84 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -3852,13 +3852,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1574, "error": 65, "change": -2.6 },
+    "rating": { "value": 1574, "deviation": 65, "change": -2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 0, "losses": 1, "winPercent": 0 },
     "probability": { "odds": 0.44, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Kaizysz", "rCode": "Kaizysz", "system": "PC" },
-      "rating": { "value": 1614, "error": 175 },
+      "rating": { "value": 1614, "deviation": 175 },
       "character": { "name": "Leo", "shortCode": "LE" }
     }
   },
@@ -3874,7 +3874,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1577, "error": 66, "change": -3 },
+    "rating": { "value": 1577, "deviation": 66, "change": -3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 6,
@@ -3889,7 +3889,7 @@ export const matches = `[
         "rCode": "ostrichmuffin",
         "system": "PC"
       },
-      "rating": { "value": 1640, "error": 77 },
+      "rating": { "value": 1640, "deviation": 77 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -3905,7 +3905,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1577, "error": 66, "change": 0 },
+    "rating": { "value": 1577, "deviation": 66, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3916,7 +3916,7 @@ export const matches = `[
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -3932,7 +3932,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1579, "error": 67, "change": -1.7 },
+    "rating": { "value": 1579, "deviation": 67, "change": -1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3943,7 +3943,7 @@ export const matches = `[
     "probability": { "odds": 0.77, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "ngl", "rCode": "ngl", "system": "PS" },
-      "rating": { "value": 1362, "error": 92 },
+      "rating": { "value": 1362, "deviation": 92 },
       "character": { "name": "Nagoriyuki", "shortCode": "NA" }
     }
   },
@@ -3959,7 +3959,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 68, "change": -2.7 },
+    "rating": { "value": 1582, "deviation": 68, "change": -2.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -3970,7 +3970,7 @@ export const matches = `[
     "probability": { "odds": 0.83, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Blackout", "rCode": "Blackout", "system": "PS" },
-      "rating": { "value": 1308, "error": 60 },
+      "rating": { "value": 1308, "deviation": 60 },
       "character": { "name": "May", "shortCode": "MA" }
     }
   },
@@ -3986,7 +3986,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1580, "error": 68, "change": 1.8 },
+    "rating": { "value": 1580, "deviation": 68, "change": 1.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.92, "oddsFactor": 0 },
@@ -3996,7 +3996,7 @@ export const matches = `[
         "rCode": "King_Shuckle",
         "system": "PC"
       },
-      "rating": { "value": 1141, "error": 66 },
+      "rating": { "value": 1141, "deviation": 66 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -4012,7 +4012,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 66, "change": -1.8 },
+    "rating": { "value": 1582, "deviation": 66, "change": -1.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 0, "losses": 1, "winPercent": 0 },
     "probability": { "odds": 0.28, "oddsFactor": 0 },
@@ -4022,7 +4022,7 @@ export const matches = `[
         "rCode": "Tonya Tornado",
         "system": "PC"
       },
-      "rating": { "value": 1749, "error": 76 },
+      "rating": { "value": 1749, "deviation": 76 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -4038,13 +4038,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1578, "error": 66, "change": 1.5 },
+    "rating": { "value": 1578, "deviation": 66, "change": 1.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 1, "losses": 1, "winPercent": 50 },
     "probability": { "odds": 0.33, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Msterbeef", "rCode": "Msterbeef", "system": "PC" },
-      "rating": { "value": 1707, "error": 251 },
+      "rating": { "value": 1707, "deviation": 251 },
       "character": { "name": "Leo", "shortCode": "LE" }
     }
   },
@@ -4060,7 +4060,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 67, "change": -2.1 },
+    "rating": { "value": 1582, "deviation": 67, "change": -2.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4071,7 +4071,7 @@ export const matches = `[
     "probability": { "odds": 0.84, "oddsFactor": 3 },
     "opponent": {
       "player": { "name": "Griz", "rCode": "Griz", "system": "PC" },
-      "rating": { "value": 1247, "error": 388 },
+      "rating": { "value": 1247, "deviation": 388 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -4087,7 +4087,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1582, "error": 67, "change": 0 },
+    "rating": { "value": 1582, "deviation": 67, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.96, "oddsFactor": 0 },
@@ -4097,7 +4097,7 @@ export const matches = `[
         "rCode": "NeoAensland",
         "system": "PS"
       },
-      "rating": { "value": 1037, "error": 85 },
+      "rating": { "value": 1037, "deviation": 85 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -4113,13 +4113,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1585, "error": 67, "change": -3 },
+    "rating": { "value": 1585, "deviation": 67, "change": -3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 0, "losses": 2, "winPercent": 0 },
     "probability": { "odds": 0.22, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Drunk", "rCode": "Drunk", "system": "PC" },
-      "rating": { "value": 1811, "error": 95 },
+      "rating": { "value": 1811, "deviation": 95 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -4135,13 +4135,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1586, "error": 69, "change": -1 },
+    "rating": { "value": 1586, "deviation": 69, "change": -1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 10, "wins": 7, "losses": 3, "winPercent": 70 },
     "probability": { "odds": 0.74, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "emilia", "rCode": "emilia", "system": "PC" },
-      "rating": { "value": 1406, "error": 91 },
+      "rating": { "value": 1406, "deviation": 91 },
       "character": { "name": "Ramlethal", "shortCode": "RA" }
     }
   },
@@ -4157,7 +4157,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1589, "error": 52, "change": -2.9 },
+    "rating": { "value": 1589, "deviation": 52, "change": -2.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.24, "oddsFactor": 0 },
@@ -4167,7 +4167,7 @@ export const matches = `[
         "rCode": "Altmart Security",
         "system": "PS"
       },
-      "rating": { "value": 1796, "error": 73 },
+      "rating": { "value": 1796, "deviation": 73 },
       "character": { "name": "Faust", "shortCode": "FA" }
     }
   },
@@ -4183,7 +4183,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1587, "error": 52, "change": 2.6 },
+    "rating": { "value": 1587, "deviation": 52, "change": 2.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.68, "oddsFactor": 0 },
@@ -4193,7 +4193,7 @@ export const matches = `[
         "rCode": "Altmart Security",
         "system": "PS"
       },
-      "rating": { "value": 1454, "error": 57 },
+      "rating": { "value": 1454, "deviation": 57 },
       "character": { "name": "Goldlewis", "shortCode": "GO" }
     }
   },
@@ -4209,7 +4209,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1593, "error": 54, "change": -6.9 },
+    "rating": { "value": 1593, "deviation": 54, "change": -6.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 16, "wins": 9, "losses": 7, "winPercent": 56.25 },
     "probability": { "odds": 0.7, "oddsFactor": 0 },
@@ -4219,7 +4219,7 @@ export const matches = `[
         "rCode": "Altmart Security",
         "system": "PS"
       },
-      "rating": { "value": 1446, "error": 60 },
+      "rating": { "value": 1446, "deviation": 60 },
       "character": { "name": "Goldlewis", "shortCode": "GO" }
     }
   },
@@ -4235,7 +4235,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1599, "error": 54, "change": -5.2 },
+    "rating": { "value": 1599, "deviation": 54, "change": -5.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4250,7 +4250,7 @@ export const matches = `[
         "rCode": "ShrimpBlimp",
         "system": "PS"
       },
-      "rating": { "value": 1377, "error": 62 },
+      "rating": { "value": 1377, "deviation": 62 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -4266,7 +4266,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1597, "error": 54, "change": 1.7 },
+    "rating": { "value": 1597, "deviation": 54, "change": 1.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.88, "oddsFactor": 0 },
@@ -4276,7 +4276,7 @@ export const matches = `[
         "rCode": "RANDOM SNAKE",
         "system": "PS"
       },
-      "rating": { "value": 1238, "error": 110 },
+      "rating": { "value": 1238, "deviation": 110 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -4292,7 +4292,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1597, "error": 54, "change": -0.2 },
+    "rating": { "value": 1597, "deviation": 54, "change": -0.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4307,7 +4307,7 @@ export const matches = `[
         "rCode": "Tonya Tornado",
         "system": "PC"
       },
-      "rating": { "value": 1721, "error": 81 },
+      "rating": { "value": 1721, "deviation": 81 },
       "character": { "name": "Axl", "shortCode": "AX" }
     }
   },
@@ -4323,13 +4323,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1597, "error": 54, "change": 0 },
+    "rating": { "value": 1597, "deviation": 54, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 1, "oddsFactor": 3 },
     "opponent": {
       "player": { "name": "3o/", "rCode": "3o/", "system": "PS" },
-      "rating": { "value": 482, "error": 324 },
+      "rating": { "value": 482, "deviation": 324 },
       "character": { "name": "Millia", "shortCode": "MI" }
     }
   },
@@ -4345,13 +4345,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 54, "change": -3.2 },
+    "rating": { "value": 1600, "deviation": 54, "change": -3.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 0, "losses": 3, "winPercent": 0 },
     "probability": { "odds": 0.25, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Bim", "rCode": "Bim", "system": "PC" },
-      "rating": { "value": 1795, "error": 169 },
+      "rating": { "value": 1795, "deviation": 169 },
       "character": { "name": "Giovanna", "shortCode": "GI" }
     }
   },
@@ -4367,13 +4367,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 54, "change": 0.2 },
+    "rating": { "value": 1600, "deviation": 54, "change": 0.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.96, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "gabika", "rCode": "gabika", "system": "PC" },
-      "rating": { "value": 993, "error": 233 },
+      "rating": { "value": 993, "deviation": 233 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -4389,7 +4389,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1601, "error": 54, "change": -1 },
+    "rating": { "value": 1601, "deviation": 54, "change": -1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4400,7 +4400,7 @@ export const matches = `[
     "probability": { "odds": 0.77, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Xdri!~", "rCode": "Xdri!~", "system": "PC" },
-      "rating": { "value": 1394, "error": 59 },
+      "rating": { "value": 1394, "deviation": 59 },
       "character": { "name": "Nagoriyuki", "shortCode": "NA" }
     }
   },
@@ -4416,13 +4416,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1600, "error": 50, "change": 1.1 },
+    "rating": { "value": 1600, "deviation": 50, "change": 1.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.91, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "BanjoBoi", "rCode": "BanjoBoi", "system": "PC" },
-      "rating": { "value": 1182, "error": 92 },
+      "rating": { "value": 1182, "deviation": 92 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -4438,7 +4438,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1598, "error": 50, "change": 2.3 },
+    "rating": { "value": 1598, "deviation": 50, "change": 2.3 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.81, "oddsFactor": 0 },
@@ -4448,7 +4448,7 @@ export const matches = `[
         "rCode": "Zeldahummer",
         "system": "PC"
       },
-      "rating": { "value": 1346, "error": 59 },
+      "rating": { "value": 1346, "deviation": 59 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -4464,7 +4464,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1596, "error": 50, "change": 2 },
+    "rating": { "value": 1596, "deviation": 50, "change": 2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4479,7 +4479,7 @@ export const matches = `[
         "rCode": "Quackattack",
         "system": "PC"
       },
-      "rating": { "value": 1613, "error": 78 },
+      "rating": { "value": 1613, "deviation": 78 },
       "character": { "name": "Baiken", "shortCode": "BA" }
     }
   },
@@ -4495,13 +4495,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1595, "error": 50, "change": 0.2 },
+    "rating": { "value": 1595, "deviation": 50, "change": 0.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.98, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Barnum", "rCode": "Barnum", "system": "PC" },
-      "rating": { "value": 842, "error": 202 },
+      "rating": { "value": 842, "deviation": 202 },
       "character": { "name": "Elphelt", "shortCode": "EL" }
     }
   },
@@ -4517,7 +4517,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1593, "error": 50, "change": 2 },
+    "rating": { "value": 1593, "deviation": 50, "change": 2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.83, "oddsFactor": 0 },
@@ -4527,7 +4527,7 @@ export const matches = `[
         "rCode": "bunnyfrot420",
         "system": "PC"
       },
-      "rating": { "value": 1317, "error": 103 },
+      "rating": { "value": 1317, "deviation": 103 },
       "character": { "name": "Testament", "shortCode": "TE" }
     }
   },
@@ -4543,13 +4543,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 50, "change": 2.2 },
+    "rating": { "value": 1591, "deviation": 50, "change": 2.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.81, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "ChugDollar", "rCode": "ChugDollar", "system": "PC" },
-      "rating": { "value": 1332, "error": 87 },
+      "rating": { "value": 1332, "deviation": 87 },
       "character": { "name": "Happy Chaos", "shortCode": "HA" }
     }
   },
@@ -4565,13 +4565,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 50, "change": 0 },
+    "rating": { "value": 1591, "deviation": 50, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.99, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Larry_the1", "rCode": "Larry_the1", "system": "PS" },
-      "rating": { "value": 684, "error": 98 },
+      "rating": { "value": 684, "deviation": 98 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -4587,7 +4587,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1592, "error": 50, "change": -0.5 },
+    "rating": { "value": 1592, "deviation": 50, "change": -0.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4598,7 +4598,7 @@ export const matches = `[
     "probability": { "odds": 0.76, "oddsFactor": 2 },
     "opponent": {
       "player": { "name": "Terehy", "rCode": "Terehy", "system": "PC" },
-      "rating": { "value": 1378, "error": 199 },
+      "rating": { "value": 1378, "deviation": 199 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -4614,13 +4614,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 50, "change": 0.8 },
+    "rating": { "value": 1591, "deviation": 50, "change": 0.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.9, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "KingDamn", "rCode": "KingDamn", "system": "XB" },
-      "rating": { "value": 1202, "error": 65 },
+      "rating": { "value": 1202, "deviation": 65 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -4636,7 +4636,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1590, "error": 50, "change": 0.4 },
+    "rating": { "value": 1590, "deviation": 50, "change": 0.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4647,7 +4647,7 @@ export const matches = `[
     "probability": { "odds": 0.27, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Pesky", "rCode": "Pesky", "system": "PC" },
-      "rating": { "value": 1763, "error": 75 },
+      "rating": { "value": 1763, "deviation": 75 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -4663,7 +4663,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1591, "error": 50, "change": -1 },
+    "rating": { "value": 1591, "deviation": 50, "change": -1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4674,7 +4674,7 @@ export const matches = `[
     "probability": { "odds": 0.78, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "TuBlessed", "rCode": "TuBlessed", "system": "XB" },
-      "rating": { "value": 1369, "error": 62 },
+      "rating": { "value": 1369, "deviation": 62 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -4690,13 +4690,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1589, "error": 50, "change": 2.5 },
+    "rating": { "value": 1589, "deviation": 50, "change": 2.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.79, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "piccle", "rCode": "piccle", "system": "PC" },
-      "rating": { "value": 1357, "error": 65 },
+      "rating": { "value": 1357, "deviation": 65 },
       "character": { "name": "Sol", "shortCode": "SO" }
     }
   },
@@ -4712,7 +4712,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1590, "error": 50, "change": -0.8 },
+    "rating": { "value": 1590, "deviation": 50, "change": -0.8 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4727,7 +4727,7 @@ export const matches = `[
         "rCode": "fist2facestyle",
         "system": "PS"
       },
-      "rating": { "value": 1387, "error": 70 },
+      "rating": { "value": 1387, "deviation": 70 },
       "character": { "name": "Anji", "shortCode": "AN" }
     }
   },
@@ -4743,7 +4743,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1586, "error": 50, "change": 3.4 },
+    "rating": { "value": 1586, "deviation": 50, "change": 3.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.69, "oddsFactor": 0 },
@@ -4753,7 +4753,7 @@ export const matches = `[
         "rCode": "Video Kojima",
         "system": "PC"
       },
-      "rating": { "value": 1447, "error": 119 },
+      "rating": { "value": 1447, "deviation": 119 },
       "character": { "name": "Potemkin", "shortCode": "PO" }
     }
   },
@@ -4769,13 +4769,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1586, "error": 50, "change": 0.6 },
+    "rating": { "value": 1586, "deviation": 50, "change": 0.6 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.94, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Zukii", "rCode": "Zukii", "system": "PC" },
-      "rating": { "value": 1114, "error": 70 },
+      "rating": { "value": 1114, "deviation": 70 },
       "character": { "name": "Jack-O'", "shortCode": "JC" }
     }
   },
@@ -4791,13 +4791,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1584, "error": 50, "change": 1.9 },
+    "rating": { "value": 1584, "deviation": 50, "change": 1.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.84, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Ryo", "rCode": "Ryo", "system": "PC" },
-      "rating": { "value": 1291, "error": 106 },
+      "rating": { "value": 1291, "deviation": 106 },
       "character": { "name": "Asuka", "shortCode": "AS" }
     }
   },
@@ -4813,13 +4813,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1584, "error": 50, "change": 0 },
+    "rating": { "value": 1584, "deviation": 50, "change": 0 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 1, "wins": 1, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.96, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Masoff", "rCode": "Masoff", "system": "PC" },
-      "rating": { "value": 1040, "error": 126 },
+      "rating": { "value": 1040, "deviation": 126 },
       "character": { "name": "Zato-1", "shortCode": "ZA" }
     }
   },
@@ -4835,13 +4835,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1583, "error": 50, "change": 0.4 },
+    "rating": { "value": 1583, "deviation": 50, "change": 0.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 2, "wins": 2, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.95, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Masoff", "rCode": "Masoff", "system": "PC" },
-      "rating": { "value": 1042, "error": 126 },
+      "rating": { "value": 1042, "deviation": 126 },
       "character": { "name": "Zato-1", "shortCode": "ZA" }
     }
   },
@@ -4857,7 +4857,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1580, "error": 50, "change": 3.1 },
+    "rating": { "value": 1580, "deviation": 50, "change": 3.1 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 3, "wins": 3, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.72, "oddsFactor": 0 },
@@ -4867,7 +4867,7 @@ export const matches = `[
         "rCode": "lostindasauce~",
         "system": "PC"
       },
-      "rating": { "value": 1410, "error": 92 },
+      "rating": { "value": 1410, "deviation": 92 },
       "character": { "name": "Ramlethal", "shortCode": "RA" }
     }
   },
@@ -4883,7 +4883,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1583, "error": 51, "change": -2.7 },
+    "rating": { "value": 1583, "deviation": 51, "change": -2.7 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4894,7 +4894,7 @@ export const matches = `[
     "probability": { "odds": 0.6, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Hanta", "rCode": "Hanta", "system": "PC" },
-      "rating": { "value": 1510, "error": 79 },
+      "rating": { "value": 1510, "deviation": 79 },
       "character": { "name": "Johnny", "shortCode": "JN" }
     }
   },
@@ -4910,13 +4910,13 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1576, "error": 51, "change": 6.9 },
+    "rating": { "value": 1576, "deviation": 51, "change": 6.9 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": { "total": 6, "wins": 6, "losses": 0, "winPercent": 100 },
     "probability": { "odds": 0.69, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "Gonguron", "rCode": "Gonguron", "system": "PC" },
-      "rating": { "value": 1432, "error": 91 },
+      "rating": { "value": 1432, "deviation": 91 },
       "character": { "name": "Leo", "shortCode": "LE" }
     }
   },
@@ -4932,7 +4932,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1579, "error": 52, "change": -2.4 },
+    "rating": { "value": 1579, "deviation": 52, "change": -2.4 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4947,7 +4947,7 @@ export const matches = `[
         "rCode": "BrickedupBandit.",
         "system": "PS"
       },
-      "rating": { "value": 1542, "error": 116 },
+      "rating": { "value": 1542, "deviation": 116 },
       "character": { "name": "Ky", "shortCode": "KY" }
     }
   },
@@ -4963,7 +4963,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1580, "error": 51, "change": -1.2 },
+    "rating": { "value": 1580, "deviation": 51, "change": -1.2 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -4974,7 +4974,7 @@ export const matches = `[
     "probability": { "odds": 0.44, "oddsFactor": 0 },
     "opponent": {
       "player": { "name": "RadOne", "rCode": "RadOne", "system": "PC" },
-      "rating": { "value": 1626, "error": 108 },
+      "rating": { "value": 1626, "deviation": 108 },
       "character": { "name": "Chipp", "shortCode": "CH" }
     }
   },
@@ -4990,7 +4990,7 @@ export const matches = `[
       "rCode": "2EC3DCA33129F30",
       "system": "TODO"
     },
-    "rating": { "value": 1577, "error": 51, "change": 2.5 },
+    "rating": { "value": 1577, "deviation": 51, "change": 2.5 },
     "character": { "name": "Ky", "shortCode": "KY" },
     "record": {
       "total": 3,
@@ -5001,7 +5001,7 @@ export const matches = `[
     "probability": { "odds": -1, "oddsFactor": -1 },
     "opponent": {
       "player": { "name": "(Hidden)", "rCode": "(Hidden)", "system": "??" },
-      "rating": { "value": 0, "error": 0 },
+      "rating": { "value": 0, "deviation": 0 },
       "character": { "name": "Baiken", "shortCode": "BA" }
     }
   }

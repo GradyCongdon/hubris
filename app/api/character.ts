@@ -26,7 +26,11 @@ export const shortToLong = {
   JN: "Johnny",
   EL: "Elphelt",
   AB: "A.B.A",
-};
+} as const;
+
+export const characterShorts = Object.keys(shortToLong);
+export const characterLongs = Object.values(shortToLong);
+export type shortKey = keyof typeof shortToLong;
 
 const others = {
   "A.B.A.": "AB",
@@ -35,7 +39,6 @@ const others = {
   Bedman: "BE",
 };
 
-export type shortKey = keyof typeof shortToLong;
 
 export const longToShort: { [key: string]: string } = Object.entries(
   shortToLong
@@ -47,5 +50,6 @@ export const longToShort: { [key: string]: string } = Object.entries(
   },
   { ...others }
 );
+
 
 export type longKey = keyof typeof longToShort;

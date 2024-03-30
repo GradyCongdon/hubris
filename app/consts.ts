@@ -8,7 +8,7 @@ export const EXAMPLE = false;
 export const POLLING_INTERVAL = 60 * 1000;
 export const SESSION_TIMEFRAME = 0;
 
-// Testing
+// // Testing
 // export const EXAMPLE = true;
 // export const POLLING_INTERVAL = 4 * 1000;
 // export const SESSION_TIMEFRAME = 0;

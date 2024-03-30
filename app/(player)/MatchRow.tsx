@@ -22,10 +22,10 @@ const getIdentifier = (player: Player, _character: Character) => {
 };
 
 export const formatMatch = (match: Match): Props => {
-  const { value: rating, error, change } = match.rating;
+  const { value: rating, deviation, change } = match.rating;
 
   const changeFormatted = formatChange(change);
-  const rgb = rgbScale(change, error / -6, error / 6);
+  const rgb = rgbScale(change, deviation / -6, deviation / 6);
   const record = `${match.record.wins} - ${match.record.losses}`;
   const _date = match.timePeriod.date.getTime();
   const date = new Date(_date);

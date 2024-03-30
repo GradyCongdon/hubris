@@ -1,3 +1,5 @@
+import { longKey, shortKey } from "../character";
+
 export type APIMatch = {
   Date: string;
   _DateString: string;
@@ -25,6 +27,7 @@ export type APIMatch = {
 export type APIPlayer = {
   name: string;
   rCode: string;
-  characterShort: string;
+  characterShort: shortKey;
   character: string;
 };
+

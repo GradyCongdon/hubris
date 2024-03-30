@@ -1,10 +1,10 @@
-import { getCharacterSets } from "@/app/api/rating-update/sets/lib";
+import { fetchCharacterSets } from "@/app/api/rating-update/sets/lib";
 
 export async function GET(
   request: Request,
   { params }: { params: { rCode: string; characterShort: string } }
 ) {
-  const sets = await getCharacterSets(
+  const sets = await fetchCharacterSets(
     params.rCode,
     params.characterShort.toUpperCase()
   );
