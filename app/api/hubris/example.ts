@@ -1,5 +1,12 @@
-import { Character, CharacterRatings, Player, PlayerCharacter, PlayerCharactersIndex, Rating } from "./types";
-import { matches }  from "./example-matches.js";
+import {
+  Character,
+  CharacterRatings,
+  Player,
+  PlayerCharacter,
+  PlayerCharactersIndex,
+  Rating,
+} from "./types";
+import { matches } from "./example-matches.js";
 import { characterShorts, shortKey } from "../character";
 
 const KY = "KY" as shortKey;
@@ -11,7 +18,7 @@ const examplePlayerHeckscape = {
   system: "PC",
 };
 
-export const examplePlayer : Player = examplePlayerHeckscape;
+export const examplePlayer: Player = examplePlayerHeckscape;
 
 const exampleCharacterKY = {
   name: "Ky",
@@ -23,7 +30,7 @@ const exampleCharacterAX = {
   shortCode: AX,
 };
 
-export const exampleCharacter : Character = exampleCharacterKY;
+export const exampleCharacter: Character = exampleCharacterKY;
 
 const exampleRating1 = {
   value: 1169,
@@ -34,7 +41,7 @@ const exampleRating2 = {
   deviation: 123,
 };
 
-export const exampleRating : Rating = exampleRating1;
+export const exampleRating: Rating = exampleRating1;
 
 export const examplePlayerCharacter: PlayerCharacter = {
   player: examplePlayerHeckscape,
@@ -50,7 +57,7 @@ const genRating = () => ({
 export const examplePlayerCharactersIndex: PlayerCharactersIndex = {
   player: examplePlayerHeckscape,
   characterRatings: characterShorts.reduce((acc, short) => {
-  // @ts-ignore
+    // @ts-ignore
     acc[short] = genRating();
     return acc;
   }, {} as CharacterRatings),
@@ -97,5 +104,73 @@ export const examplePlayerCharacterMatchIndex = {
       return new Date(value);
     }
     return value;
-  })
+  }),
+};
+
+export const exampleSearch: Record<string, PlayerCharactersIndex> = {
+  "2EC3DCA33129F30": {
+    player: {
+      name: "heckscape",
+      rCode: "2EC3DCA33129F30",
+      system: "PC",
+    },
+    characterRatings: {
+      KY: {
+        value: 1611,
+        deviation: 75,
+      },
+      SI: {
+        value: 1580,
+        deviation: 399,
+      },
+      AX: {
+        value: 1528,
+        deviation: 67,
+      },
+      SO: {
+        value: 1337,
+        deviation: 266,
+      },
+      JN: {
+        value: 1333,
+        deviation: 155,
+      },
+      GO: {
+        value: 1230,
+        deviation: 316,
+      },
+      AN: {
+        value: 1457,
+        deviation: 124,
+      },
+      TE: {
+        value: 1345,
+        deviation: 163,
+      },
+      EL: {
+        value: 1452,
+        deviation: 297,
+      },
+      BE: {
+        value: 1394,
+        deviation: 545,
+      },
+      FA: {
+        value: 1298,
+        deviation: 230,
+      },
+      BI: {
+        value: 1050,
+        deviation: 269,
+      },
+      IN: {
+        value: 1095,
+        deviation: 278,
+      },
+      AS: {
+        value: 1104,
+        deviation: 566,
+      },
+    },
+  },
 };

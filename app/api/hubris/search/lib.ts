@@ -3,8 +3,11 @@ import {SearchResult, search as _search } from '@/app/api/rating-update/search/l
 import { CharacterRatings, PlayerCharactersIndex } from '../types';
 import { shortKey } from '../../character';
 import { groupBy } from 'lodash';
+import { EXAMPLE } from '@/app/consts';
+import { exampleSearch } from '../example';
 
 export const search = async (name: string): Promise<Record<string,PlayerCharactersIndex>> => {
+  if (EXAMPLE) return exampleSearch;
   const results = await _search(name.trim());
   const rCodeGroups = groupBy(results, 'id');
   const playerCharacterIndices: Record<string, PlayerCharactersIndex> = {};

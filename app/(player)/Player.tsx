@@ -1,8 +1,8 @@
 import type { PlayerCharacterMatchIndex } from "@/app/api/hubris/types";
-import { shortKey, shortToLong } from "../api/character";
+import { shortKey, shortToLong } from "@/app/api/character";
 import { useRouter } from "next/navigation";
-import { Suspense, use, useEffect, useState } from "react";
-import { getCharacterRatings } from "../api/hubris/player/[rCode]/characters/lib";
+import { useEffect, useState } from "react";
+import { getCharacterRatings } from "@/app/api/hubris/player/[rCode]/characters/lib";
 
 export const Player = (props: PlayerCharacterMatchIndex) => {
   const { player, character, rating, matches } = props;

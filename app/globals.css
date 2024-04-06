@@ -139,10 +139,10 @@
   filter: contrast(0.88) brightness(1);
 }
 .theme-utah .change-bg {
-  filter: contrast(.55) brightness(0.85);
+  filter: contrast(0.55) brightness(0.85);
 }
 .theme-dark .change-bg {
-  filter: contrast(.9) brightness(0.7);
+  filter: contrast(0.9) brightness(0.7);
 }
 
 @supports (color: color(display-p3 1 1 1)) {
@@ -152,21 +152,30 @@
     --color: color(display-p3 0 0.207 1);
   }
   .theme-dark {
-    --accent-color-bg: color(display-p3 0.62 .9 0);
+    --accent-color-bg: color(display-p3 0.62 0.9 0);
     --accent-color: color(display-p3 0.694 1 0);
   }
 }
 
 .change-bg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
 }
 .change-value {
   position: relative;
   color: white;
   z-index: 101;
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+.input {
+  background-color: var(--bg);
+  color: var(--color);
 }

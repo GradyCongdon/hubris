@@ -1,3 +1,4 @@
+import { Rating } from "../api/hubris/types";
 
 export const rgbScale = (
   value: number,
@@ -28,3 +29,8 @@ export const formatChange = (change: number): string => {
   const singleDecimal = decimal ? decimal.slice(0, 1) : "0";
   return `${whole}.${singleDecimal}`;
 };
+
+
+export const formatRating = (rating: Rating): string => {
+  return `${rating.value}±${rating.deviation}`;
+}
