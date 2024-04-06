@@ -1,13 +1,13 @@
 "use client";
-import { useState } from "react";
-import { search } from "../api/hubris/search/lib";
-import { PlayerCharactersIndex, Rating } from "../api/hubris/types";
-import { shortKey, shortToLong } from "../api/character";
-import { formatRating } from "../(player)/utils";
+import { use, useCallback, useEffect, useState } from "react";
+import { search } from "../../api/hubris/search/lib";
+import { PlayerCharactersIndex, Rating } from "../../api/hubris/types";
+import { shortKey, shortToLong } from "../../api/character";
+import { formatRating } from "../../(player)/utils";
 import Link from "next/link";
-import { EXAMPLE } from "../consts";
-import { exampleSearch } from "../api/hubris/example";
-import { set } from "lodash";
+import { EXAMPLE } from "../../consts";
+import { exampleSearch } from "../../api/hubris/example";
+import { SearchInput } from "@/app/SearchInput";
 
 const byRating = ([, a]: [string, Rating], [, b]: [string, Rating]) =>
   b.value - b.deviation - (a.value - a.deviation);
@@ -18,14 +18,13 @@ const FullMessage = ({ children }: { children: React.ReactNode }) => (
   <h2 className="min-h-screen justify-center flex items-center">{children}</h2>
 );
 
-export default function Page() {
+export default function Page({ params }: { params: { query?: string[] } }) {
+  const queryString = params.query?.join(" ") ?? "";
   const [results, setResults] =
     useState<Record<string, PlayerCharactersIndex>>(defaultSearch);
-  const [name, setName] = useState<string>("");
   const [state, setState] = useState<string>("init");
-  const onSubmit = async (e: React.FormEvent) => {
+  const fetchSearch = useCallback(async (name: string) => {
     setState("loading");
-    e.preventDefault();
     try {
       const results = await search(name);
       setResults(results);
@@ -35,33 +34,20 @@ export default function Page() {
       console.error(e);
       setState("error");
     }
-  };
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
-  };
-  const submit = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter") {
-      onSubmit(e as any);
+  }, []);
+
+  useEffect(() => {
+    if (queryString) {
+      fetchSearch(queryString);
     }
-  };
+  }, [fetchSearch, queryString]);
+
   const entries = Object.entries(results);
   return (
     <div className="max-w-3xl m-auto p-8">
-      <form
-        onSubmit={onSubmit}
-        onKeyDown={submit}
-        className="flex justify-center"
-      >
-        <input
-          type="text"
-          placeholder="player name"
-          onChange={onChange}
-          className="p-2 rounded border input"
-        />
-        <button type="submit" className="ml-2 p-2 rounded-full button">
-          Search
-        </button>
-      </form>
+      <div className="flex justify-center">
+        <SearchInput defaultValue={queryString} callback={fetchSearch} />
+      </div>
       <div>
         {state === "loading" && <FullMessage>Loading...</FullMessage>}
         {state === "error" && <FullMessage>Error</FullMessage>}

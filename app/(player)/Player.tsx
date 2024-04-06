@@ -3,6 +3,7 @@ import { shortKey, shortToLong } from "@/app/api/character";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getCharacterRatings } from "@/app/api/hubris/player/[rCode]/characters/lib";
+import Link from "next/link";
 
 export const Player = (props: PlayerCharacterMatchIndex) => {
   const { player, character, rating, matches } = props;
@@ -28,17 +29,19 @@ export const Player = (props: PlayerCharacterMatchIndex) => {
       </h1>
       <div className="container player-meta divide-x border-t">
         <h2 className="rt-rc text-left pl-2 md:pl-2">{rCode}</h2>
-        <div
-          className="theme-invert flex align-middle justify-end pr-2 md:pr-2"
-          style={{ alignItems: "center", height: "100%" }}
-        >
-          <h2 className={`${nameClass} text-right align-middle `}>
-            {nameLimited}
-          </h2>
-        </div>
+        <Link href={`/search/${name}`}>
+          <div
+            className="theme-invert flex align-middle justify-end pr-2 md:pr-2"
+            style={{ alignItems: "center", height: "100%" }}
+          >
+            <h2 className={`${nameClass} text-right align-middle `}>
+              {nameLimited}
+            </h2>
+          </div>
+        </Link>
       </div>
       <div className="container player-meta divide-x border-t ">
-        <div className="rt-md pl-2 md:pl-2 flex justify-between">
+        <div className="rt-md flex justify-between">
           <CharacterSelect rCode={rCode} characterShort={character.shortCode} />
         </div>
         <h2 className="rt-md text-right pr-2 md:pr-2">

@@ -1,6 +1,14 @@
+import { SearchInputRouter } from "./SearchInput";
+
 export default function Home() {
   return (
     <main className="min-h-screen p-3 lg:p-24 text-lg lg:text-xl">
+      <br />
+      <br />
+      <h2 className="text-xl">Search</h2>
+      <SearchInputRouter />
+      <br />
+      <p>or</p>
       <br />
       <p>
         navigate to
