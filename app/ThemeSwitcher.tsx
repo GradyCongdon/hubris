@@ -1,12 +1,14 @@
+"use client";
+
 import { ReactNode } from "react";
-import { Moon } from "./icons/Moon";
-import { Sun } from "./icons/Sun";
-import { DEFAULT_THEME, THEMES } from "../consts";
-import { Tree } from "./icons/Tree";
+import { Moon } from "./(player)/icons/Moon";
+import { Sun } from "./(player)/icons/Sun";
+import { DEFAULT_THEME, THEMES } from "./consts";
+import { Tree } from "./(player)/icons/Tree";
+import { useTheme } from "./useTheme";
 
 type Props = {
-  theme: string;
-  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  defaultTheme: string;
 };
 
 export const SIZE = 24;
@@ -18,7 +20,8 @@ const icons: Record<string, ReactNode> = {
   utah: <Tree />,
 };
 
-export const ThemeSwitcher = ({ theme, setTheme }: Props) => {
+export const ThemeSwitcher = ({ defaultTheme }: Props) => {
+  const [theme, setTheme] = useTheme(defaultTheme);
   const onClick = () => {
     if (!THEMES.includes(theme)) setTheme(DEFAULT_THEME);
     const nextTheme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];

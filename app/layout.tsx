@@ -6,6 +6,7 @@ import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { cookies } from "next/headers";
 import { DEFAULT_THEME } from "./consts";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 // const inter = Inter({ subsets: ["latin"] });
 const inter = { className: "font" };
@@ -20,7 +21,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const theme = cookies().get("theme")?.value ?? DEFAULT_THEME;
+  const cookieTheme = cookies().get("theme")?.value ?? DEFAULT_THEME;
   return (
     <html lang="en">
       <head>
@@ -38,7 +39,8 @@ export default function RootLayout({
   }}();`}
         </Script>
       </head>
-      <body className={`${inter.className} theme theme-${theme}`}>
+      <body className={`${inter.className} theme theme-${cookieTheme}`}>
+        <ThemeSwitcher defaultTheme={cookieTheme} />
         {children}
       </body>
     </html>

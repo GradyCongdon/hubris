@@ -1,4 +1,4 @@
-import { SIZE } from "../ThemeSwitcher";
+import { SIZE } from "../../ThemeSwitcher";
 
 export const Sun = () => (
   <svg

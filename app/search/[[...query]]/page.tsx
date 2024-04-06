@@ -19,7 +19,7 @@ const FullMessage = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default function Page({ params }: { params: { query?: string[] } }) {
-  const queryString = params.query?.join(" ") ?? "";
+  const queryString = params.query?.map(decodeURIComponent).join(" ") ?? "";
   const [results, setResults] =
     useState<Record<string, PlayerCharactersIndex>>(defaultSearch);
   const [state, setState] = useState<string>("init");
@@ -73,7 +73,10 @@ export default function Page({ params }: { params: { query?: string[] } }) {
                     <Link
                       key={shortCode}
                       className="flex p-4 shadow-md justify-between border"
-                      style={{ borderRadius: "4px" }}
+                      style={{
+                        borderRadius: "4px",
+                        backgroundColor: "var(--bg-contrast)",
+                      }}
                       href={`/player/${rCode}/${shortCode}`}
                     >
                       <h4>{shortToLong[shortCode as shortKey]}</h4>

@@ -2,32 +2,27 @@ import { SearchInputRouter } from "./SearchInput";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-3 lg:p-24 text-lg lg:text-xl">
-      <br />
-      <br />
-      <h2 className="text-xl">Search</h2>
+    <main className="min-h-screen p-3 lg:p-24 text-lg lg:text-xl mt-16">
+      <h2 className="text-2xl mb-1">Search</h2>
       <SearchInputRouter />
-      <br />
-      <p>or</p>
-      <br />
+      <p className="pl-2 italic text-sm my-4">or</p>
       <p>
         navigate to
-        <br />
-        <br />
-        <kbd className="text-xs md:text-md lg:text-lg">
+        <kbd
+          className="text-xs md:text-md lg:text-lg px-1 ml-2"
+          // style={{ background: "var(--bg-contrast)" }}
+        >
           /player/&lt;r-code&gt;/&lt;character-short-code&gt;
         </kbd>
       </p>
-      <br />
-      <p className="text-md">
+      <p className="text-sm italic">
         your r-code and character short can be found in the url of your{" "}
         <a href="http://ratingupdate.info" className="underline">
           ratingupdate.info
         </a>
         &nbsp;page
       </p>
-      <br />
-      <p>examples:</p>
+      <p className="mt-6 mb-1">examples:</p>
       <ul>
         <li>
           <kbd>

@@ -38,10 +38,13 @@ export const SearchInput = ({
         type="text"
         placeholder="player name"
         onChange={onChange}
-        className="p-2 rounded border input text-lg"
+        className="p-2 rounded border input text-lg shadow-md"
         value={name}
       />
-      <button type="submit" className="ml-2 p-2 rounded-full button">
+      <button
+        type="submit"
+        className="ml-2 p-2 px-4 rounded-full button shadow-lg border"
+      >
         Search
       </button>
     </form>

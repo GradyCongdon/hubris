@@ -1,10 +1,5 @@
 "use client";
-import {
-  MATCH_LIMIT,
-  POLLING_INTERVAL,
-  SESSION_TIMEFRAME,
-  THEMES,
-} from "@/app/consts";
+import { MATCH_LIMIT, POLLING_INTERVAL, SESSION_TIMEFRAME } from "@/app/consts";
 import { getPlayerCharacterMatchIndex } from "@/app/api/hubris/actions";
 import { Match, PlayerCharacterMatchIndex } from "@/app/api/hubris/types";
 import { SetStateAction, useCallback, useEffect, useState } from "react";
@@ -13,8 +8,6 @@ import { Matches, MatchesSkeleton } from "./Matches";
 import { Player, PlayerSkeleton } from "./Player";
 import { Session, SessionSkeleton } from "./Session";
 import { SessionStats, getSessionStats } from "./SessionStats";
-import { ThemeSwitcher } from "./ThemeSwitcher";
-import { setThemeCookie } from "./theme-cookie";
 
 type Props = {
   rCode: string;
@@ -23,7 +16,6 @@ type Props = {
 };
 
 export default function Main({ rCode, characterShort, themeCookie }: Props) {
-  const [theme, setTheme] = useState(themeCookie);
   const [data, setData] = useState<PlayerCharacterMatchIndex | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState("init");
@@ -66,14 +58,6 @@ export default function Main({ rCode, characterShort, themeCookie }: Props) {
       character_short: characterShort,
     });
   }, [active, characterShort, fetchUpdate, rCode]);
-  useEffect(() => {
-    const themes = THEMES.map((theme) => "theme-" + theme);
-    document.body.classList.remove(...themes);
-    document.body.classList.add("theme-" + theme);
-    window.analytics.track("Theme Change", { theme: theme });
-    setThemeCookie(theme);
-    console.debug("theme change", theme);
-  }, [theme]);
 
   useEffect(() => {
     setStatus("loading");
@@ -111,7 +95,6 @@ export default function Main({ rCode, characterShort, themeCookie }: Props) {
   if (status === "init" || status === "loading") {
     return (
       <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme player-page">
-        <ThemeSwitcher theme={theme} setTheme={setTheme} />
         <PlayerSkeleton rCode={rCode} characterShort={characterShort} />
         <BarChartSkeleton />
         <SessionSkeleton />
@@ -132,7 +115,6 @@ export default function Main({ rCode, characterShort, themeCookie }: Props) {
 
   return (
     <main className="min-h-screen max-w-2xl mx-auto text-x-offwhite flex flex-col pt-2 mono-300 container theme player-page">
-      <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <Player {...data} />
       {active ? (
         <SessionStats

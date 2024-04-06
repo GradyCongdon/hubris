@@ -110,6 +110,7 @@
 
 .theme-light {
   --bg: rgb(255, 252, 251);
+  --bg-contrast: rgb(255, 255, 255);
   --color: blue;
   --border-color: rgb(191, 200, 255);
   --accent-color-bg: rgb(255, 132, 195);
@@ -119,6 +120,7 @@
 
 .theme-dark {
   --bg: rgb(25, 26, 26);
+  --bg-contrast: rgb(48, 49, 49);
   --color: rgb(200, 201, 201);
   --border-color: rgb(47, 48, 48);
   --accent-color-bg: rgb(131, 187, 0);
@@ -128,6 +130,7 @@
 
 .theme-utah {
   --bg: rgb(207, 199, 191);
+  --bg-contrast: rgb(226, 216, 206);
   --color: rgb(31, 28, 0);
   --color: rgb(45, 71, 139);
   --border-color: rgb(162, 154, 116);
@@ -176,6 +179,6 @@
   color: var(--accent-text);
 }
 .input {
-  background-color: var(--bg);
+  background-color: var(--bg-contrast);
   color: var(--color);
 }
