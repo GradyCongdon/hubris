@@ -56,7 +56,7 @@ export type PlayerCharacter = {
   rating: Rating;
 };
 
-export type CharacterRatings = Record<shortKey, Rating>;
+export type CharacterRatings = Partial<Record<shortKey, Rating>>;
 
 export type PlayerCharactersIndex = {
   player: Player;
