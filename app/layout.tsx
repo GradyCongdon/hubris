@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import "./globals.css";
@@ -7,6 +8,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { cookies } from "next/headers";
 import { DEFAULT_THEME } from "./consts";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { Nav } from "./Nav";
 
 // const inter = Inter({ subsets: ["latin"] });
 const inter = { className: "font" };
@@ -22,6 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieTheme = cookies().get("theme")?.value ?? DEFAULT_THEME;
+  const rCode = cookies().get("rCode")?.value ?? "";
+  const characterShort = cookies().get("characterShort")?.value ?? "";
   return (
     <html lang="en">
       <head>
@@ -40,8 +44,11 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${inter.className} theme theme-${cookieTheme}`}>
-        <ThemeSwitcher defaultTheme={cookieTheme} />
         {children}
+        <footer className="app-footer">
+          <Nav rCode={rCode} characterShort={characterShort} />
+          <ThemeSwitcher defaultTheme={cookieTheme} />
+        </footer>
       </body>
     </html>
   );

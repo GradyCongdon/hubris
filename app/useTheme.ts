@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, Dispatch, SetStateAction } from "react";
-import { setThemeCookie } from "./(player)/theme-cookie";
+import { setThemeCookie } from "./cookie-actions";
 import { THEMES } from "./consts";
 
 export const useTheme = (defaultTheme: string): [string, Dispatch<SetStateAction<string>>] => {

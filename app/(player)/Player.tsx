@@ -29,7 +29,7 @@ export const Player = (props: PlayerCharacterMatchIndex) => {
       </h1>
       <div className="container player-meta divide-x border-t">
         <h2 className="rt-rc text-left pl-2 md:pl-2">{rCode}</h2>
-        <Link href={`/search/${name}`}>
+        <Link href={`/search`}>
           <div
             className="theme-invert flex align-middle justify-end pr-2 md:pr-2"
             style={{ alignItems: "center", height: "100%" }}
@@ -102,11 +102,7 @@ const CharacterSelect = ({
       {usedCharacters.map(
         ({ characterShort: short, name, value, deviation }) => {
           return (
-            <option
-              key={short}
-              value={short}
-              selected={short === characterShort}
-            >
+            <option key={short} value={short}>
               {name} {short === characterShort ? "" : `(${value}±${deviation})`}
             </option>
           );
@@ -136,10 +132,13 @@ export const PlayerSkeleton = ({ rCode, characterShort }: SkeletonProps) => {
         </div>
       </div>
       <div className="container player-meta divide-x border-t ">
-        <select className="rt-md pl-2 md:pl-2  flex justify-between character-select">
+        <select
+          className="rt-md pl-2 md:pl-2  flex justify-between character-select"
+          defaultValue={characterShort}
+        >
           {Object.entries(shortToLong).map(([short, long]) => {
             return (
-              <option key={short} selected={characterShort === short}>
+              <option key={short} value={short}>
                 {long}
               </option>
             );

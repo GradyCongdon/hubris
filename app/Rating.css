@@ -136,3 +136,34 @@
   background-color: transparent;
   outline-offset: -3px;
 }
+
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  height: 48px;
+  line-height: 48px;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg);
+  padding: 4px 4px;
+  a, button {
+    /* border: 1px solid var(--border-color); */
+    min-width: 80px;
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .claim {
+    border-color: var(--accent-color);
+    border-width: 1px;
+  }
+}
+
+.active-link {
+  color: var(--accent-color) !important;
+}

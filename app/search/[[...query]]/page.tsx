@@ -1,5 +1,5 @@
 "use client";
-import { use, useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { search } from "../../api/hubris/search/lib";
 import { PlayerCharactersIndex, Rating } from "../../api/hubris/types";
 import { shortKey, shortToLong } from "../../api/character";
@@ -23,6 +23,7 @@ export default function Page({ params }: { params: { query?: string[] } }) {
   const [results, setResults] =
     useState<Record<string, PlayerCharactersIndex>>(defaultSearch);
   const [state, setState] = useState<string>("init");
+
   const fetchSearch = useCallback(async (name: string) => {
     setState("loading");
     try {

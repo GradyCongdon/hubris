@@ -34,10 +34,14 @@ export const ThemeSwitcher = ({ defaultTheme }: Props) => {
       className="theme-switch"
       onClick={onClick}
       style={{
-        position: "absolute",
-        top: OFFSET,
-        right: OFFSET,
-        zIndex: 100,
+        // position: "absolute",
+        // top: OFFSET,
+        // right: OFFSET,
+        // zIndex: 100,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginLeft: "auto",
         color: "var(--color)",
       }}
     >
